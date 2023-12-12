@@ -45,7 +45,7 @@ Physics2DSettings:
   m_ReuseCollisionCallbacks: 1
   m_AutoSyncTransforms: 0
   m_GizmoOptions: 10
-<<<<<<< HEAD
+  <<<<<<< HEAD
   m_LayerCollisionMatrix: bfffffffbfffffffbfffffffffffffffbfffffffbfffffff08ffffffbfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 =======
   m_LayerCollisionMatrix: bfffffffbfffffffbfffffffffffffffbfffffffbfffffff88ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
