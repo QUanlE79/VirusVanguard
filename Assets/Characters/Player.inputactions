@@ -221,6 +221,17 @@
                 },
                 {
                     "name": "",
+                    "id": "e40ce92d-a79c-4281-bef9-0038b1949881",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9b277de0-c198-48d3-8ec7-67ad5a83e52d",
                     "path": "<Keyboard>/w",
                     "interactions": "",
