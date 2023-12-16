@@ -1,18 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
+[RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(TouchingDirection))]
 public class VirusController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     float horizontal;
     float vertical;
     public float speed = 5f;
-     Animator animator;
-    Vector2 lookDirection = new Vector2(1, 0);
+    public float jumpImpulse = 8f;
+
+    Animator animator;
+    
     Vector2 moveInput;
+    TouchingDirection touchingDirection;
+
+    public float CurSpeed { 
+        get {
+            if (IsMoving && !touchingDirection.IsOnWall)
+            {
+                return 5;
+            }
+            else
+            {
+                return 0;
+            }
+            
+        } 
+        private set { 
+            
+        } 
+    }
     [SerializeField]
     private bool _isMoving=false;
     public bool IsMoving { get {
@@ -20,8 +41,18 @@ public class VirusController : MonoBehaviour
         } 
         private set { 
             _isMoving= value;
-            animator.SetBool("isMoving", value);
+            animator.SetBool(AnimationString.isMoving, value);
         } 
+    }
+    [SerializeField]
+    private bool _isFacingRight=true;
+    public bool IsFacingRight { get { return _isFacingRight; }
+        private set { 
+            if(_isFacingRight !=value) {
+                transform.localScale *= new Vector2(-1, 1);
+            }
+            _isFacingRight= value;
+        }
     }
 
     // Start is called before the first frame update
@@ -29,6 +60,7 @@ public class VirusController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        touchingDirection= GetComponent<TouchingDirection>();  
     }
     void Start()
     {
@@ -44,18 +76,40 @@ public class VirusController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb2d.velocity = new Vector2(moveInput.x*speed, rb2d.velocity.y);
-        if (!Mathf.Approximately(moveInput.x, 0.0f) || !Mathf.Approximately(0.0f, moveInput.y))
-        {
-            lookDirection.Set(moveInput.x, moveInput.y);
-            lookDirection.Normalize();
-        }
-        animator.SetFloat("LookX", lookDirection.x);
+        
+        rb2d.velocity = new Vector2(moveInput.x*CurSpeed, rb2d.velocity.y);
+        animator.SetFloat(AnimationString.LookY, rb2d.velocity.y);
 
     }
     public void onMove(InputAction.CallbackContext context)
     {
-        moveInput=context.ReadValue<Vector2>();
-        IsMoving = moveInput != Vector2.zero;
+        
+            moveInput = context.ReadValue<Vector2>();
+            IsMoving = moveInput != Vector2.zero;
+            SetFacingDirection(moveInput);
+        Debug.Log(IsFacingRight);
+      
+    }
+
+    private void SetFacingDirection(Vector2 moveInput)
+    {
+        if (moveInput.x > 0 && !IsFacingRight)
+        {
+            IsFacingRight= true;
+        }
+        else if(moveInput.x < 0 && IsFacingRight)
+        {
+            IsFacingRight = false;
+        }
+    }
+
+    public void onJump(InputAction.CallbackContext context)
+    {
+       if(context.started && touchingDirection.IsGrounded)
+        {
+            animator.SetTrigger(AnimationString.jump);
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpImpulse);
+            
+        }
     }
 }
