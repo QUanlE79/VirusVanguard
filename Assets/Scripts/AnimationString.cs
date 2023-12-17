@@ -14,5 +14,9 @@ internal class AnimationString
     internal static string jump="jump";
     internal static string isOnCeiling= "isOnCeiling";
     internal static string isOnWall= "isOnWall";
+    internal static string fire = "fire";
+    internal static string canMove = "canMove";
+    internal static string die;
+    internal static string isAlive="isAlive";
 }
 

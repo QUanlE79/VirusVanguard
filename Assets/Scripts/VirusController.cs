@@ -20,14 +20,22 @@ public class VirusController : MonoBehaviour
 
     public float CurSpeed { 
         get {
-            if (IsMoving && !touchingDirection.IsOnWall)
+            if (CanMove)
             {
-                return 5;
+                if (IsMoving && !touchingDirection.IsOnWall)
+                {
+                    return 5;
+                }
+                else
+                {
+                    return 0;
+                }
             }
             else
             {
                 return 0;
             }
+          
             
         } 
         private set { 
@@ -54,7 +62,14 @@ public class VirusController : MonoBehaviour
             _isFacingRight= value;
         }
     }
-
+    public bool CanMove { get
+        {
+            return animator.GetBool(AnimationString.canMove);
+        } }
+    public bool isAlive { get
+        {
+            return animator.GetBool(AnimationString.isAlive);
+        } }
     // Start is called before the first frame update
     private void Awake()
     {
@@ -77,17 +92,25 @@ public class VirusController : MonoBehaviour
     private void FixedUpdate()
     {
         
+        
         rb2d.velocity = new Vector2(moveInput.x*CurSpeed, rb2d.velocity.y);
         animator.SetFloat(AnimationString.LookY, rb2d.velocity.y);
 
     }
     public void onMove(InputAction.CallbackContext context)
     {
-        
-            moveInput = context.ReadValue<Vector2>();
+        moveInput = context.ReadValue<Vector2>();
+        if (isAlive)
+        {
+            
             IsMoving = moveInput != Vector2.zero;
             SetFacingDirection(moveInput);
-        Debug.Log(IsFacingRight);
+
+        }
+        else
+        {
+            IsMoving = false;
+        }
       
     }
 
@@ -105,11 +128,18 @@ public class VirusController : MonoBehaviour
 
     public void onJump(InputAction.CallbackContext context)
     {
-       if(context.started && touchingDirection.IsGrounded)
+       if(context.started && touchingDirection.IsGrounded && CanMove)
         {
             animator.SetTrigger(AnimationString.jump);
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpImpulse);
             
+        }
+    }
+    public void onAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            animator.SetTrigger(AnimationString.fire);
         }
     }
 }
