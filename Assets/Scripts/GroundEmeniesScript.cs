@@ -45,7 +45,13 @@ public class GroundEmeniesScript : MonoBehaviour
             animator.SetBool(AnimationString.hasTarget, value);
         } 
     }
-
+    public bool isAlive
+    {
+        get
+        {
+            return animator.GetBool(AnimationString.isAlive);
+        }
+    }
     public bool CanMove
     {
         get
@@ -83,6 +89,10 @@ public class GroundEmeniesScript : MonoBehaviour
                 rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y);
             }
         }
+        if (!isAlive)
+        {
+            InvokeRepeating("Death", 0.7f, 0);
+        }
         
         
     }
@@ -103,6 +113,10 @@ public class GroundEmeniesScript : MonoBehaviour
     {
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
         
+    }
+    void Death()
+    {
+        Destroy(gameObject);
     }
 
 }

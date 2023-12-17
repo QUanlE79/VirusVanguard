@@ -24,7 +24,14 @@ public class VirusController : MonoBehaviour
             {
                 if (IsMoving && !touchingDirection.IsOnWall)
                 {
-                    return 5;
+                    if(touchingDirection.IsGrounded)
+                    {
+                        return 5;
+                    }
+                    else
+                    {
+                        return 3;
+                    }
                 }
                 else
                 {

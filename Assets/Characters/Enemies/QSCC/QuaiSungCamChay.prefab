@@ -131,7 +131,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7077801304946162261}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -339,8 +339,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015723448, y: 0.039445113}
-  m_Size: {x: 0.6396413, y: 0.73498684}
+  m_Offset: {x: -0.015723448, y: 0.15773405}
+  m_Size: {x: 0.6396413, y: 0.9715647}
   m_Direction: 0
 --- !u!95 &7934926261465569515
 Animator:
@@ -439,4 +439,4 @@ MonoBehaviour:
   _maxhealth: 100
   _health: 100
   _isAlive: 1
-  InvincibilityTime: 0.25
+  InvincibilityTime: 0

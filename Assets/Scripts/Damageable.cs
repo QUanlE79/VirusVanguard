@@ -96,6 +96,7 @@ public class Damageable : MonoBehaviour
 
     public bool Hit(int damage, Vector2 knockback)
     {
+        Debug.Log(damage);
         if (isAlive && !isInvincible)
         {
             health -= damage;

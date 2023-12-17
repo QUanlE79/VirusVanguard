@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9023115860762977174}
-  - component: {fileID: 7954087045373789358}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BowAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,25 +25,12 @@ Transform:
   m_GameObject: {fileID: 1594591471165361595}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.472, y: 0.3979363, z: -0.0053710598}
+  m_LocalPosition: {x: 0.303, y: 0.381, z: -0.0053710598}
   m_LocalScale: {x: 1.5820441, y: 1.6588869, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 607426395594241000}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7954087045373789358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594591471165361595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512de1cc13507fb42b6157246466344b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 3011926482359563110, guid: 8d4662e3f0f7e304ba80bece828d1697, type: 3}
 --- !u!1 &7269322366686367390
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,6 +48,7 @@ GameObject:
   - component: {fileID: 6522842859099836689}
   - component: {fileID: 850174996420355647}
   - component: {fileID: 3421127287258258314}
+  - component: {fileID: 6864582372483971803}
   m_Layer: 7
   m_Name: VarusArcher
   m_TagString: Untagged
@@ -79,7 +66,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.03, y: -1.82, z: 0}
-  m_LocalScale: {x: 0.6320936, y: 0.60281384, z: 1}
+  m_LocalScale: {x: 0.63209367, y: 0.60281384, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9023115860762977174}
@@ -212,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpImpulse: 8
+  jumpImpulse: 6
   _isMoving: 0
   _isFacingRight: 1
 --- !u!95 &1071598054696878190
@@ -379,7 +366,7 @@ MonoBehaviour:
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 129
+      m_Bits: 385
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0
@@ -401,7 +388,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974cae048e5ff9f45a41935f7f6ce732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageableHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4388436256836263562}
+        m_TargetAssemblyTypeName: VirusController, Assembly-CSharp
+        m_MethodName: onHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _maxhealth: 100
   _health: 100
   _isAlive: 1
-  InvincibilityTime: 0.5
+  InvincibilityTime: 1
+--- !u!114 &6864582372483971803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269322366686367390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512de1cc13507fb42b6157246466344b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaunchPonit: {fileID: 9023115860762977174}
+  projectilePrefab: {fileID: 3011926482359563110, guid: 8d4662e3f0f7e304ba80bece828d1697, type: 3}
