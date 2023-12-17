@@ -6,6 +6,7 @@ using UnityEngine;
 public class GroundEmeniesScript : MonoBehaviour
 {
     public float walkSpeed = 3f;
+    public float walkStopRate = 0.05f;
     public DetectionZone attackZone;
 
     Rigidbody2D rb;
@@ -45,6 +46,14 @@ public class GroundEmeniesScript : MonoBehaviour
         } 
     }
 
+    public bool CanMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationString.canMove);
+        }
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -62,7 +71,14 @@ public class GroundEmeniesScript : MonoBehaviour
         {
             FlipDirection();
         }
-        rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+        if(CanMove) {
+            rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x,0,walkStopRate), rb.velocity.y);
+        }
+        
     }
     private void FlipDirection()
     {
