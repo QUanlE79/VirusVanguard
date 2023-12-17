@@ -13,11 +13,11 @@ TagManager:
   - UI
   - confiner
   - character
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Enemy
+  - Player
+  - PlayerHitBox
+  - EnemyHitBox
   - 
   - 
   - 
