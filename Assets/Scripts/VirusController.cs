@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection),typeof(Damageable))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection))]
 public class VirusController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
@@ -14,7 +14,7 @@ public class VirusController : MonoBehaviour
     public float jumpImpulse = 8f;
 
     Animator animator;
-    Damageable damageable;
+    
     Vector2 moveInput;
     TouchingDirection touchingDirection;
 
@@ -70,13 +70,25 @@ public class VirusController : MonoBehaviour
         {
             return animator.GetBool(AnimationString.isAlive);
         } }
+
+    public bool LockVelocity { 
+        get 
+        { 
+            return animator.GetBool(AnimationString.lockVelocity);
+        }
+        set
+        {
+            animator.SetBool(AnimationString.lockVelocity, value);
+        }
+    }
+
     // Start is called before the first frame update
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirection= GetComponent<TouchingDirection>();
-        damageable = GetComponent<Damageable>();
+       
     }
     void Start()
     {
@@ -93,7 +105,7 @@ public class VirusController : MonoBehaviour
     private void FixedUpdate()
     {
         
-        if(!damageable.isHit)
+        if(!LockVelocity)
             rb2d.velocity = new Vector2(moveInput.x*CurSpeed, rb2d.velocity.y);
 
         animator.SetFloat(AnimationString.LookY, rb2d.velocity.y);
@@ -146,6 +158,7 @@ public class VirusController : MonoBehaviour
     }
     public void onHit(int damage, Vector2 knockback)
     {
+        LockVelocity = true;
         rb2d.velocity = new Vector2(knockback.x, rb2d.velocity.y + knockback.y);
     }
 }

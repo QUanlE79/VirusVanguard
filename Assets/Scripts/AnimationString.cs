@@ -19,5 +19,7 @@ internal class AnimationString
     internal static string die;
     internal static string isAlive="isAlive";
     internal static string isHit = "isHit";
+    internal static string hit = "Hit";
+    internal static string lockVelocity = "lockVelocity";
 }
 

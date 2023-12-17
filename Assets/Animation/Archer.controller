@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62c7e1e506d4624cb1b73bb96b6f9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boolName: isHit
+  boolName: lockVelocity
   UpdateOnState: 1
   valueOnEnter: 1
   valueOnExit: 0
@@ -525,7 +525,7 @@ AnimatorStateTransition:
     m_ConditionEvent: isAlive
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: isHit
+    m_ConditionEvent: Hit
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6049008987647558878}
@@ -658,8 +658,14 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 0}
-  - m_Name: isHit
+  - m_Name: lockVelocity
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Hit
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0

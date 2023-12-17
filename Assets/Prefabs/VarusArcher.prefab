@@ -419,4 +419,4 @@ MonoBehaviour:
   _maxhealth: 100
   _health: 100
   _isAlive: 1
-  InvincibilityTime: 0.25
+  InvincibilityTime: 0.5
