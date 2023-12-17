@@ -21,5 +21,7 @@ internal class AnimationString
     internal static string isHit = "isHit";
     internal static string hit = "Hit";
     internal static string lockVelocity = "lockVelocity";
+    internal static string attackTrigger = "attack";
+    internal static string hasTarget = "hasTarget";
 }
 
