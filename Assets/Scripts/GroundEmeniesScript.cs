@@ -6,8 +6,11 @@ using UnityEngine;
 public class GroundEmeniesScript : MonoBehaviour
 {
     public float walkSpeed = 3f;
+    public DetectionZone attackZone;
+
     Rigidbody2D rb;
     TouchingDirection touchingDirection;
+    Animator animator;
 
     public enum WalkableDirection { Right, Left}
     private WalkableDirection _walkDirection;
@@ -31,12 +34,28 @@ public class GroundEmeniesScript : MonoBehaviour
             _walkDirection = value;
         }
     }
+
+    private bool _hasTarger = false;
+
+    public bool HasTarger { 
+        get { return _hasTarger; } 
+        private set { 
+            _hasTarger = value;
+            animator.SetBool(AnimationString.hasTarget, value);
+        } 
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         touchingDirection = GetComponent<TouchingDirection>();
+        animator = GetComponent<Animator>();
     }
-
+    // Update is called once per frame
+    void Update()
+    {
+        HasTarger = attackZone.detectedColliders.Count > 0;
+    }
     private void FixedUpdate()
     {
         if(touchingDirection.IsOnWall && touchingDirection.IsGrounded)
@@ -58,15 +77,5 @@ public class GroundEmeniesScript : MonoBehaviour
             Debug.LogError("Error Direction");
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-   
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
