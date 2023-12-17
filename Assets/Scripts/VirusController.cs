@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class VirusController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
@@ -14,7 +14,7 @@ public class VirusController : MonoBehaviour
     public float jumpImpulse = 8f;
 
     Animator animator;
-    
+    Damageable damageable;
     Vector2 moveInput;
     TouchingDirection touchingDirection;
 
@@ -71,16 +71,7 @@ public class VirusController : MonoBehaviour
             return animator.GetBool(AnimationString.isAlive);
         } }
 
-    public bool LockVelocity { 
-        get 
-        { 
-            return animator.GetBool(AnimationString.lockVelocity);
-        }
-        set
-        {
-            animator.SetBool(AnimationString.lockVelocity, value);
-        }
-    }
+    
 
     // Start is called before the first frame update
     private void Awake()
@@ -88,24 +79,14 @@ public class VirusController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirection= GetComponent<TouchingDirection>();
-       
-    }
-    void Start()
-    {
-         
-       
-    }
+        damageable= GetComponent<Damageable>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
+
     }
     private void FixedUpdate()
     {
         
-        if(!LockVelocity)
+        if(!damageable.LockVelocity)
             rb2d.velocity = new Vector2(moveInput.x*CurSpeed, rb2d.velocity.y);
 
         animator.SetFloat(AnimationString.LookY, rb2d.velocity.y);
@@ -148,6 +129,7 @@ public class VirusController : MonoBehaviour
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpImpulse);
             
         }
+       
     }
     public void onAttack(InputAction.CallbackContext context)
     {
@@ -158,7 +140,7 @@ public class VirusController : MonoBehaviour
     }
     public void onHit(int damage, Vector2 knockback)
     {
-        LockVelocity = true;
         rb2d.velocity = new Vector2(knockback.x, rb2d.velocity.y + knockback.y);
+        
     }
 }

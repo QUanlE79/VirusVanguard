@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class GroundEmeniesScript : MonoBehaviour
 {
     public float walkSpeed = 3f;
@@ -12,7 +12,7 @@ public class GroundEmeniesScript : MonoBehaviour
     Rigidbody2D rb;
     TouchingDirection touchingDirection;
     Animator animator;
-
+    Damageable damageable;
     public enum WalkableDirection { Right, Left}
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
@@ -36,12 +36,12 @@ public class GroundEmeniesScript : MonoBehaviour
         }
     }
 
-    private bool _hasTarger = false;
+    private bool _hasTarget = false;
 
-    public bool HasTarger { 
-        get { return _hasTarger; } 
+    public bool HasTarget { 
+        get { return _hasTarget; } 
         private set { 
-            _hasTarger = value;
+            _hasTarget = value;
             animator.SetBool(AnimationString.hasTarget, value);
         } 
     }
@@ -59,11 +59,12 @@ public class GroundEmeniesScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         touchingDirection = GetComponent<TouchingDirection>();
         animator = GetComponent<Animator>();
+        damageable= GetComponent<Damageable>();
     }
     // Update is called once per frame
     void Update()
     {
-        HasTarger = attackZone.detectedColliders.Count > 0;
+        HasTarget = attackZone.detectedColliders.Count > 0;
     }
     private void FixedUpdate()
     {
@@ -71,13 +72,18 @@ public class GroundEmeniesScript : MonoBehaviour
         {
             FlipDirection();
         }
-        if(CanMove) {
-            rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
-        }
-        else
+        if(!damageable.LockVelocity)
         {
-            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x,0,walkStopRate), rb.velocity.y);
+            if (CanMove)
+            {
+                rb.velocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, walkStopRate), rb.velocity.y);
+            }
         }
+        
         
     }
     private void FlipDirection()
@@ -93,5 +99,10 @@ public class GroundEmeniesScript : MonoBehaviour
             Debug.LogError("Error Direction");
         }
     }
-    
+    public void onHit(int damage, Vector2 knockback)
+    {
+        rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+        
+    }
+
 }
