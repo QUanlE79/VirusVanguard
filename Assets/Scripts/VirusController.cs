@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class VirusController : MonoBehaviour
@@ -12,7 +13,8 @@ public class VirusController : MonoBehaviour
     float vertical;
     public float speed = 5f;
     public float jumpImpulse = 8f;
-
+    public Image FrontHB;
+    public Image BackHB;
     Animator animator;
     Damageable damageable;
     Vector2 moveInput;
