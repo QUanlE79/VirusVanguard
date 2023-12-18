@@ -419,5 +419,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 512de1cc13507fb42b6157246466344b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaunchPonit: {fileID: 9023115860762977174}
+  LaunchPoint: {fileID: 9023115860762977174}
   projectilePrefab: {fileID: 3011926482359563110, guid: 8d4662e3f0f7e304ba80bece828d1697, type: 3}
