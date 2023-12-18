@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 850174996420355647}
   - component: {fileID: 3421127287258258314}
   - component: {fileID: 6864582372483971803}
+  - component: {fileID: 596636744838871785}
   m_Layer: 7
   m_Name: VarusArcher
   m_TagString: Untagged
@@ -199,7 +200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpImpulse: 7
+  jumpImpulse: 8
+  FrontHB: {fileID: 0}
+  BackHB: {fileID: 0}
   _isMoving: 0
   _isFacingRight: 1
 --- !u!95 &1071598054696878190
@@ -403,6 +406,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
   _maxhealth: 100
   _health: 100
   _isAlive: 1
@@ -421,3 +427,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LaunchPoint: {fileID: 9023115860762977174}
   projectilePrefab: {fileID: 3011926482359563110, guid: 8d4662e3f0f7e304ba80bece828d1697, type: 3}
+--- !u!114 &596636744838871785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269322366686367390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536c87f052cf565418fc522668a1882a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrontHB: {fileID: 0}
+  BackHB: {fileID: 0}
+  chipSeed: 2
