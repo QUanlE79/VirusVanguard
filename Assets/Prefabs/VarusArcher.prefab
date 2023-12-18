@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpImpulse: 6
+  jumpImpulse: 7
   _isMoving: 0
   _isFacingRight: 1
 --- !u!95 &1071598054696878190
