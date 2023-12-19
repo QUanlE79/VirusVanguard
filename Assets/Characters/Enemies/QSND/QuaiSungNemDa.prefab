@@ -221,6 +221,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageableHit:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2809870940566628339}
+        m_TargetAssemblyTypeName: GroundEmeniesScript, Assembly-CSharp
+        m_MethodName: onHit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  healthChanged:
+    m_PersistentCalls:
       m_Calls: []
   _maxhealth: 100
   _health: 100
@@ -238,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07c0690f9f2ea04e9a38bd808e2c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
+  walkSpeed: 2
   walkStopRate: 10
   attackZone: {fileID: 4495180560827410659}
 --- !u!114 &2242779755124942112
@@ -253,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 512de1cc13507fb42b6157246466344b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaunchPonit: {fileID: 6056997186642166819}
+  LaunchPoint: {fileID: 6056997186642166819}
   projectilePrefab: {fileID: 6160439525443770578, guid: 5a7be0f3b3b33204db72eb6fbaa44398, type: 3}
 --- !u!1 &3915603340159637977
 GameObject:

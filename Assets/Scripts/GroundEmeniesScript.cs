@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
 public class GroundEmeniesScript : MonoBehaviour
 {
-    public float walkSpeed = 3f;
+    public float walkSpeed = 2f;
     public float walkStopRate = 0.05f;
     public DetectionZone attackZone;
 

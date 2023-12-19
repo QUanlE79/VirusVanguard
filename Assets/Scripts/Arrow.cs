@@ -10,6 +10,7 @@ public class Arrow : MonoBehaviour
     public Vector2 knockback = new Vector2 (2f,0);
     Rigidbody2D rb2d;
     Animator animator;
+    CircleCollider2D circleCollider;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -18,6 +19,7 @@ public class Arrow : MonoBehaviour
     {
         rb2d.velocity = new Vector2(speed.x * transform.localScale.x, speed.y);
         animator= GetComponent<Animator>();
+        circleCollider= GetComponent<CircleCollider2D>();
         
     }
 
@@ -42,6 +44,7 @@ public class Arrow : MonoBehaviour
             
         }
         rb2d.velocity = Vector2.zero;
+        Destroy(circleCollider);
         animator.SetTrigger(AnimationString.hit);
         InvokeRepeating("del", 0.7f, 0);
     }

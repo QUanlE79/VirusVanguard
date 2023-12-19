@@ -221,7 +221,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.74, y: -4.15, z: 0}
-  m_LocalScale: {x: 1.5183, y: 1.4737, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7920088465755274613}
@@ -339,8 +339,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015723448, y: 0.15773405}
-  m_Size: {x: 0.6396413, y: 0.9715647}
+  m_Offset: {x: -0.015723467, y: 0.025240978}
+  m_Size: {x: 0.6396413, y: 0.7065789}
   m_Direction: 0
 --- !u!95 &7934926261465569515
 Animator:
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07c0690f9f2ea04e9a38bd808e2c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
+  walkSpeed: 2
   walkStopRate: 0.05
   attackZone: {fileID: 3574104370449077080}
 --- !u!114 &2209253977889208977
@@ -436,6 +436,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
   _maxhealth: 100
   _health: 100
   _isAlive: 1
