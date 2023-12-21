@@ -7,43 +7,45 @@ public class GroundEmeniesScript : MonoBehaviour
 {
     public float walkSpeed = 2f;
     public float walkStopRate = 0.05f;
+
     public DetectionZone attackZone;
+    public DetectionZone cliffDetectionZone;
 
     Rigidbody2D rb;
     TouchingDirection touchingDirection;
     Animator animator;
     Damageable damageable;
-    public enum WalkableDirection { Right, Left}
+    public enum WalkableDirection { Right, Left }
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
 
     public WalkableDirection WalkDirection
     {
         get { return _walkDirection; }
-        set { 
-            if (_walkDirection != value) 
+        set {
+            if (_walkDirection != value)
             {
                 gameObject.transform.localScale = new Vector2(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y);
                 if (value == WalkableDirection.Right)
                 {
                     walkDirectionVector = Vector2.right;
-                }else if (value == WalkableDirection.Left)
+                } else if (value == WalkableDirection.Left)
                 {
                     walkDirectionVector = Vector2.left;
                 }
-            } 
+            }
             _walkDirection = value;
         }
     }
 
     private bool _hasTarget = false;
 
-    public bool HasTarget { 
-        get { return _hasTarget; } 
-        private set { 
+    public bool HasTarget {
+        get { return _hasTarget; }
+        private set {
             _hasTarget = value;
             animator.SetBool(AnimationString.hasTarget, value);
-        } 
+        }
     }
     public bool isAlive
     {
@@ -58,6 +60,20 @@ public class GroundEmeniesScript : MonoBehaviour
         {
             return animator.GetBool(AnimationString.canMove);
         }
+        private set
+        {
+            animator.SetBool(AnimationString.canMove, value);
+        }
+    }
+
+    public float atkCd {
+        get
+        {
+            return animator.GetFloat(AnimationString.atkCd);
+        }
+        private set {
+            animator.SetFloat(AnimationString.atkCd, Mathf.Max(value,0));
+        } 
     }
 
     private void Awake()
@@ -71,10 +87,16 @@ public class GroundEmeniesScript : MonoBehaviour
     void Update()
     {
         HasTarget = attackZone.detectedColliders.Count > 0;
+        if (HasTarget) CanMove = false; else CanMove = true;
+        if (atkCd > 0)
+        {
+            atkCd -= Time.deltaTime;
+        }
+        
     }
     private void FixedUpdate()
     {
-        if(touchingDirection.IsOnWall && touchingDirection.IsGrounded)
+        if(touchingDirection.IsOnWall && touchingDirection.IsGrounded || cliffDetectionZone.detectedColliders.Count == 0)
         {
             FlipDirection();
         }
