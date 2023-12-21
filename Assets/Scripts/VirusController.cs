@@ -13,7 +13,13 @@ public class VirusController : MonoBehaviour
     float vertical;
     public float speed = 5f;
     public float jumpImpulse = 8f;
-    
+    public float rollImpulse = 30f;
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+
+    public TrailRenderer tr;
     Animator animator;
     Damageable damageable;
     Vector2 moveInput;
@@ -80,7 +86,10 @@ public class VirusController : MonoBehaviour
         } }
 
     
-
+    public bool canDoubleJump { get
+        {
+            return animator.GetBool(AnimationString.canDoubleJump);
+        } }
     // Start is called before the first frame update
     private void Awake()
     {
@@ -88,13 +97,13 @@ public class VirusController : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirection= GetComponent<TouchingDirection>();
         damageable= GetComponent<Damageable>();
-
+        
 
     }
     private void FixedUpdate()
     {
-        
-        if(!damageable.LockVelocity)
+       
+        if (!damageable.LockVelocity && !isDashing)
             rb2d.velocity = new Vector2(moveInput.x*CurSpeed, rb2d.velocity.y);
 
         animator.SetFloat(AnimationString.LookY, rb2d.velocity.y);
@@ -130,12 +139,30 @@ public class VirusController : MonoBehaviour
     }
 
     public void onJump(InputAction.CallbackContext context)
-    {
-       if(context.started && touchingDirection.IsGrounded && CanMove)
+    {   
+        //if(touchingDirection.IsGrounded)
+        //{
+        //    animator.SetBool(AnimationString.canDoubleJump, false);
+        //}
+        if (context.started && touchingDirection.IsGrounded && CanMove )
         {
-            animator.SetTrigger(AnimationString.jump);
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpImpulse);
-            
+                
+                animator.SetTrigger(AnimationString.jump);
+                animator.SetBool(AnimationString.canDoubleJump, true);
+                rb2d.velocity = new Vector2(rb2d.velocity.x, jumpImpulse);
+                
+        }
+        else if(context.started && !touchingDirection.IsGrounded && CanMove)
+        {
+            Debug.Log("cl" + canDoubleJump);
+            if (canDoubleJump)
+            {
+                
+                animator.SetTrigger(AnimationString.jump);
+                animator.SetBool(AnimationString.canDoubleJump, false);
+                rb2d.velocity = new Vector2(rb2d.velocity.x, jumpImpulse);
+                
+            }
         }
        
     }
@@ -148,7 +175,35 @@ public class VirusController : MonoBehaviour
     }
     public void onHit(int damage, Vector2 knockback)
     {
-        rb2d.velocity = new Vector2(knockback.x, rb2d.velocity.y + knockback.y);
+        if(!isDashing)
+        {
+            rb2d.velocity = new Vector2(knockback.x, rb2d.velocity.y + knockback.y);
+        }
+            
         
+    }
+    public void onDash(InputAction.CallbackContext context)
+    {
+        if (context.performed && canDash)
+        {
+            
+            animator.SetTrigger(AnimationString.roll);
+            StartCoroutine(Dash());
+        }
+    }
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb2d.gravityScale;
+        rb2d.gravityScale = 0f;
+        rb2d.velocity = new Vector2(transform.localScale.x * rollImpulse, 0f);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        rb2d.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 }

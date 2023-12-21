@@ -24,5 +24,7 @@ internal class AnimationString
     internal static string attackTrigger = "attack";
     internal static string hasTarget = "hasTarget";
     internal static string atkCd = "atkCd";
+    internal static string canDoubleJump = "canDoubleJump";
+    internal static string roll = "roll";
 }
 
