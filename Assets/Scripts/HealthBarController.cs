@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class HealthBarController : MonoBehaviour
 {
     public Image FrontHB;
     public Image BackHB;
+    public TMP_Text HealthAmountText;
     public float chipSeed= 2f;
     Damageable damageable;
     float lerpTimer = 0f;
@@ -58,6 +60,7 @@ public class HealthBarController : MonoBehaviour
             FrontHB.fillAmount = Mathf.Lerp(fillF, BackHB.fillAmount, percentComplete);
         }
         //isHealthChanged = false;
+        HealthAmountText.text = hFraction*100+ "%";
     }
     private void OnPlayerHealthChanged(int health, int MaxHealth)
     {
