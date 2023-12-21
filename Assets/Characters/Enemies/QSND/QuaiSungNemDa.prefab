@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 2407666954381073216}
   - component: {fileID: 3141797400541918588}
   - component: {fileID: 1193438145250915937}
-  - component: {fileID: 7001240954261298881}
-  - component: {fileID: 3334051265192767905}
-  - component: {fileID: 2809870940566628339}
   - component: {fileID: 2242779755124942112}
+  - component: {fileID: 7225175364802318618}
+  - component: {fileID: 3987392808218626668}
+  - component: {fileID: 5333195076562313777}
   m_Layer: 9
   m_Name: QuaiSungNemDa
   m_TagString: Untagged
@@ -177,7 +177,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7001240954261298881
+--- !u!114 &2242779755124942112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432115350216964327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512de1cc13507fb42b6157246466344b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaunchPoint: {fileID: 6056997186642166819}
+  projectilePrefab: {fileID: 6160439525443770578, guid: 5a7be0f3b3b33204db72eb6fbaa44398, type: 3}
+--- !u!114 &7225175364802318618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,7 +222,7 @@ MonoBehaviour:
   ceilingDistance: 0.05
   _isOnWall: 1
   _isOnCeiling: 1
---- !u!114 &3334051265192767905
+--- !u!114 &3987392808218626668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,7 +237,7 @@ MonoBehaviour:
   damageableHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2809870940566628339}
+      - m_Target: {fileID: 5333195076562313777}
         m_TargetAssemblyTypeName: GroundEmeniesScript, Assembly-CSharp
         m_MethodName: onHit
         m_Mode: 0
@@ -242,7 +256,7 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   InvincibilityTime: 0.25
---- !u!114 &2809870940566628339
+--- !u!114 &5333195076562313777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,23 +269,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2
-  walkStopRate: 10
+  walkStopRate: 0.05
   attackZone: {fileID: 4495180560827410659}
   cliffDetectionZone: {fileID: 3030362519920878180}
---- !u!114 &2242779755124942112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 432115350216964327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512de1cc13507fb42b6157246466344b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LaunchPoint: {fileID: 6056997186642166819}
-  projectilePrefab: {fileID: 6160439525443770578, guid: 5a7be0f3b3b33204db72eb6fbaa44398, type: 3}
 --- !u!1 &3915603340159637977
 GameObject:
   m_ObjectHideFlags: 0
