@@ -262,8 +262,8 @@ PolygonCollider2D:
     - - {x: 0, y: 1}
       - {x: -0.35307795, y: 0.8044851}
       - {x: -0.46818966, y: 0.019610524}
-      - {x: -0.13304234, y: 0.4588499}
-      - {x: 0.3400513, y: 0.42111135}
+      - {x: 0.25639093, y: -0.081707}
+      - {x: 0.5376742, y: 0.37461162}
       - {x: 0.4897585, y: 0.5823793}
   m_UseDelaunayMesh: 0
 --- !u!114 &3035427914258528652
@@ -313,7 +313,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.955843, y: -13.147388, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4283463512765480153}
