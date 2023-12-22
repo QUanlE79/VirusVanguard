@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,511 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: NguoiBay_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1146
+        width: 80
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ae3eb15acece5419ae0bbd1912fad6
+      internalID: 687563600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1147
+        width: 82
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a129f9b7f6432bb40ab54e003d958771
+      internalID: -428156234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1154
+        width: 82
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295edcebfc23cd040906f1e5e719b477
+      internalID: 939199043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_3
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1148
+        width: 82
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969558da093c82d47afaa97fb6cd06a0
+      internalID: 326847749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1004
+        width: 77
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb2fd15c131fa64d99547255d546aa9
+      internalID: 510615495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_5
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1006
+        width: 99
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7feaa607e0591c54aa834cc1bc170bd2
+      internalID: 334850340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_6
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1006
+        width: 98
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6254033ad8cbffc49a58a8284db6c85f
+      internalID: -719392894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 863
+        width: 103
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6551f49a7adb10459d6cbaf25f7c219
+      internalID: 432742536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_8
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 729
+        width: 82
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1109928db7928084695f7aeccf1003ae
+      internalID: 787513316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_9
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 733
+        width: 82
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dfa3afcc2b17f429f1bcbf37727d9a
+      internalID: 1410585544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_10
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 739
+        width: 82
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7db3482737a31478ea77a28c27f08f
+      internalID: -1737857438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_11
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 734
+        width: 80
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36b20cfa6544ae4c931a945d4409f4e
+      internalID: -2000723100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_12
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 586
+        width: 75
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc360d4bd8fae54393a3b871c696774
+      internalID: 1205432852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_13
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 588
+        width: 99
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5f1cea193e66e459c8ec330099aafa
+      internalID: 614060598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_14
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 588
+        width: 97
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed03c92133f5b64da111d7cd7120e9a
+      internalID: -540372250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_15
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 445
+        width: 103
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869a8ce36f9e34a42a1129aba392e4ee
+      internalID: -1012242674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_16
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 314
+        width: 81
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45b2adc813681c4798eca6121ab7e4b
+      internalID: 2000075347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_17
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 318
+        width: 82
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d34e08346df16646929ee65ace90856
+      internalID: -2125288064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_18
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 323
+        width: 82
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3addc7e7d2ea8b46b5297b64d8ab222
+      internalID: -782865343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_19
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 318
+        width: 82
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b9dac87a8423244a05ef36145d7e6e
+      internalID: -1815972130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_20
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 170
+        width: 79
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ee28a4ae8fc974a86a51d1cc4d15ea
+      internalID: -1135074020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_21
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 174
+        width: 91
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7564b268f87d59468035677c85d7c89
+      internalID: -377639435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_22
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 174
+        width: 88
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a550ecac8773340989e814aa018574
+      internalID: 1561140966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NguoiBay_23
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 30
+        width: 94
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0df2d4de0e17a4ca2f873a38bcfba0
+      internalID: -1796558106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +623,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NguoiBay_0: 687563600
+      NguoiBay_1: -428156234
+      NguoiBay_10: -1737857438
+      NguoiBay_11: -2000723100
+      NguoiBay_12: 1205432852
+      NguoiBay_13: 614060598
+      NguoiBay_14: -540372250
+      NguoiBay_15: -1012242674
+      NguoiBay_16: 2000075347
+      NguoiBay_17: -2125288064
+      NguoiBay_18: -782865343
+      NguoiBay_19: -1815972130
+      NguoiBay_2: 939199043
+      NguoiBay_20: -1135074020
+      NguoiBay_21: -377639435
+      NguoiBay_22: 1561140966
+      NguoiBay_23: -1796558106
+      NguoiBay_3: 326847749
+      NguoiBay_4: 510615495
+      NguoiBay_5: 334850340
+      NguoiBay_6: -719392894
+      NguoiBay_7: 432742536
+      NguoiBay_8: 787513316
+      NguoiBay_9: 1410585544
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
