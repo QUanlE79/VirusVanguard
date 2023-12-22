@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 4041441336580578041}
   - component: {fileID: 7041515924117623459}
   - component: {fileID: 4440068156896270039}
+  - component: {fileID: 5028979525756957305}
   m_Layer: 9
   m_Name: QuaiCho1
   m_TagString: Untagged
@@ -436,6 +437,7 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 5304190430996100048}
   cliffDetectionZone: {fileID: 4893009772959233716}
+  flashEffect: {fileID: 5028979525756957305}
 --- !u!95 &4440068156896270039
 Animator:
   serializedVersion: 5
@@ -457,6 +459,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5028979525756957305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8012272593686004976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0a5a788d6421e42981f103269b106b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4271322b35696f047910f1582fb6e085, type: 2}
+  duration: 0.125
 --- !u!1 &8338011043311113704
 GameObject:
   m_ObjectHideFlags: 0

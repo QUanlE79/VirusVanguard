@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 7496928695551918594}
   - component: {fileID: 2293845709171622417}
   - component: {fileID: 3340886585126817277}
+  - component: {fileID: 3283899839921785278}
   m_Layer: 9
   m_Name: QuaiDongHo2
   m_TagString: Untagged
@@ -527,6 +528,7 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 1136897981910176260}
   cliffDetectionZone: {fileID: 6776734493317676376}
+  flashEffect: {fileID: 3283899839921785278}
 --- !u!95 &3340886585126817277
 Animator:
   serializedVersion: 5
@@ -548,3 +550,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3283899839921785278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8383199636978204744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0a5a788d6421e42981f103269b106b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4271322b35696f047910f1582fb6e085, type: 2}
+  duration: 0.125

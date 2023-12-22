@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 3575151930050947140}
   - component: {fileID: 2209253977889208977}
   - component: {fileID: 9215723107783158231}
+  - component: {fileID: 7488165994763868259}
   m_Layer: 9
   m_Name: QuaiSungCamChay
   m_TagString: Untagged
@@ -471,6 +472,7 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 3574104370449077080}
   cliffDetectionZone: {fileID: 1370583685580745194}
+  flashEffect: {fileID: 7488165994763868259}
 --- !u!114 &2209253977889208977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,3 +538,17 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   InvincibilityTime: 0
+--- !u!114 &7488165994763868259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312473365286834900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0a5a788d6421e42981f103269b106b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4271322b35696f047910f1582fb6e085, type: 2}
+  duration: 0.125

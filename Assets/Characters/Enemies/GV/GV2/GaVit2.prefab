@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 7543486172168083761}
   - component: {fileID: 5337713382834712895}
   - component: {fileID: 1908069148833558260}
+  - component: {fileID: 2726692741921888974}
   m_Layer: 9
   m_Name: GaVit2
   m_TagString: Untagged
@@ -431,6 +432,7 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 4883571949927818628}
   cliffDetectionZone: {fileID: 7133037440020341206}
+  flashEffect: {fileID: 2726692741921888974}
 --- !u!95 &1908069148833558260
 Animator:
   serializedVersion: 5
@@ -452,6 +454,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2726692741921888974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5835375725852839252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0a5a788d6421e42981f103269b106b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4271322b35696f047910f1582fb6e085, type: 2}
+  duration: 0.125
 --- !u!1 &7867323756839162096
 GameObject:
   m_ObjectHideFlags: 0

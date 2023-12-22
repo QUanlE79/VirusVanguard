@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 6122144460330514132}
   - component: {fileID: 5306839761794851297}
   - component: {fileID: 1446337971770616463}
+  - component: {fileID: 4611660156429828347}
   m_Layer: 9
   m_Name: NhimSao2
   m_TagString: Untagged
@@ -327,6 +328,7 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 8735908454531010719}
   cliffDetectionZone: {fileID: 7027257299306445715}
+  flashEffect: {fileID: 4611660156429828347}
 --- !u!95 &1446337971770616463
 Animator:
   serializedVersion: 5
@@ -348,6 +350,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4611660156429828347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4635106748323640673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0a5a788d6421e42981f103269b106b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4271322b35696f047910f1582fb6e085, type: 2}
+  duration: 0.125
 --- !u!1 &6012886753505526249
 GameObject:
   m_ObjectHideFlags: 0

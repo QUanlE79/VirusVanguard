@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 958643736375458585}
   - component: {fileID: 6978638184957667949}
   - component: {fileID: 5496387169217847534}
+  - component: {fileID: 251450349868579496}
   m_Layer: 9
   m_Name: CayChim1
   m_TagString: Untagged
@@ -353,6 +354,7 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 8269179446790768877}
   cliffDetectionZone: {fileID: 4693930785596659547}
+  flashEffect: {fileID: 251450349868579496}
 --- !u!114 &958643736375458585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +441,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &251450349868579496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3561771899170005587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0a5a788d6421e42981f103269b106b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4271322b35696f047910f1582fb6e085, type: 2}
+  duration: 0.125
 --- !u!1 &4492740820038863740
 GameObject:
   m_ObjectHideFlags: 0

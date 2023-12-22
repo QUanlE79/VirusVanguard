@@ -131,9 +131,11 @@ public class GroundEmeniesScript : MonoBehaviour
             Debug.LogError("Error Direction");
         }
     }
+    [SerializeField] private SimpleFlash flashEffect;
     public void onHit(int damage, Vector2 knockback)
     {
         rb.velocity = new Vector2(knockback.x, rb.velocity.y + knockback.y);
+        flashEffect.Flash();
         
     }
     void Death()

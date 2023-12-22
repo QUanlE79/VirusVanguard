@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 525627125804230773}
   - component: {fileID: 8422492773851276078}
   - component: {fileID: 5927970660910796934}
+  - component: {fileID: 6437938291050505440}
   m_Layer: 9
   m_Name: QuaiHe1
   m_TagString: Untagged
@@ -527,6 +528,7 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 3224797232826624392}
   cliffDetectionZone: {fileID: 4221943823154194356}
+  flashEffect: {fileID: 6437938291050505440}
 --- !u!95 &5927970660910796934
 Animator:
   serializedVersion: 5
@@ -548,3 +550,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6437938291050505440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5552820055975477334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0a5a788d6421e42981f103269b106b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4271322b35696f047910f1582fb6e085, type: 2}
+  duration: 0.125

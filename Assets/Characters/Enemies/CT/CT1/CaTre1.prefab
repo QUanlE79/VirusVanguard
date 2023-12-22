@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 5169889068831181532}
   - component: {fileID: 4408930054936848082}
   - component: {fileID: 7210040364122958516}
+  - component: {fileID: 5254232308792520727}
   m_Layer: 9
   m_Name: CaTre1
   m_TagString: Untagged
@@ -429,6 +430,7 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 7198929160061776328}
   cliffDetectionZone: {fileID: 2953438947622079234}
+  flashEffect: {fileID: 5254232308792520727}
 --- !u!95 &7210040364122958516
 Animator:
   serializedVersion: 5
@@ -450,6 +452,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5254232308792520727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542066303267560483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0a5a788d6421e42981f103269b106b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4271322b35696f047910f1582fb6e085, type: 2}
+  duration: 0.125
 --- !u!1 &8113559401272556486
 GameObject:
   m_ObjectHideFlags: 0
