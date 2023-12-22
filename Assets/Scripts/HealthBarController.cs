@@ -38,7 +38,7 @@ public class HealthBarController : MonoBehaviour
     }
     private void UpdateHealthBar(float health, float MaxHealth)
     {
-        Debug.Log(damageable.health);
+        
         float fillF = FrontHB.fillAmount;
         float fillB = BackHB.fillAmount;
         float hFraction= health / MaxHealth;
