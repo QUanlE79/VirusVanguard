@@ -2,7 +2,7 @@
     "name": "Player",
     "maps": [
         {
-            "name": "Varus",
+            "name": "Player",
             "id": "49ab39b4-c983-444c-861d-8aaebad86165",
             "actions": [
                 {

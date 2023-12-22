@@ -71,6 +71,8 @@ public class VirusController : MonoBehaviour
     }
     [SerializeField]
     private bool _isFacingRight=true;
+    internal static object instance;
+
     public bool IsFacingRight { get { return _isFacingRight; }
         private set { 
             if(_isFacingRight !=value) {
@@ -100,15 +102,12 @@ public class VirusController : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirection= GetComponent<TouchingDirection>();
         damageable= GetComponent<Damageable>();
-        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        //pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
 
 
 
     }
-    private void Start()
-    {
-        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
-    }
+
     private void FixedUpdate()
     {
        
@@ -219,7 +218,7 @@ public class VirusController : MonoBehaviour
     {
         if (context.performed)
         {
-
+            Debug.Log("cc");
             MyGameManager.Instance.PauseGame();
             pauseMenu.SetActive(true);
             

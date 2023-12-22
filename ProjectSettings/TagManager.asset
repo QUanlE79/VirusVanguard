@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PauseMenu
+  tags:
+  - FlyingEnemy
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - Projectile
   - Door
   - GroundDetection
-  - 
+  - ChaseZone
   - 
   - 
   - 
