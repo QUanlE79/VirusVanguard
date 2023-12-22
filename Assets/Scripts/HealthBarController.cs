@@ -12,7 +12,7 @@ public class HealthBarController : MonoBehaviour
     public float chipSeed= 2f;
     Damageable damageable;
     float lerpTimer = 0f;
-    bool isHealthChanged=false;
+    
     private void Awake()
     {
         damageable = GetComponent<Damageable>();
