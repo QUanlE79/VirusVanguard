@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 3915603340159637977}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.358, y: 0.643, z: 0}
+  m_LocalPosition: {x: 3.438, y: 0.643, z: 0}
   m_LocalScale: {x: 2.2774498, y: 2.2105498, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -372,7 +372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6056997186642166819}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: RockAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ Transform:
   m_GameObject: {fileID: 8717336868124648729}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.549, y: -0.7, z: 0}
+  m_LocalPosition: {x: 0.549, y: -0.662, z: 0}
   m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
