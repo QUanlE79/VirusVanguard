@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AC_Rock
+  m_Name: AC_Bullet
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Hit
@@ -57,7 +57,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rock_fly
+  m_Name: fly
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -71,7 +71,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8783cd6c4aa91444ca783b02df0d6a1a, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9c186d0e661480f4f9e32900f10dba40, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -109,7 +109,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: rock_destroy
+  m_Name: destroy
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -123,7 +123,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 715e710ecd3c8ef44a9300f37789711b, type: 2}
+  m_Motion: {fileID: 7400000, guid: a937d1973d4aadb4fbfd2dd0aa6e929c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

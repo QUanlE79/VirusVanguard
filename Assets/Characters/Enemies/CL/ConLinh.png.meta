@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ConLinh_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 642
+        width: 98
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8645b6e2e4db524b94c6da0699b4a63
+      internalID: 465891753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 644
+        width: 98
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f98707210453945979693d1f1ca680
+      internalID: -492937434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 644
+        width: 99
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f8347326f39ed48a63a5bc3efe4990
+      internalID: -336915093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_3
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 642
+        width: 99
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509d8a7fda871b24eba19940b785e560
+      internalID: 2140066209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 530
+        width: 111
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5027d8a98a6eae4094a6243fda3c65e
+      internalID: -2016108964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_5
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 526
+        width: 111
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e38bdb11bed9ec4e846cf00878b8bb8
+      internalID: -35337410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 398
+        width: 90
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821a0906a63d8ff429d94247bb839aac
+      internalID: -401681421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 284
+        width: 98
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07269865135bd8b429001b2e45421244
+      internalID: 385819847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_8
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 286
+        width: 99
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4444a67eeb756438045c1fec36e095
+      internalID: -1533538117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_9
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 284
+        width: 99
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941e74c8cfb96a046bb06e0bf3e461f8
+      internalID: 554554776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 284
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32000b5bd000b6243bee5acd1aa1f739
+      internalID: 1628041116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_11
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 172
+        width: 110
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e0c4ae7976f6842a5c1ebb85addc8b
+      internalID: 439008303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_12
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 168
+        width: 110
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc9a9d49b44c044fa85ea0b846ccf69
+      internalID: -700002060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConLinh_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 33
+        width: 90
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3758d27348f9a214aba5d0d6a8c607b7
+      internalID: 1312453411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +413,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ConLinh_0: 465891753
+      ConLinh_1: -492937434
+      ConLinh_10: 1628041116
+      ConLinh_11: 439008303
+      ConLinh_12: -700002060
+      ConLinh_13: 1312453411
+      ConLinh_2: -336915093
+      ConLinh_3: 2140066209
+      ConLinh_4: -2016108964
+      ConLinh_5: -35337410
+      ConLinh_6: -401681421
+      ConLinh_7: 385819847
+      ConLinh_8: -1533538117
+      ConLinh_9: 554554776
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
