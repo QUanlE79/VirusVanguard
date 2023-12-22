@@ -5036,6 +5036,7 @@ MonoBehaviour:
   jumpImpulse: 7
   rollImpulse: 25
   tr: {fileID: 3895757829278085503}
+  pauseMenu: {fileID: 0}
   _isMoving: 0
   _isFacingRight: 1
 --- !u!95 &1071598054696878190
@@ -5192,6 +5193,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9dad2933-eb5e-4f52-9ba3-43e4ef6efda6
     m_ActionName: Player/Rolling[/Keyboard/leftShift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4388436256836263562}
+        m_TargetAssemblyTypeName: VirusController, Assembly-CSharp
+        m_MethodName: onPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9354485c-de4a-466b-8a0f-4163c3f06ae3
+    m_ActionName: Player/PauseGame[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

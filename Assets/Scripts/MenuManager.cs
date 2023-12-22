@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    GameObject pauseMenu;
-    private void Start()
+    public GameObject pauseMenu;
+    private void Awake()
     {
-        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        
     }
     public void NewGame()
     {
