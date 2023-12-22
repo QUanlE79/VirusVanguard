@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FlyingEnemy
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Projectile
   - Door
   - GroundDetection
-  - 
+  - ChaseZone
   - 
   - 
   - 
