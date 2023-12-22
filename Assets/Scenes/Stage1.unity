@@ -4918,6 +4918,7 @@ GameObject:
   - component: {fileID: 326098527}
   - component: {fileID: 326098526}
   - component: {fileID: 326098528}
+  - component: {fileID: 326098529}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -4985,6 +4986,18 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &326098529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326098524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1fdc4ebf399fb54a8c3cf6ff1c2a7e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &342454356
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,7 +6139,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.604621, y: -0.5806458, z: -10}
+  m_LocalPosition: {x: -2.5005193, y: -0.5782902, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6626,9 +6639,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: e1fdc4ebf399fb54a8c3cf6ff1c2a7e1, type: 3}
+      - m_Target: {fileID: 326098529}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8445,6 +8458,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 607426395594241000, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
   m_PrefabInstance: {fileID: 6807407723724513291}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1909316779 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4388436256836263562, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+  m_PrefabInstance: {fileID: 6807407723724513291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f446a4dffca739244a3c594f54414285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1946871520
 GameObject:
   m_ObjectHideFlags: 0
@@ -8529,13 +8553,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000404098}
+  - component: {fileID: 2000404099}
   m_Layer: 5
-  m_Name: Main Menu
-  m_TagString: Untagged
+  m_Name: Pause Menu
+  m_TagString: PauseMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2000404098
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8561,6 +8586,18 @@ RectTransform:
   m_AnchoredPosition: {x: -257, y: -22}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2000404099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000404097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1fdc4ebf399fb54a8c3cf6ff1c2a7e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2028318050
 GameObject:
   m_ObjectHideFlags: 0
@@ -9163,6 +9200,50 @@ PrefabInstance:
     - target: {fileID: 607426395594241000, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Varus
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
+      value: 9354485c-de4a-466b-8a0f-4163c3f06ae3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
+      value: Player/PauseGame[/Keyboard/escape]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1909316779}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VirusController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522842859099836689, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7269322366686367390, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
       propertyPath: m_Name
