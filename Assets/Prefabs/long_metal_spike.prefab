@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2608236367639829256}
   - component: {fileID: 4905344034798335878}
   - component: {fileID: -6385946832032143933}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: long_metal_spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.5326853, y: 6.5694046, z: 0}
-  m_LocalScale: {x: 0.67473, y: 0.67473, z: 0.67473}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
