@@ -16,5 +16,12 @@ public class VarusArrowController : MonoBehaviour
             orgin.x * direction,
             orgin.y,
             orgin.z);
+        Debug.Log(projectie.transform.localScale);
+        Arrow arrowScript = projectie.GetComponent<Arrow>();
+        if (arrowScript != null)
+        {
+            arrowScript.SetLocalScale(projectie.transform.localScale.x);
+            arrowScript.UpdateRotation();
+        }
     }
 }
