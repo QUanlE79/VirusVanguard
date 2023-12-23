@@ -102,7 +102,7 @@ public class VirusController : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirection= GetComponent<TouchingDirection>();
         damageable= GetComponent<Damageable>();
-        //pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        
 
 
 
@@ -148,10 +148,7 @@ public class VirusController : MonoBehaviour
 
     public void onJump(InputAction.CallbackContext context)
     {   
-        //if(touchingDirection.IsGrounded)
-        //{
-        //    animator.SetBool(AnimationString.canDoubleJump, false);
-        //}
+        
         if (context.started && touchingDirection.IsGrounded && CanMove )
         {
                 
@@ -218,7 +215,7 @@ public class VirusController : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("cc");
+            
             MyGameManager.Instance.PauseGame();
             pauseMenu.SetActive(true);
             

@@ -114,7 +114,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: -1791544287, guid: ec14edbef90a817458c70804f2ada077, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchPoint: {fileID: 9023115860762977174}
-  projectilePrefab: {fileID: 3313497054110551136, guid: e94d69924d6b9d64fade16d4d6545aa0, type: 3}
+  projectilePrefab: {fileID: 3011926482359563110, guid: 8d4662e3f0f7e304ba80bece828d1697, type: 3}
 --- !u!114 &596636744838871785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,7 +559,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 0.75686276}
+      key0: {r: 0.84050906, g: 0.31777143, b: 0.98490566, a: 0.75686276}
       key1: {r: 0.335849, g: 0.3212744, b: 0.3212744, a: 1}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
