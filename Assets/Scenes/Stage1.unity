@@ -4599,7 +4599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fdc4ebf399fb54a8c3cf6ff1c2a7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 2000404097}
+  pauseMenu: {fileID: 1473407917}
 --- !u!1 &342454356
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,6 +5122,14 @@ PrefabInstance:
     - target: {fileID: 1964003980572821043, guid: a1a100672ceca4e45a290adeb9d3c4dc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2865233928078539952, guid: a1a100672ceca4e45a290adeb9d3c4dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 326098529}
+    - target: {fileID: 2865233928078539952, guid: a1a100672ceca4e45a290adeb9d3c4dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
       objectReference: {fileID: 0}
     - target: {fileID: 3055886387832815523, guid: a1a100672ceca4e45a290adeb9d3c4dc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7495,6 +7503,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1473407917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1021167845928354302, guid: a1a100672ceca4e45a290adeb9d3c4dc, type: 3}
+  m_PrefabInstance: {fileID: 429576316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1496170723
 GameObject:
   m_ObjectHideFlags: 0
@@ -8734,26 +8747,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3895757829278085503, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.b
-      value: 0.98490566
-      objectReference: {fileID: 0}
-    - target: {fileID: 3895757829278085503, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 0.31777143
-      objectReference: {fileID: 0}
-    - target: {fileID: 3895757829278085503, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.r
-      value: 0.84050906
-      objectReference: {fileID: 0}
     - target: {fileID: 4388436256836263562, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6864582372483971803, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
-      propertyPath: projectilePrefab
-      value: 
-      objectReference: {fileID: 3011926482359563110, guid: 8d4662e3f0f7e304ba80bece828d1697, type: 3}
+      objectReference: {fileID: 1473407917}
     - target: {fileID: 7269322366686367390, guid: 169fa60dea825f44eadab88077cb6ec7, type: 3}
       propertyPath: m_Name
       value: VarusArcher
