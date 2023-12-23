@@ -24,9 +24,8 @@ public class Attack : MonoBehaviour
         Damageable damageable= collision.GetComponent<Damageable>();
         if (damageable != null)
         {
-
             damageable.Hit(damage, deliveredKnockback);
-            Debug.Log(collision.name + "hit for " + damage);
+            //Debug.Log(collision.name + "hit for " + damage);
         }
     }
 }

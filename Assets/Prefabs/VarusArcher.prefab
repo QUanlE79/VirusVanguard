@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 3895757829278085503}
   m_Layer: 7
   m_Name: VarusArcher
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,6 +204,7 @@ MonoBehaviour:
   jumpImpulse: 7
   rollImpulse: 25
   tr: {fileID: 3895757829278085503}
+  pauseMenu: {fileID: 0}
   _isMoving: 0
   _isFacingRight: 1
 --- !u!95 &1071598054696878190
@@ -360,6 +361,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9dad2933-eb5e-4f52-9ba3-43e4ef6efda6
     m_ActionName: Player/Rolling[/Keyboard/leftShift]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4388436256836263562}
+        m_TargetAssemblyTypeName: VirusController, Assembly-CSharp
+        m_MethodName: onPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9354485c-de4a-466b-8a0f-4163c3f06ae3
+    m_ActionName: Player/PauseGame[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -443,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchPoint: {fileID: 9023115860762977174}
-  projectilePrefab: {fileID: 3011926482359563110, guid: 8d4662e3f0f7e304ba80bece828d1697, type: 3}
+  projectilePrefab: {fileID: 3313497054110551136, guid: e94d69924d6b9d64fade16d4d6545aa0, type: 3}
 --- !u!114 &596636744838871785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,8 +528,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0021209717
-        value: 0.50769234
+        time: 0
+        value: 0.18579918
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -520,8 +537,17 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.6887709
-        value: 0.15857714
+        time: 0.30216575
+        value: 0.13253784
+        inSlope: -0.49925727
+        outSlope: -0.49925727
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7417799
+        value: 0.08047485
         inSlope: 0
         outSlope: 0
         tangentMode: 0

@@ -24,6 +24,9 @@ public class VirusController : MonoBehaviour
     Damageable damageable;
     Vector2 moveInput;
     TouchingDirection touchingDirection;
+    public GameObject pauseMenu;
+
+
 
     public float CurSpeed { 
         get {
@@ -68,6 +71,8 @@ public class VirusController : MonoBehaviour
     }
     [SerializeField]
     private bool _isFacingRight=true;
+    internal static object instance;
+
     public bool IsFacingRight { get { return _isFacingRight; }
         private set { 
             if(_isFacingRight !=value) {
@@ -97,9 +102,12 @@ public class VirusController : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirection= GetComponent<TouchingDirection>();
         damageable= GetComponent<Damageable>();
-        
+        //pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+
+
 
     }
+
     private void FixedUpdate()
     {
        
@@ -205,5 +213,15 @@ public class VirusController : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+    public void onPause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("cc");
+            MyGameManager.Instance.PauseGame();
+            pauseMenu.SetActive(true);
+            
+        }
     }
 }

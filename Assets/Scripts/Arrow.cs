@@ -11,28 +11,43 @@ public class Arrow : MonoBehaviour
     Rigidbody2D rb2d;
     Animator animator;
     CircleCollider2D circleCollider;
+    public ParticleSystem effect;
+    private float localScaleX;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        effect = GetComponentInChildren<ParticleSystem>();
+        
     }
     void Start()
     {
         rb2d.velocity = new Vector2(speed.x * transform.localScale.x, speed.y);
         animator= GetComponent<Animator>();
         circleCollider= GetComponent<CircleCollider2D>();
+
         
+
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
-        
+       
+        if (transform.position.magnitude > 100)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Damageable damageable = collision.GetComponent<Damageable>();
         if (damageable != null)
         {
+            if (effect != null)
+            {
+                effect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear); 
+            }
             Vector2 deliveredKnockback = transform.localScale.x > 0 ? knockback : new Vector2(knockback.x, knockback.y) * new Vector2(-1, 1);
             bool gotHit=damageable.Hit(damage, deliveredKnockback);
             if (gotHit)
@@ -46,10 +61,31 @@ public class Arrow : MonoBehaviour
         rb2d.velocity = Vector2.zero;
         Destroy(circleCollider);
         animator.SetTrigger(AnimationString.hit);
-        InvokeRepeating("del", 0.7f, 0);
+        InvokeRepeating("del", 0.5f, 0);
     }
     private void del()
     {
         Destroy(gameObject);
+    }
+    public void SetLocalScale(float scaleX)
+    {
+        localScaleX = scaleX;
+        Debug.Log("Projectile Local Scale X: " + localScaleX);
+    }
+    public void UpdateRotation()
+    {
+        if (effect == null)
+        {
+            Debug.LogWarning("Particle System component not found in children.");
+        }
+        else
+        {
+
+            // Set the start rotation of the Particle System to match the parent object's rotation
+            ParticleSystem.MainModule mainModule = effect.main;
+            int direction = localScaleX > 0 ? 1 : -1;
+            mainModule.startRotation = direction > 0 ? 0 : 180 * Mathf.Deg2Rad;
+            Debug.Log(mainModule.startRotation.constant);
+        }
     }
 }

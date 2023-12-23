@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ThanLanBay_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 674
+        width: 98
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb427a610ae32664fa752fa4c8d05a71
+      internalID: -2057718661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 674
+        width: 94
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c28b82a492c6442a3931deb713d646
+      internalID: -678979157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_2
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 678
+        width: 115
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77b5381307303547962152cbb07ec1e
+      internalID: 1515678937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_3
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 678
+        width: 96
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f666ceb92b374f24a98679d4d7fe83d1
+      internalID: 1144653926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 549
+        width: 94
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817cf126678f1a240aeca57c893f17f9
+      internalID: 1916369094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_5
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 550
+        width: 116
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b00ad1120e9b254699908745f9204df
+      internalID: 1805178556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_6
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 550
+        width: 111
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c3b884627597241a12da9eb2302bce
+      internalID: -476674251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 423
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b5d334ed826fd458cdc6d7e9035e18
+      internalID: -1436491355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_8
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 291
+        width: 98
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a5f189d317ecd4d9d1e0806d4c4b79
+      internalID: -1003363493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 291
+        width: 94
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5d93cd93fe01943952aa9867399802
+      internalID: 1861733836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_10
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 295
+        width: 114
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b83183f1111a6459f800947eb1817b
+      internalID: 662177442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_11
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 291
+        width: 96
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1c5cd11caee2d4ca22297221c454bb
+      internalID: 1552332376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_12
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 165
+        width: 95
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8fd0b72a4fd8f4699406b13f0159c2
+      internalID: -181029720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_13
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 167
+        width: 116
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ed877ab5f605a408f62ef98804b41e
+      internalID: -1718778102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_14
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 167
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499e21ad5139c554d87ef51897f5f0c7
+      internalID: 504772969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThanLanBay_15
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 32
+        width: 102
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1199f99d23e4d34294dda4991aaaa0f
+      internalID: -1927036601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +455,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ThanLanBay_0: -2057718661
+      ThanLanBay_1: -678979157
+      ThanLanBay_10: 662177442
+      ThanLanBay_11: 1552332376
+      ThanLanBay_12: -181029720
+      ThanLanBay_13: -1718778102
+      ThanLanBay_14: 504772969
+      ThanLanBay_15: -1927036601
+      ThanLanBay_2: 1515678937
+      ThanLanBay_3: 1144653926
+      ThanLanBay_4: 1916369094
+      ThanLanBay_5: 1805178556
+      ThanLanBay_6: -476674251
+      ThanLanBay_7: -1436491355
+      ThanLanBay_8: -1003363493
+      ThanLanBay_9: 1861733836
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
