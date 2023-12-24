@@ -34,7 +34,7 @@ public class Arrow : MonoBehaviour
     void Update()
     {
        
-        if (transform.position.magnitude > 100)
+        if (transform.position.magnitude > 1000)
         {
             Destroy(gameObject);
         }
