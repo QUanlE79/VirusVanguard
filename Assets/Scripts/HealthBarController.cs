@@ -10,12 +10,12 @@ public class HealthBarController : MonoBehaviour
     public Image BackHB;
     public TMP_Text HealthAmountText;
     public float chipSeed= 2f;
-    Damageable damageable;
+    PlayerDamageable damageable;
     float lerpTimer = 0f;
     
     private void Awake()
     {
-        damageable = GetComponent<Damageable>();
+        damageable = GetComponent<PlayerDamageable>();
     }
     // Start is called before the first frame update
     void Start()

@@ -19,7 +19,7 @@ public class HealthCollectible : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Damageable damageable= collision.GetComponent<Damageable>();
+        PlayerDamageable damageable= collision.GetComponent<PlayerDamageable>();
         if (damageable)
         {
             bool washealed=damageable.Health(healAmount);
