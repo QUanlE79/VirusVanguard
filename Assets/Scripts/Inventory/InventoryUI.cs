@@ -54,14 +54,7 @@ public class InventoryUI : MonoBehaviour
         {
             
             inventoryUI.SetActive(!inventoryUI.activeSelf);
-            if (inventoryUI.activeSelf)
-            {
-                Time.timeScale = 0;
-            }
-            else
-            {
-                Time.timeScale = 1;
-            }
+            //
         }
     }
 }
