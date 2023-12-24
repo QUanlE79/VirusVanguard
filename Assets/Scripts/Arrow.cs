@@ -70,7 +70,7 @@ public class Arrow : MonoBehaviour
     public void SetLocalScale(float scaleX)
     {
         localScaleX = scaleX;
-        Debug.Log("Projectile Local Scale X: " + localScaleX);
+       
     }
     public void UpdateRotation()
     {
@@ -85,7 +85,7 @@ public class Arrow : MonoBehaviour
             ParticleSystem.MainModule mainModule = effect.main;
             int direction = localScaleX > 0 ? 1 : -1;
             mainModule.startRotation = direction > 0 ? 0 : 180 * Mathf.Deg2Rad;
-            Debug.Log(mainModule.startRotation.constant);
+            
         }
     }
 }

@@ -14,4 +14,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StageBach.unity
     guid: 4eff6d2b41332ed40bf9e5fa5f5ef6f8
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 96b6924d5520bce40afd7f4e37ad1731, type: 2}

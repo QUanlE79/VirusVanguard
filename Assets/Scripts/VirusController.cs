@@ -159,7 +159,7 @@ public class VirusController : MonoBehaviour
         }
         else if(context.started && !touchingDirection.IsGrounded && CanMove)
         {
-            Debug.Log("cl" + canDoubleJump);
+            
             if (canDoubleJump)
             {
                 
