@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossesScript : MonoBehaviour
+public class QSScript : MonoBehaviour
 {
     public float speed = 3f;
     public bool chase = false;

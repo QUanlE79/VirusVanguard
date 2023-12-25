@@ -328,6 +328,9 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 5227065626336679124}
   attackZonePhase2: {fileID: 4351536163023903035}
+  SQCC: {fileID: 8312473365286834900, guid: 7e52d8b66a40c9e439fae40b7a1e3e08, type: 3}
+  SQCK: {fileID: 8616117044008193632, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
+  SQND: {fileID: 432115350216964327, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
   flashEffect: {fileID: 1859030130838699014}
 --- !u!114 &1859030130838699014
 MonoBehaviour:
@@ -602,7 +605,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.65517426, y: 0.21838951}
+  m_Offset: {x: -1.2547302, y: 0.21838951}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -613,7 +616,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3897552, y: 2.4691658}
+  m_Size: {x: 1.9580688, y: 2.4691658}
   m_EdgeRadius: 0
 --- !u!114 &5227065626336679124
 MonoBehaviour:
