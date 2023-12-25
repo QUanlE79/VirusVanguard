@@ -8,18 +8,30 @@ public class InventoryUI : MonoBehaviour
 
     public Transform itemsParent;   // The parent object of all the items
     public GameObject inventoryUI;  // The entire UI
-
+    private CanvasGroup inventoryCanvasGroup;
     Inventory inventory;    // Our current inventory
 
     InventorySlot[] slots;  // List of all the slots
-
+    private void Awake()
+    {
+        
+    }
     void Start()
     {
         inventory = Inventory.instance;
-        inventory.onItemChangedCallback += UpdateUI;    // Subscribe to the onItemChanged callback
+        inventory.onItemChangedCallback += UpdateUI;
+        
+          // Subscribe to the onItemChanged callback
 
         // Populate our slots array
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+        Transform inventoryTransform = inventoryUI.transform; // Replace "Inventory" with the actual name of your inventory UI GameObject
+
+        // Get the CanvasGroup component
+        inventoryCanvasGroup = inventoryTransform.GetComponent<CanvasGroup>();
+
+        // Hide the inventory UI at the start
+        HideInventory();
     }
 
     void Update()
@@ -35,6 +47,7 @@ public class InventoryUI : MonoBehaviour
     void UpdateUI()
     {
         // Loop through all the slots
+        Debug.Log(inventory.items.Count);
         for (int i = 0; i < slots.Length; i++)
         {
             if (i < inventory.items.Count)  // If there is an item to add
@@ -53,8 +66,37 @@ public class InventoryUI : MonoBehaviour
         if (context.performed)
         {
             
-            inventoryUI.SetActive(!inventoryUI.activeSelf);
+           ToggleInventoryVisibility();
             //
+        }
+    }
+    private void HideInventory()
+    {
+        // Set alpha to 0 (completely transparent) and disable interactability
+        inventoryCanvasGroup.alpha = 0f;
+        inventoryCanvasGroup.interactable = false;
+        inventoryCanvasGroup.blocksRaycasts = false;
+    }
+
+    private void ShowInventory()
+    {
+        // Set alpha to 1 (fully opaque) and enable interactability
+        inventoryCanvasGroup.alpha = 1f;
+        inventoryCanvasGroup.interactable = true;
+        inventoryCanvasGroup.blocksRaycasts = true;
+    }
+
+    private void ToggleInventoryVisibility()
+    {
+        if (inventoryCanvasGroup.alpha > 0f)
+        {
+            HideInventory();
+            
+        }
+        else
+        {
+            ShowInventory();
+           
         }
     }
 }

@@ -5,18 +5,27 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int damage= 10;
+    private int damage;
     public Vector2 speed = new Vector2 (3f,0);
     public Vector2 knockback = new Vector2 (2f,0);
     Rigidbody2D rb2d;
     Animator animator;
     CircleCollider2D circleCollider;
+    public Equipment weapon;
     public ParticleSystem effect;
     private float localScaleX;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         effect = GetComponentInChildren<ParticleSystem>();
+        if(weapon== null)
+        {
+            damage = 10;
+        }
+        else
+        {
+            damage = weapon.damageModifier;
+        }
         
     }
     void Start()
@@ -30,7 +39,6 @@ public class Arrow : MonoBehaviour
     }
 
     // Update is called once per frame
-    [System.Obsolete]
     void Update()
     {
        
@@ -76,7 +84,8 @@ public class Arrow : MonoBehaviour
     {
         if (effect == null)
         {
-            Debug.LogWarning("Particle System component not found in children.");
+            
+            
         }
         else
         {

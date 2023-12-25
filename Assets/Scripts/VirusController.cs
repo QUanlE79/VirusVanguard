@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(Damageable))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(PlayerDamageable))]
 public class VirusController : MonoBehaviour
 {
     private Rigidbody2D rb2d;
@@ -21,7 +21,7 @@ public class VirusController : MonoBehaviour
 
     public TrailRenderer tr;
     Animator animator;
-    Damageable damageable;
+    PlayerDamageable damageable;
     Vector2 moveInput;
     TouchingDirection touchingDirection;
     public GameObject pauseMenu;
@@ -101,7 +101,7 @@ public class VirusController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         touchingDirection= GetComponent<TouchingDirection>();
-        damageable= GetComponent<Damageable>();
+        damageable= GetComponent<PlayerDamageable>();
         
 
 
