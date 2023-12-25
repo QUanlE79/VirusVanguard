@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /* Keep track of equipment. Has functions for adding and removing items. */
@@ -33,16 +34,16 @@ public class EquipmentManager : MonoBehaviour {
 	// Callback for when an item is equipped/unequipped
 	public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
 	public OnEquipmentChanged onEquipmentChanged;
-   
+	public Transform equipmentParent;
 
-	Inventory inventory;	// Reference to our inventory
-
+	Inventory inventory;    // Reference to our inventory
+	EquipSlot[] slots;
 	void Start ()
 	{
-		inventory = Inventory.instance;		// Get a reference to our inventory
-
-		// Initialize currentEquipment based on number of equipment slots
-		int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
+		inventory = Inventory.instance;     // Get a reference to our inventory
+        slots = equipmentParent.GetComponentsInChildren<EquipSlot>();
+        // Initialize currentEquipment based on number of equipment slots
+        int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length;
 		currentEquipment = new Equipment[numSlots];
         //currentMeshes = new SkinnedMeshRenderer[numSlots];
 
@@ -53,8 +54,10 @@ public class EquipmentManager : MonoBehaviour {
 	public void Equip (Equipment newItem)
 	{
 		// Find out what slot the item fits in
+		if (newItem == null)
+			return;
 		int slotIndex = (int)newItem.equipSlot;
-
+		
         Equipment oldItem = Unequip(slotIndex);
 
 		// An item has been equipped so we trigger the callback
@@ -69,9 +72,9 @@ public class EquipmentManager : MonoBehaviour {
 			weapon.projectilePrefab = newItem.EquipmentPrefab;
 		}
 		currentEquipment[slotIndex] = newItem;
-
+        slots[slotIndex].AddItem(newItem);
         //AttachToMesh(newItem, slotIndex);
-	}
+    }
 
 	// Unequip an item with a particular index
 	public Equipment Unequip (int slotIndex)
@@ -87,13 +90,16 @@ public class EquipmentManager : MonoBehaviour {
            
 			// Remove the item from the equipment array
 			currentEquipment[slotIndex] = null;
-
-			// Equipment has been removed so we trigger the callback
-			if (onEquipmentChanged != null)
+			slots[slotIndex].ClearSlot();
+			Equip(defaultEquipment[slotIndex]);
+            // Equipment has been removed so we trigger the callback
+            if (onEquipmentChanged != null)
 			{
-				onEquipmentChanged.Invoke(null, oldItem);
+                onEquipmentChanged.Invoke(null, oldItem);
 			}
+			
 		}
+        
         return oldItem;
 	}
 
@@ -108,36 +114,31 @@ public class EquipmentManager : MonoBehaviour {
         EquipDefaults();
 	}
 
- //   void AttachToMesh(Equipment item, int slotIndex)
-	//{
-
- //       SkinnedMeshRenderer newMesh = Instantiate(item.mesh) as SkinnedMeshRenderer;
- //       newMesh.transform.parent = targetMesh.transform.parent;
-
- //       newMesh.rootBone = targetMesh.rootBone;
-	//	newMesh.bones = targetMesh.bones;
-		
-	//	currentMeshes[slotIndex] = newMesh;
-
-
- //       SetBlendShapeWeight(item, 100);
-       
-	//}
-
- //   void SetBlendShapeWeight(Equipment item, int weight)
- //   {
-	//	foreach (MeshBlendShape blendshape in item.coveredMeshRegions)
-	//	{
-	//		int shapeIndex = (int)blendshape;
- //           targetMesh.SetBlendShapeWeight(shapeIndex, weight);
-	//	}
- //   }
+    public void UpdateUI()
+    {
+        //for (int i = 0; i < slots.Length; i++)
+        //{
+        //    if (i < currentEquipment.Length)  // If there is an item to add
+        //    {
+        //        slots[i].AddItem(inventory.items[i]);   // Add it
+        //    }
+        //    else
+        //    {
+        //        // Otherwise clear the slot
+        //        slots[i].ClearSlot();
+        //    }
+        //}
+    }
 
     void EquipDefaults()
     {
 		foreach (Equipment e in defaultEquipment)
 		{
-			Equip(e);
+			if (e != null)
+			{
+                Equip(e);
+            }
+			
 		}
     }
 
