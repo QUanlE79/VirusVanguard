@@ -25,9 +25,12 @@ public class VirusController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirection touchingDirection;
     public GameObject pauseMenu;
-
-
-
+    public AudioSource bowCharge;
+    public AudioSource bowRelease;
+    public AudioSource footStep1;
+    public AudioSource DashAudio;
+    public AudioSource doubleJump;
+    public AudioSource Jump;
     public float CurSpeed { 
         get {
             if (CanMove)
@@ -151,8 +154,8 @@ public class VirusController : MonoBehaviour
         
         if (context.started && touchingDirection.IsGrounded && CanMove )
         {
-                
-                animator.SetTrigger(AnimationString.jump);
+            Jump.Play();
+            animator.SetTrigger(AnimationString.jump);
                 animator.SetBool(AnimationString.canDoubleJump, true);
                 rb2d.velocity = new Vector2(rb2d.velocity.x, jumpImpulse);
                 
@@ -191,6 +194,7 @@ public class VirusController : MonoBehaviour
     {
         if (context.performed && canDash)
         {
+            DashAudio.Play();
             
             animator.SetTrigger(AnimationString.roll);
             StartCoroutine(Dash());
@@ -221,4 +225,26 @@ public class VirusController : MonoBehaviour
             
         }
     }
+    public void onChargeBow()
+    {
+        bowCharge.Play();
+    }
+    public void onReleaseBow()
+    {
+        bowRelease.Play();
+    }
+    public void FootStepPlay()
+    {
+        footStep1.Play();
+        InvokeRepeating("StopFootStep", 1, 0);
+    }
+    public void StopFootStep()
+    {
+        footStep1.Stop();
+    }
+    public void OnSecondJump()
+    {
+        doubleJump.Play();
+    }
+
 }
