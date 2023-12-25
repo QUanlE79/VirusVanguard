@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DD_death
+  m_Name: TD_idle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,16 +22,16 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 155704790, guid: 8ee6c1372eb68854680ae8a83c1a3d1d, type: 3}
-    - time: 0.25
+    - time: 0.33333334
       value: {fileID: -998780859, guid: 8ee6c1372eb68854680ae8a83c1a3d1d, type: 3}
-    - time: 0.75
+    - time: 0.6666667
       value: {fileID: 1652053762, guid: 8ee6c1372eb68854680ae8a83c1a3d1d, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 4
+  m_SampleRate: 3
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
