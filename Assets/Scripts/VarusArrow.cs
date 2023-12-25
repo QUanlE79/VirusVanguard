@@ -20,7 +20,7 @@ public class VarusArrow : MonoBehaviour
         effect = GetComponentInChildren<ParticleSystem>();
         if(weapon== null)
         {
-            damage = 10;
+            damage = 0;
         }
         else
         {
