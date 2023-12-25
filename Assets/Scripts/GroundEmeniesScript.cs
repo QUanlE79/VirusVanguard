@@ -18,7 +18,8 @@ public class GroundEmeniesScript : MonoBehaviour
     public enum WalkableDirection { Right, Left }
     private WalkableDirection _walkDirection;
     private Vector2 walkDirectionVector = Vector2.right;
-
+    public int minCoin = 1;
+    public int maxCoin = 10;
     public WalkableDirection WalkDirection
     {
         get { return _walkDirection; }
@@ -113,6 +114,7 @@ public class GroundEmeniesScript : MonoBehaviour
         }
         if (!isAlive)
         {
+            
             InvokeRepeating("Death", 0.7f, 0);
         }
         
@@ -140,6 +142,7 @@ public class GroundEmeniesScript : MonoBehaviour
     }
     void Death()
     {
+        damageable.DropCoin(minCoin, maxCoin);
         Destroy(gameObject);
     }
 

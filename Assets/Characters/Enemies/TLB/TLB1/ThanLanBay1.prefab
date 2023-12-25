@@ -90,7 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a532004d10349a429d12334923f10ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyArray: []
 --- !u!1 &5327185599143276921
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +265,7 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   InvincibilityTime: 0.25
+  CoinPrefab: {fileID: 9010154992810424471, guid: bc8223112bfbaca4a8f7963ce008dec4, type: 3}
 --- !u!114 &342962057778949089
 MonoBehaviour:
   m_ObjectHideFlags: 0

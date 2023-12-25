@@ -330,6 +330,7 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   InvincibilityTime: 0.25
+  CoinPrefab: {fileID: 9010154992810424471, guid: bc8223112bfbaca4a8f7963ce008dec4, type: 3}
 --- !u!114 &3680640288011882354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +347,8 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 5649450097255072239}
   cliffDetectionZone: {fileID: 1053514136789913839}
+  minCoin: 1
+  maxCoin: 10
   flashEffect: {fileID: 1585530961976336942}
 --- !u!95 &8762134282906332162
 Animator:

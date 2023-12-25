@@ -21,13 +21,21 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -194049833, guid: 4f154d39a4c58ef4189c74f6b890fdaa, type: 3}
+      value: {fileID: -811884282, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
+    - time: 0.125
+      value: {fileID: -917709936, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
+    - time: 0.25
+      value: {fileID: 1159888662, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
+    - time: 0.375
+      value: {fileID: 937749580, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
+    - time: 0.5
+      value: {fileID: 951882818, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 60
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -44,13 +52,17 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -194049833, guid: 4f154d39a4c58ef4189c74f6b890fdaa, type: 3}
+    - {fileID: -811884282, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
+    - {fileID: -917709936, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
+    - {fileID: 1159888662, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
+    - {fileID: 937749580, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
+    - {fileID: 951882818, guid: da040b249ea0ccb4183ed7d99c4fccc2, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 0.625
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -69,4 +81,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.25
+    functionName: LaunchDan
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

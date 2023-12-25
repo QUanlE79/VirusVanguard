@@ -11,7 +11,7 @@ public class PlayerDamageable : MonoBehaviour
     Animator animator;
     public Stat damage;
     public Stat armor;
-    
+    VirusController controller;
     // Start is called before the first frame update
     [SerializeField]
     private int _maxhealth = 100;
@@ -63,7 +63,7 @@ public class PlayerDamageable : MonoBehaviour
             Debug.Log("isAlive:" + value);
         }
     }
-
+    
     public bool LockVelocity
     {
         get
@@ -79,13 +79,15 @@ public class PlayerDamageable : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        controller=GetComponent<VirusController>();
     }
     void Start()
     {
-        //EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+        EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
     }
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
+        Debug.Log("modify");
         // Add new modifiers
         if (newItem != null)
         {
@@ -120,7 +122,7 @@ public class PlayerDamageable : MonoBehaviour
     public bool Hit(int damage, Vector2 knockback)
     {
         Debug.Log(damage);
-        if (isAlive && !isInvincible)
+        if (isAlive && !isInvincible && !controller.isDashing)
         {
             damage -= armor.GetValue();
             damage = Mathf.Clamp(damage, 0, int.MaxValue);
@@ -130,6 +132,10 @@ public class PlayerDamageable : MonoBehaviour
             LockVelocity= true;
             damageableHit?.Invoke(damage, knockback);
             CharacterEvents.CharacterTookDamaged.Invoke(gameObject, damage);
+            if (health < 0)
+            {
+                health = 0;
+            }
             return true;
         }
         return false;

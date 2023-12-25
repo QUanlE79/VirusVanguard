@@ -15,7 +15,7 @@ public class VirusController : MonoBehaviour
     public float jumpImpulse = 8f;
     public float rollImpulse = 30f;
     private bool canDash = true;
-    private bool isDashing;
+    public bool isDashing;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
@@ -192,7 +192,7 @@ public class VirusController : MonoBehaviour
     }
     public void onDash(InputAction.CallbackContext context)
     {
-        if (context.performed && canDash)
+        if (context.performed && canDash && CanMove)
         {
             DashAudio.Play();
             

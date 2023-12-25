@@ -22,6 +22,8 @@ public class Damageable : MonoBehaviour
             _maxhealth = value;
         }
     }
+    private Vector2 spawnArea = new Vector2(0.5f, 0.5f);
+    
     [SerializeField]
     private int _health = 100;
     public int health
@@ -46,6 +48,7 @@ public class Damageable : MonoBehaviour
     
     private float timeSinceHit=0;
     public float InvincibilityTime = 0.25f;
+    public GameObject CoinPrefab;
     public bool isAlive
     {
         get
@@ -94,6 +97,10 @@ public class Damageable : MonoBehaviour
             }
             timeSinceHit += Time.deltaTime;
         }
+        if(!isAlive)
+        {
+            
+        }
     }
 
     public bool Hit(int damage, Vector2 knockback)
@@ -119,6 +126,24 @@ public class Damageable : MonoBehaviour
             int actualHeal = Mathf.Min(maxheal, healthRestore);
             health += actualHeal;
             CharacterEvents.CharacterHealthed.Invoke(gameObject, actualHeal);
+            return true;
+        }
+        return false;
+    }
+    public bool DropCoin(int min,int max)
+    {
+        Debug.Log("Coin");
+        if (!isAlive && CoinPrefab!=null)
+        {
+            Debug.Log("Coin2");
+            float amountCoin = (float) Random.Range(min,max)/10;
+            float actualDropCoin= Mathf.Clamp(amountCoin, 1f, (float) max);
+            Debug.Log(actualDropCoin);
+            for(int i = 0; i < (int)actualDropCoin; i++)
+            {
+                Vector2 randomSpawnPoint = transform.position + new Vector3(Random.Range(-spawnArea.x, spawnArea.x), 0, 0);
+                Instantiate(CoinPrefab, randomSpawnPoint, Quaternion.identity);
+            }
             return true;
         }
         return false;
