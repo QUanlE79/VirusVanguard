@@ -21,7 +21,7 @@ public class Attack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {   
         Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(knockback.x, knockback.y)* new Vector2(-1,1);
-        Damageable damageable= collision.GetComponent<Damageable>();
+        PlayerDamageable damageable= collision.GetComponent<PlayerDamageable>();
         if (damageable != null)
         {
             damageable.Hit(damage, deliveredKnockback);

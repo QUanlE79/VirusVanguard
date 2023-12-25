@@ -26,5 +26,6 @@ internal class AnimationString
     internal static string atkCd = "atkCd";
     internal static string canDoubleJump = "canDoubleJump";
     internal static string roll = "roll";
+    internal static string isPhase2 = "isPhase2";
 }
 

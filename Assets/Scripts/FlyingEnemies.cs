@@ -6,8 +6,8 @@ public class FlyingEnemies : MonoBehaviour
 {
     public float speed = 2f;
     public bool chase = false;
-   // public Transform startingPoint;
-    private Vector3 startPoint;
+    public Transform spawPoint;
+    //private Vector3 startPoint;
     private GameObject player;
 
     public float walkStopRate = 0.05f;
@@ -74,7 +74,7 @@ public class FlyingEnemies : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        startPoint = transform.position;
+        //startPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -87,7 +87,7 @@ public class FlyingEnemies : MonoBehaviour
         }
         else
         {
-            ReturnStartPoint();
+            ReturnSpawPoint();
         }
         
         Flip();
@@ -104,9 +104,9 @@ public class FlyingEnemies : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
     }
-    private void ReturnStartPoint()
+    private void ReturnSpawPoint()
     {
-        transform.position = Vector2.MoveTowards(transform.position, startPoint, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, spawPoint.position, speed * Time.deltaTime);
     }
     private void Flip()
     {

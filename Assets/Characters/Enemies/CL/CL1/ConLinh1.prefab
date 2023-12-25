@@ -195,11 +195,11 @@ GameObject:
   - component: {fileID: 9085243134150995739}
   - component: {fileID: 8915124171884717697}
   - component: {fileID: 7299598865613427067}
-  - component: {fileID: 8587884300139704527}
   - component: {fileID: 3975547194308334795}
   - component: {fileID: 2737493668224087748}
   - component: {fileID: 3277290598160508359}
   - component: {fileID: 2314302094943213871}
+  - component: {fileID: 2605566536403598609}
   m_Layer: 9
   m_Name: ConLinh1
   m_TagString: Untagged
@@ -360,20 +360,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8587884300139704527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6135115921140398684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512de1cc13507fb42b6157246466344b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LaunchPoint: {fileID: 6974451744174859090}
-  projectilePrefab: {fileID: 7491817444771003852, guid: 3ab50f9ea7bc30d48a399985d0c24b1b, type: 3}
 --- !u!114 &3975547194308334795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +456,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 4271322b35696f047910f1582fb6e085, type: 2}
   duration: 0.125
+--- !u!114 &2605566536403598609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135115921140398684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ec2b1bed7ef664e8edec2d8c43bf75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaunchPoint: {fileID: 6974451744174859090}
+  projectilePrefab: {fileID: 7491817444771003852, guid: 3ab50f9ea7bc30d48a399985d0c24b1b, type: 3}
 --- !u!1 &8181804891808907053
 GameObject:
   m_ObjectHideFlags: 0

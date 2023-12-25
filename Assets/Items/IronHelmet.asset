@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7ec968a47d7ea4787191247dc00a18, type: 3}
-  m_Name: FireArrow
+  m_Script: {fileID: 11500000, guid: 3914a38786470774fbe2f0767ea0fee5, type: 3}
+  m_Name: IronHelmet
   m_EditorClassIdentifier: 
-  name: Arrow of Fire
-  icon: {fileID: 21300000, guid: 879d1a4ca6b8b40428e74c32899603e4, type: 3}
+  name: Iron Helmet
+  icon: {fileID: 21300000, guid: 516aa4b3dd619314081107cdab9aec5e, type: 3}
   isDefaultItem: 0
+  equipSlot: 0
+  armorModifier: 1
+  damageModifier: 0
+  EquipmentPrefab: {fileID: 0}

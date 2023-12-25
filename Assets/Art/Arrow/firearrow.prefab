@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4913505645788325317}
   - component: {fileID: 7592978076078067475}
-  - component: {fileID: 1475946854687140031}
   - component: {fileID: 5413451132041284656}
   - component: {fileID: 2591023046518468756}
   - component: {fileID: 473935498526943058}
+  - component: {fileID: 2394769298318818596}
   m_Layer: 11
   m_Name: firearrow
   m_TagString: Untagged
@@ -90,22 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1475946854687140031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3313497054110551136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36afd29ea627512439f562e53c4d51cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  speed: {x: 4, y: 0}
-  knockback: {x: 4, y: 0}
-  effect: {fileID: 0}
 --- !u!50 &5413451132041284656
 Rigidbody2D:
   serializedVersion: 4
@@ -189,6 +173,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2394769298318818596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3313497054110551136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5011d518f57553c44a9d81c72965fdf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 3, y: 0}
+  knockback: {x: 2, y: 0}
+  weapon: {fileID: 11400000, guid: 07a14e3ded6e12e4c9fdcf775fad1492, type: 2}
+  effect: {fileID: 2310989441199249912}
 --- !u!1 &6296645304816212452
 GameObject:
   m_ObjectHideFlags: 0
