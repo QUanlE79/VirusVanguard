@@ -20,11 +20,12 @@ public class HandScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InvokeRepeating("del", 0.5f, 0);
+        InvokeRepeating("del", 10f, 0);
     }
     
     private void del()
     {
+        Debug.Log("cc");
         Destroy(gameObject);
     }
 }
