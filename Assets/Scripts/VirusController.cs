@@ -236,7 +236,7 @@ public class VirusController : MonoBehaviour
     public void FootStepPlay()
     {
         footStep1.Play();
-        InvokeRepeating("StopFootStep", 1, 0);
+        InvokeRepeating("StopFootStep", 0.5f, 0);
     }
     public void StopFootStep()
     {
