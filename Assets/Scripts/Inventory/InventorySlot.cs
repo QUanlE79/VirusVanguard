@@ -39,7 +39,7 @@ public class InventorySlot : MonoBehaviour
     {
         int direction = player.transform.localScale.x > 0 ? 1 : -1;
         Debug.Log(direction);
-        Vector3 spawnPoint = new Vector3((player.transform.position.x + direction), player.transform.position.y, 0);
+        Vector3 spawnPoint = new Vector3((player.transform.position.x + direction*1), player.transform.position.y, 0);
         if(item!=null )
         {
             GameObject newitem = Instantiate(item.ItemPrefab, spawnPoint, Quaternion.identity);
