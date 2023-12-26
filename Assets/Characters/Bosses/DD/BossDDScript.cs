@@ -60,6 +60,7 @@ public class BossDDScript : MonoBehaviour
         animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine(Meet());
     }
     private bool isChecked = false;
     public GameObject Dan;
@@ -200,5 +201,24 @@ public class BossDDScript : MonoBehaviour
         // Hide the canvas notification
         Dialog.gameObject.SetActive(false);
         SceneManager.LoadScene(0);
+    }
+    public Canvas MeetDialog;
+    //private float Duration = 5f;
+    private IEnumerator Meet()
+    {
+        // Freeze the screen
+        Time.timeScale = 0f;
+
+        // Display the canvas notification
+        MeetDialog.gameObject.SetActive(true);
+
+        // Wait for a duration
+        yield return new WaitForSecondsRealtime(Duration);
+
+        // Unfreeze the screen
+        Time.timeScale = 1f;
+
+        // Hide the canvas notification
+        MeetDialog.gameObject.SetActive(false);
     }
 }
