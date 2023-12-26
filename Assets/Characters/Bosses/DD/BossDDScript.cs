@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static GroundEmeniesScript;
 
 public class BossDDScript : MonoBehaviour
@@ -173,8 +174,31 @@ public class BossDDScript : MonoBehaviour
         flashEffect.Flash();
 
     }
-    void Death()
+    public Canvas Dialog;
+    private float Duration = 5f;
+    private void FixedUpdate()
     {
-        Destroy(gameObject);
+        if (!isAlive)
+        {
+            StartCoroutine(Death());
+        }
+    }
+    private IEnumerator Death()
+    {
+        // Freeze the screen
+        //Time.timeScale = 0f;
+
+        // Display the canvas notification
+        Dialog.gameObject.SetActive(true);
+
+        // Wait for a duration
+        yield return new WaitForSecondsRealtime(Duration);
+
+        // Unfreeze the screen
+        //Time.timeScale = 1f;
+
+        // Hide the canvas notification
+        Dialog.gameObject.SetActive(false);
+        SceneManager.LoadScene(0);
     }
 }
