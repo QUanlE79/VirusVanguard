@@ -50,7 +50,7 @@ public class BossDDScript : MonoBehaviour
 
     private void Awake()
     {
-       
+
     }
     // Start is called before the first frame update
     void Start()
@@ -60,6 +60,7 @@ public class BossDDScript : MonoBehaviour
         animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine(Meet());
     }
     private bool isChecked = false;
     public GameObject Dan;
@@ -123,12 +124,12 @@ public class BossDDScript : MonoBehaviour
         else
         {
             //transform.rotation = Quaternion.Euler(0, 0, 0);
-            
+
             WalkDirection = WalkableDirection.Right;
 
         }
 
-        
+
 
     }
     //public GameObject projectilePrefab;
@@ -146,14 +147,14 @@ public class BossDDScript : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
-            GameObject projectie = Instantiate(Dan, new Vector2(player.transform.position.x + i*2, player.transform.position.y + 10), Dan.transform.rotation);
+            GameObject projectie = Instantiate(Dan, new Vector2(player.transform.position.x + i * 2, player.transform.position.y + 10), Dan.transform.rotation);
             Vector3 orgin = projectie.transform.localScale;
             int direction = transform.localScale.x > 0 ? 1 : -1;
             projectie.transform.localScale = new Vector3(
                 orgin.x * direction,
                 orgin.y,
                 orgin.z);
-          
+
         }
     }
     public void LaunchDan()
@@ -200,5 +201,24 @@ public class BossDDScript : MonoBehaviour
         // Hide the canvas notification
         Dialog.gameObject.SetActive(false);
         SceneManager.LoadScene(0);
+    }
+    public Canvas MeetDialog;
+    //private float Duration = 5f;
+    private IEnumerator Meet()
+    {
+        // Freeze the screen
+        Time.timeScale = 0f;
+
+        // Display the canvas notification
+        MeetDialog.gameObject.SetActive(true);
+
+        // Wait for a duration
+        yield return new WaitForSecondsRealtime(Duration);
+
+        // Unfreeze the screen
+        Time.timeScale = 1f;
+
+        // Hide the canvas notification
+        MeetDialog.gameObject.SetActive(false);
     }
 }
