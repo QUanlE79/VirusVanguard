@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7284166024251705103}
   - component: {fileID: 2412631592320459258}
   - component: {fileID: 6598234627348861293}
-  - component: {fileID: 4130835366013313152}
+  - component: {fileID: 3344515288224504748}
   m_Layer: 16
   m_Name: NBSkill
   m_TagString: Untagged
@@ -171,7 +171,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &4130835366013313152
+--- !u!114 &3344515288224504748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3155650042122430640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36afd29ea627512439f562e53c4d51cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 73acb41b2a920b4468ca04806698cc14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
