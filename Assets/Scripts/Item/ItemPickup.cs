@@ -2,18 +2,22 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour {
 
-	public Item item;	// Item to put in the inventory on pickup
+	public Item item;   // Item to put in the inventory on pickup
+    public Vector3 spinRotationSpeed = new Vector3(0, 180, 0);
+    // When the player interacts with the item
+    //public override void Interact()
+    //{
+    //	base.Interact();
 
-	// When the player interacts with the item
-	//public override void Interact()
-	//{
-	//	base.Interact();
+    //	PickUp();	// Pick it up!
+    //}
 
-	//	PickUp();	// Pick it up!
-	//}
-
-	// Pick up the item
-	void PickUp ()
+    // Pick up the item
+    private void Update()
+    {
+        transform.eulerAngles += spinRotationSpeed * Time.deltaTime;
+    }
+    void PickUp ()
 	{
 		Debug.Log("Picking up " + item.name);
 		bool wasPickedUp = Inventory.instance.Add(item);	// Add to inventory
@@ -24,7 +28,10 @@ public class ItemPickup : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-		
-        PickUp();
+		if(collision.GetComponent<PlayerDamageable>() != null)
+        {
+            PickUp();
+        }
+       
     }
 }

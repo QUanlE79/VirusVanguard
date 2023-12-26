@@ -15,7 +15,8 @@ MonoBehaviour:
   name: Iron Helmet
   icon: {fileID: 21300000, guid: 516aa4b3dd619314081107cdab9aec5e, type: 3}
   isDefaultItem: 0
+  ItemPrefab: {fileID: 2521636243051981656, guid: de5bc4abe8efc4343af887d5a4551baa, type: 3}
   equipSlot: 0
   armorModifier: 1
   damageModifier: 0
-  EquipmentPrefab: {fileID: 0}
+  EquipmentPrefab: {fileID: 2521636243051981656, guid: de5bc4abe8efc4343af887d5a4551baa, type: 3}

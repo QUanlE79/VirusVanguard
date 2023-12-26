@@ -15,7 +15,8 @@ MonoBehaviour:
   name: IronArmor
   icon: {fileID: 21300000, guid: 41a0689a95f5c28408490f69f2e327bc, type: 3}
   isDefaultItem: 0
+  ItemPrefab: {fileID: 8399087730134043543, guid: e0f32fb92f797f24795fb35aeb5fc944, type: 3}
   equipSlot: 1
   armorModifier: 2
   damageModifier: 0
-  EquipmentPrefab: {fileID: 0}
+  EquipmentPrefab: {fileID: 8399087730134043543, guid: e0f32fb92f797f24795fb35aeb5fc944, type: 3}
