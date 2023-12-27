@@ -110,7 +110,25 @@ public class VirusController : MonoBehaviour
 
 
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            
+            Vector2 direction = new Vector2(transform.localScale.x, 0f); 
+            RaycastHit2D hit = Physics2D.Raycast(rb2d.position, direction, 1.5f, LayerMask.GetMask("NPC"));
 
+            if (hit.collider != null)
+            {
+                NPC character = hit.collider.GetComponent<NPC>();
+
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                }
+            }
+        }
+    }
     private void FixedUpdate()
     {
        
