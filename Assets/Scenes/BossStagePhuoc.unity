@@ -461,6 +461,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3655481265923443214, guid: 6c4f09990587fc14f9e8d83bed045511, type: 3}
+      propertyPath: Dialog
+      value: 
+      objectReference: {fileID: 1137847268}
+    - target: {fileID: 3655481265923443214, guid: 6c4f09990587fc14f9e8d83bed045511, type: 3}
+      propertyPath: MeetDialog
+      value: 
+      objectReference: {fileID: 224936714}
     - target: {fileID: 4740457811912119913, guid: 6c4f09990587fc14f9e8d83bed045511, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -707,9 +715,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Strumming through the chaos, you've silenced me. \nThe melody of victory
-    echoes in every shattered chord\nAnd the echoes will resonate through the annals
-    of history"
+  m_text: With a mighty blow, the player vanquished the once indomitable boss, shattering
+    the enchanted rock and restoring peace to the virtual realm.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad8d9397ccde0f542aa308b3138b0416, type: 2}
   m_sharedMaterial: {fileID: 2650155722396308456, guid: ad8d9397ccde0f542aa308b3138b0416, type: 2}
@@ -1032,7 +1039,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2.09}
+  m_AnchoredPosition: {x: -0.09, y: 3.65}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577783704
@@ -1108,7 +1115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 3.26}
+  m_AnchoredPosition: {x: -0.09, y: 3.65}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &581393404
@@ -1131,7 +1138,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0a209a58ea8eaf847a27f9cd379a72af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66ce013d30b646049bde8459d6ff44f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1363,7 +1370,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -1.7}
-  m_SizeDelta: {x: 5.8971, y: 0.8004}
+  m_SizeDelta: {x: 7, y: 0.8004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678418360
 MonoBehaviour:
@@ -1385,7 +1392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Chord Lord
+  m_text: Granite Goliath
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad8d9397ccde0f542aa308b3138b0416, type: 2}
   m_sharedMaterial: {fileID: 2650155722396308456, guid: ad8d9397ccde0f542aa308b3138b0416, type: 2}
@@ -1685,7 +1692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Chord Lord
+  m_text: Granite Goliath
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad8d9397ccde0f542aa308b3138b0416, type: 2}
   m_sharedMaterial: {fileID: 2650155722396308456, guid: ad8d9397ccde0f542aa308b3138b0416, type: 2}
@@ -2269,7 +2276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.37, y: 1.49}
+  m_AnchoredPosition: {x: 74.97, y: -14.29}
   m_SizeDelta: {x: 20, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1451407528
@@ -8618,8 +8625,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hello Challenger,\nHope you can unleash \na symphony of challenge for
-    me"
+  m_text: From the depths of the enchanted rock, I, the formidable boss, arise to
+    challenge you, player, in this ultimate showdown of skill and determination!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad8d9397ccde0f542aa308b3138b0416, type: 2}
   m_sharedMaterial: {fileID: 2650155722396308456, guid: ad8d9397ccde0f542aa308b3138b0416, type: 2}
@@ -9026,7 +9033,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 10}
+  m_SizeDelta: {x: 20, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842305190
 MonoBehaviour:
@@ -9103,7 +9110,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 10}
+  m_SizeDelta: {x: 20, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895358830
 MonoBehaviour:
