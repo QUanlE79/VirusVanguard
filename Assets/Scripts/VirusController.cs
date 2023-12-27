@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -176,7 +177,7 @@ public class VirusController : MonoBehaviour
     }
     public void onAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && !EventSystem.current.IsPointerOverGameObject())
         {
             animator.SetTrigger(AnimationString.fire);
         }

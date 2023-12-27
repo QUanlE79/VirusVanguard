@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 7839243696240373209}
   removeButton: {fileID: 4452311736655383250}
+  tooltipPrefab: {fileID: 5158857365596157568, guid: b040ca0185fe772419d3f4ab6b9e2916, type: 3}
 --- !u!114 &7631056542388867679
 MonoBehaviour:
   m_ObjectHideFlags: 0

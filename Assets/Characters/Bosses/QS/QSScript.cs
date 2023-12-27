@@ -22,8 +22,8 @@ public class QSScript : MonoBehaviour
     Damageable damageable;
 
     SpriteRenderer spriteRenderer;
-    public int minCoin = 9;
-    public int maxCoin = 15;
+    public int minCoin = 90;
+    public int maxCoin = 150;
 
     private bool _hasTarget = false;
     public GameObject door;
