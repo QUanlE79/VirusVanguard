@@ -52,6 +52,8 @@ public class BossTDScript : MonoBehaviour
         StartCoroutine(Meet());
         blueBook.transform.localScale = new Vector3(1,1,1);
         redBook.transform.localScale = new Vector3(1, 1, 1);
+        blueBook.GetComponent<SkillScipt>().damage = 10;
+        redBook.GetComponent<SkillScipt>().damage = 10;
         theHand.transform.localScale = new Vector3(2, 2, 2);
         theRock.transform.localScale = new Vector3(2, 2, 2);
     }
@@ -71,6 +73,8 @@ public class BossTDScript : MonoBehaviour
             isChecked = true;
             blueBook.transform.localScale *= 2f;
             redBook.transform.localScale *= 2f;
+            blueBook.GetComponent<SkillScipt>().damage *= 2;
+            redBook.GetComponent<SkillScipt>().damage *= 2;
             theHand.transform.localScale *= 2f;
             theRock.transform.localScale *= 2f;
         }
