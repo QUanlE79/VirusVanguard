@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StageBach.unity
     guid: 4eff6d2b41332ed40bf9e5fa5f5ef6f8
   - enabled: 1
+    path: Assets/Scenes/Stage1Boss.unity
+    guid: 14e2db6c45d8c504fb44b3da6e4274c6
+  - enabled: 1
     path: Assets/Scenes/StagePhuoc.unity
     guid: 5c296c1525295cd42b91586b11159ce1
   - enabled: 1

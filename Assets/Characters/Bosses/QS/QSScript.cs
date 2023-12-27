@@ -22,9 +22,11 @@ public class QSScript : MonoBehaviour
     Damageable damageable;
 
     SpriteRenderer spriteRenderer;
+    public int minCoin = 9;
+    public int maxCoin = 15;
 
     private bool _hasTarget = false;
-
+    public GameObject door;
     public bool HasTarget
     {
         get { return _hasTarget; }
@@ -82,6 +84,7 @@ public class QSScript : MonoBehaviour
         animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        door = GameObject.FindGameObjectWithTag("Door");
     }
     // Start is called before the first frame update
     void Start()
@@ -113,7 +116,7 @@ public class QSScript : MonoBehaviour
         if (damageable.health < damageable.MaxHealth/2 && isChecked == false)
         {
             IsPhase2 = true;
-            speed = 6f;
+            speed = 5f;
             spriteRenderer.color = HexToColor("#FF92BF");
             isChecked = true;
             Vector2 spawPoint = transform.position;
@@ -128,6 +131,14 @@ public class QSScript : MonoBehaviour
         if (atkCd > 0)
         {
             atkCd -= Time.deltaTime;
+        }
+    }
+    private void FixedUpdate()
+    {
+        if(!isAlive)
+        {
+            Death();
+            Destroy(gameObject);
         }
     }
     Color HexToColor(string hex)
@@ -162,6 +173,25 @@ public class QSScript : MonoBehaviour
     }
     void Death()
     {
-        Destroy(gameObject);
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject x in enemies)
+        {
+            Destroy(x);
+        }
+        damageable.DropCoin(minCoin,maxCoin);
+        BoxCollider2D boxCollider = door.GetComponent<BoxCollider2D>();
+        SpriteRenderer spriteRenderer = door.GetComponent<SpriteRenderer>();
+
+        if (boxCollider != null)
+        {
+            // Toggle the enabled state of the BoxCollider2D
+            boxCollider.enabled = true;
+        }
+        spriteRenderer.color = new Color(
+                spriteRenderer.color.r,
+                spriteRenderer.color.g,
+                spriteRenderer.color.b,
+                255 // invert the alpha value
+            );
     }
 }
