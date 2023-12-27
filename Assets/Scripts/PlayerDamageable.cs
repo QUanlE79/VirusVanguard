@@ -152,4 +152,18 @@ public class PlayerDamageable : MonoBehaviour
         }
         return false;
     }
+    public PlayerDamageableData SavePlayerDamageableData()
+    {
+        return new PlayerDamageableData(this);
+    }
+
+    public void LoadPlayerDamageableData(PlayerDamageableData loadedData)
+    {
+        this.MaxHealth = loadedData.maxHealth;
+        this.health = loadedData.health;
+        this.damage.SetModifiers(loadedData.damageModifiers);
+        this.armor.SetModifiers(loadedData.armorModifiers);
+
+        // Load other data as needed
+    }
 }
