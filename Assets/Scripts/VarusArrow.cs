@@ -5,7 +5,7 @@ using UnityEngine;
 public class VarusArrow : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int damage;
+    private int damage=0;
     public Vector2 speed = new Vector2 (3f,0);
     public Vector2 knockback = new Vector2 (2f,0);
     Rigidbody2D rb2d;
@@ -14,6 +14,7 @@ public class VarusArrow : MonoBehaviour
     public Equipment weapon;
     public ParticleSystem effect;
     private float localScaleX;
+    Vector2 startPoint;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -26,7 +27,8 @@ public class VarusArrow : MonoBehaviour
         {
             damage = weapon.damageModifier;
         }
-        
+        startPoint = new Vector2(transform.position.x, transform.position.y);
+
     }
     void Start()
     {
@@ -41,8 +43,10 @@ public class VarusArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        if (transform.position.magnitude > 1000)
+
+        float distance = Vector2.Distance(new Vector2(transform.position.x, transform.position.y),
+            new Vector2(startPoint.x, startPoint.y));
+        if (distance > 20)
         {
             Destroy(gameObject);
         }

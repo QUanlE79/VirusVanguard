@@ -11,12 +11,15 @@ public class Projectile : MonoBehaviour
     Rigidbody2D rb2d;
     Animator animator;
     CircleCollider2D circleCollider;
+    Vector2 startPonit;
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        startPonit = new Vector2(transform.position.x, transform.position.y);
     }
     void Start()
     {
+
         rb2d.velocity = new Vector2(speed.x * transform.localScale.x, speed.y);
         animator = GetComponent<Animator>();
         circleCollider = GetComponent<CircleCollider2D>();
@@ -26,7 +29,12 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        float distance = Vector2.Distance(new Vector2(transform.position.x, transform.position.y),
+            new Vector2(startPonit.x, startPonit.y));
+        if (distance > 20)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
