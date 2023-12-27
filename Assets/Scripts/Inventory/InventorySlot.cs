@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 /* Sits on all InventorySlots. */
@@ -9,13 +11,16 @@ public class InventorySlot : MonoBehaviour
     public Image icon;          // Reference to the Icon image
     public Button removeButton; // Reference to the remove button
     GameObject player;
-    Item item;  // Current item in the slot
+    public Equipment item;  // Current item in the slot
+   
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        
     }
     // Add item to the slot
-    public void AddItem(Item newItem)
+    public void AddItem(Equipment newItem)
     {
         item = newItem;
 
@@ -60,5 +65,9 @@ public class InventorySlot : MonoBehaviour
             item.Use();
         }
     }
+    
+
+
+    
 
 }   
