@@ -250,6 +250,17 @@
                 },
                 {
                     "name": "",
+                    "id": "dd8071ae-cacb-4bc8-86bd-8c7bbf0c37b0",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9b277de0-c198-48d3-8ec7-67ad5a83e52d",
                     "path": "<Keyboard>/w",
                     "interactions": "",
@@ -261,11 +272,33 @@
                 },
                 {
                     "name": "",
+                    "id": "6010a934-d21a-4b01-826a-5e7717a5335c",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "b991acc6-9352-48d5-985c-a80b331b191b",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Rolling",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed139076-d768-4160-86fd-d7740fca35a1",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Rolling",
                     "isComposite": false,
                     "isPartOfComposite": false
