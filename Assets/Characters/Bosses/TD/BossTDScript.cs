@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static GroundEmeniesScript;
+using UnityEngine.SceneManagement;
+
 
 public class BossTDScript : MonoBehaviour
 {
@@ -47,8 +49,11 @@ public class BossTDScript : MonoBehaviour
         animator = GetComponent<Animator>();
         damageable = GetComponent<Damageable>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine(Meet());
         blueBook.transform.localScale = new Vector3(1,1,1);
         redBook.transform.localScale = new Vector3(1, 1, 1);
+        blueBook.GetComponent<SkillScipt>().damage = 10;
+        redBook.GetComponent<SkillScipt>().damage = 10;
         theHand.transform.localScale = new Vector3(2, 2, 2);
         theRock.transform.localScale = new Vector3(2, 2, 2);
     }
@@ -68,6 +73,8 @@ public class BossTDScript : MonoBehaviour
             isChecked = true;
             blueBook.transform.localScale *= 2f;
             redBook.transform.localScale *= 2f;
+            blueBook.GetComponent<SkillScipt>().damage *= 2;
+            redBook.GetComponent<SkillScipt>().damage *= 2;
             theHand.transform.localScale *= 2f;
             theRock.transform.localScale *= 2f;
         }
@@ -184,8 +191,57 @@ public class BossTDScript : MonoBehaviour
         flashEffect.Flash();
 
     }
-    void Death()
+    // void Death()
+    // {
+    //     Destroy(gameObject);
+    // }
+    public Canvas MeetDialog;
+    private float Duration = 5f;
+
+    //private float Duration = 5f;
+    private IEnumerator Meet()
     {
-        Destroy(gameObject);
+        // Freeze the screen
+        Time.timeScale = 0f;
+
+        // Display the canvas notification
+        MeetDialog.gameObject.SetActive(true);
+
+        // Wait for a duration
+        yield return new WaitForSecondsRealtime(Duration);
+
+        // Unfreeze the screen
+        Time.timeScale = 1f;
+
+        // Hide the canvas notification
+        MeetDialog.gameObject.SetActive(false);
+    }
+    public Canvas Dialog;
+
+    private IEnumerator Death()
+    {
+        // Freeze the screen
+        //Time.timeScale = 0f;
+
+        // Display the canvas notification
+        Dialog.gameObject.SetActive(true);
+
+        // Wait for a duration
+        yield return new WaitForSecondsRealtime(Duration);
+
+        // Unfreeze the screen
+        //Time.timeScale = 1f;
+
+        // Hide the canvas notification
+        Dialog.gameObject.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
+
+    private void FixedUpdate()
+    {
+        if (!isAlive)
+        {
+            StartCoroutine(Death());
+        }
     }
 }

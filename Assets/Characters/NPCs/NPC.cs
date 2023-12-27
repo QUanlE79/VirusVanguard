@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
@@ -11,6 +14,7 @@ public class NPC : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         Dialog.gameObject.SetActive(false);
+        
     }
    
     // Update is called once per frame
@@ -52,5 +56,4 @@ public class NPC : MonoBehaviour
         }
 
     }
-    
 }

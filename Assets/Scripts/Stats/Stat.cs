@@ -24,10 +24,10 @@ public class Stat {
 
 	// Add new modifier
 	public void AddModifier (int modifier)
-	{
+	{		
 		if (modifier != 0)
 			modifiers.Add(modifier);
-	}
+    }
 
 	// Remove a modifier
 	public void RemoveModifier (int modifier)
