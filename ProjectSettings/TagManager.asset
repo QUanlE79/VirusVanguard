@@ -30,6 +30,7 @@ TagManager:
   - GroundDetection
   - ChaseZone
   - Item
+  - NPC
   - FlyingGround
   - 
   - 

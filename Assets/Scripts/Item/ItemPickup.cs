@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour {
 
-	public Item item;   // Item to put in the inventory on pickup
+	public Equipment item;   // Item to put in the inventory on pickup
     public Vector3 spinRotationSpeed = new Vector3(0, 180, 0);
     // When the player interacts with the item
     //public override void Interact()
@@ -26,9 +26,9 @@ public class ItemPickup : MonoBehaviour {
 		if (wasPickedUp)
 			Destroy(gameObject);	// Destroy item from scene
 	}
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-		if(collision.GetComponent<PlayerDamageable>() != null)
+		if(collision.gameObject.GetComponent<PlayerDamageable>() != null)
         {
             PickUp();
         }

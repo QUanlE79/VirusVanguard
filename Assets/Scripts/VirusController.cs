@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -110,7 +111,25 @@ public class VirusController : MonoBehaviour
 
 
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            
+            Vector2 direction = new Vector2(transform.localScale.x, 0f); 
+            RaycastHit2D hit = Physics2D.Raycast(rb2d.position, direction, 1.5f, LayerMask.GetMask("NPC"));
 
+            if (hit.collider != null)
+            {
+                NPC character = hit.collider.GetComponent<NPC>();
+
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                }
+            }
+        }
+    }
     private void FixedUpdate()
     {
        
@@ -176,7 +195,7 @@ public class VirusController : MonoBehaviour
     }
     public void onAttack(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && !EventSystem.current.IsPointerOverGameObject())
         {
             animator.SetTrigger(AnimationString.fire);
         }

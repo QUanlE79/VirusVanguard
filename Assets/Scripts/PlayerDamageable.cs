@@ -87,7 +87,7 @@ public class PlayerDamageable : MonoBehaviour
     }
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
-        Debug.Log("modify");
+       
         // Add new modifiers
         if (newItem != null)
         {
