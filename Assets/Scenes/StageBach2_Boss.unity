@@ -188,6 +188,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1926839608}
     - target: {fileID: 4326508600896037138, guid: d3167e8941ae94343bba71167bd2d839, type: 3}
+      propertyPath: bgMusic
+      value: 
+      objectReference: {fileID: 1019751807}
+    - target: {fileID: 4326508600896037138, guid: d3167e8941ae94343bba71167bd2d839, type: 3}
       propertyPath: MeetDialog
       value: 
       objectReference: {fileID: 1680693307}

@@ -7,12 +7,14 @@ using UnityEngine.UI;
 
 public class OrrnScript : MonoBehaviour
 {
+    public AudioSource BgMusic;
     // Start is called before the first frame update
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         damageable = player.GetComponent<PlayerDamageable>();
         UpGradeTime = 0;
+        BgMusic.Play();
     }
 
     // Update is called once per frame
