@@ -165,7 +165,10 @@ public class PlayerDamageable : MonoBehaviour
         this.health = loadedData.health;
         this.damage.SetModifiers(loadedData.damageModifiers);
         this.armor.SetModifiers(loadedData.armorModifiers);
-
+        YuriaScript.UpGradeTime = loadedData.upgradeHPTime;
+        OrrnScript.UpGradeTime = loadedData.upgradeATKTime;
+        YuriaScript.instance.UpdateHPBar();
+        OrrnScript.instance.UpdateAtkBar();
         // Load other data as needed
     }
 }

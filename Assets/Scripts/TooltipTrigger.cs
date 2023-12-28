@@ -16,6 +16,7 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         if (inventorySlot.item)
         {
+            Debug.Log(inventorySlot.item.name);
             TooltipSystem.ShowTooltip(inventorySlot.item.name, inventorySlot.item.damageModifier,inventorySlot.item.armorModifier);
 
         }

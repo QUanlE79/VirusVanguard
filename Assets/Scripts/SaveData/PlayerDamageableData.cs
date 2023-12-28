@@ -8,7 +8,8 @@ public class PlayerDamageableData
     public List<int> damageModifiers;
 
     public List<int> armorModifiers;
-
+    public int upgradeHPTime;
+    public int upgradeATKTime;
     public PlayerDamageableData(PlayerDamageable playerDamageable)
     {
         maxHealth = playerDamageable.MaxHealth;
@@ -23,5 +24,7 @@ public class PlayerDamageableData
         // Armor stat
         
         armorModifiers = new List<int>(playerDamageable.armor.GetModifiers());
+        upgradeATKTime = OrrnScript.UpGradeTime;
+        upgradeHPTime = YuriaScript.UpGradeTime;
     }
 }
