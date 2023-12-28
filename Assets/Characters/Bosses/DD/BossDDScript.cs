@@ -53,6 +53,8 @@ public class BossDDScript : MonoBehaviour
 
     }
     // Start is called before the first frame update
+    public AudioSource warningStart;
+    public AudioSource bgMusic;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -61,6 +63,8 @@ public class BossDDScript : MonoBehaviour
         damageable = GetComponent<Damageable>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(Meet());
+        warningStart.Play();
+        bgMusic.Play();
     }
     private bool isChecked = false;
     public GameObject Dan;
@@ -176,7 +180,7 @@ public class BossDDScript : MonoBehaviour
 
     }
     public Canvas Dialog;
-    private float Duration = 5f;
+    private float Duration = 10f;
     private void FixedUpdate()
     {
         if (!isAlive)
@@ -220,5 +224,6 @@ public class BossDDScript : MonoBehaviour
 
         // Hide the canvas notification
         MeetDialog.gameObject.SetActive(false);
+        warningStart.Stop();
     }
 }
