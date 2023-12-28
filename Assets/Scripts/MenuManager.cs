@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class MenuManager : MonoBehaviour
     List<int> heights = new List<int>() { 320, 540, 800, 1080 };
     public GameObject pauseMenu;
     public GameObject optionsDialog;
+    public AudioMixer audioMixer;
     private void Awake()
     {
 
@@ -60,5 +62,13 @@ public class MenuManager : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         optionsDialog.SetActive(false);
+    }
+    public void ChangeMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("MusicVol", volume);
+    }
+    public void ChangeFXVolume(float volume)
+    {
+        audioMixer.SetFloat("FXVol", volume);
     }
 }
