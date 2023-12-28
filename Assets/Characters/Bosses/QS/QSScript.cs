@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QSScript : MonoBehaviour
 {
@@ -90,6 +91,7 @@ public class QSScript : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(Meet());
     }
     private bool isChecked = false;
 
@@ -193,5 +195,44 @@ public class QSScript : MonoBehaviour
                 spriteRenderer.color.b,
                 255 // invert the alpha value
             );
+        StartCoroutine(DeathSpeech());
+    }
+    public Canvas MeetDialog;
+    public Canvas EndDialog;
+    private float Duration = 5f;
+    private IEnumerator Meet()
+    {
+        // Freeze the screen
+        Time.timeScale = 0f;
+
+        // Display the canvas notification
+        MeetDialog.gameObject.SetActive(true);
+
+        // Wait for a duration
+        yield return new WaitForSecondsRealtime(Duration);
+
+        // Unfreeze the screen
+        Time.timeScale = 1f;
+
+        // Hide the canvas notification
+        MeetDialog.gameObject.SetActive(false);
+    }
+    private IEnumerator DeathSpeech()
+    {
+        // Freeze the screen
+        //Time.timeScale = 0f;
+
+        // Display the canvas notification
+        EndDialog.gameObject.SetActive(true);
+
+        // Wait for a duration
+        yield return new WaitForSecondsRealtime(Duration);
+
+        // Unfreeze the screen
+        //Time.timeScale = 1f;
+
+        // Hide the canvas notification
+        EndDialog.gameObject.SetActive(false);
+        //SceneManager.LoadScene(0);
     }
 }

@@ -19,13 +19,17 @@ public class VarusArrow : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         effect = GetComponentInChildren<ParticleSystem>();
-        if(weapon== null)
+        if(weapon == null)
         {
-            damage = 0;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerDamageable damageable = player.GetComponent<PlayerDamageable>();
+            damage = 0 + damageable.damage.GetValue();
         }
         else
         {
-            damage = weapon.damageModifier;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerDamageable damageable = player.GetComponent<PlayerDamageable>();
+            damage = weapon.damageModifier + damageable.damage.GetValue();
         }
         startPoint = new Vector2(transform.position.x, transform.position.y);
 

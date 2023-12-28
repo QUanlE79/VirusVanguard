@@ -106,7 +106,12 @@ public class VirusController : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirection= GetComponent<TouchingDirection>();
         damageable= GetComponent<PlayerDamageable>();
-        
+        PlayerDamageableData loadedData = FileManager.LoadPlayerDamageableData();
+        if (loadedData != null)
+        {
+            // Apply the loaded data to the playerDamageable instance
+            damageable.LoadPlayerDamageableData(loadedData);
+        }
 
 
 

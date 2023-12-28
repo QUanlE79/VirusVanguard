@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,10 +24,10 @@ public class Stat {
 
 	// Add new modifier
 	public void AddModifier (int modifier)
-	{
+	{		
 		if (modifier != 0)
 			modifiers.Add(modifier);
-	}
+    }
 
 	// Remove a modifier
 	public void RemoveModifier (int modifier)
@@ -34,5 +35,25 @@ public class Stat {
 		if (modifier != 0)
 			modifiers.Remove(modifier);
 	}
+
+    public List<int> GetModifiers()
+    {
+        return modifiers;
+    }
+    public void SetModifiers(List<int> newModifiers)
+    {
+        ClearModifiers();
+        AddModifiers(newModifiers);
+    }
+    public void AddModifiers(List<int> newModifiers)
+    {
+        newModifiers.ForEach(x => AddModifier(x));
+    }
+
+    // Clear all modifiers
+    public void ClearModifiers()
+    {
+        modifiers.Clear();
+    }
 
 }
