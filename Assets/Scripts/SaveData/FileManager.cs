@@ -24,4 +24,24 @@ public class FileManager : MonoBehaviour
             return null;
         }
     }
+    public static void LoadEquipmentAtStart()
+    {
+        // Replace the following with your actual equipment data
+
+        // Load equipment into the equipment manager
+        EquipmentManager.instance.LoadEquipment("EquipmentData.json");
+
+        // Load inventory from a file
+        Inventory.instance.LoadInventory("InventoryData.json");
+    }
+    public static void SaveEquipmentAtEnd()
+    {
+        // Replace the following with your actual equipment data
+
+        // Load equipment into the equipment manager
+        EquipmentManager.instance.SaveEquipment("EquipmentData.json");
+
+        // Load inventory from a file
+        Inventory.instance.SaveInventory("InventoryData.json");
+    }
 }

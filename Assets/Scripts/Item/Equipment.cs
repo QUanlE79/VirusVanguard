@@ -14,12 +14,14 @@ public class Equipment : Item {
 	public int armorModifier;		// Increase/decrease in armor
 	public int damageModifier;
 	public GameObject EquipmentPrefab;
-	// Increase/decrease in damage
+    [SerializeField]
+    private string equipmentPrefabPath;
+    // Increase/decrease in damage
     //public SkinnedMeshRenderer mesh;
     //public EquipmentManager.MeshBlendShape[] coveredMeshRegions;
 
-	// When pressed in inventory
-	public override void Use()
+    // When pressed in inventory
+    public override void Use()
 	{
 		base.Use();
 		EquipmentManager.instance.Equip(this);	// Equip it

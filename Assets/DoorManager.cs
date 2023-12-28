@@ -24,9 +24,11 @@ public class DoorManager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        FileManager.SaveEquipmentAtEnd();
         damageable = collision.GetComponent<PlayerDamageable>();
         PlayerDamageableData data = new PlayerDamageableData(damageable);
         FileManager.SavePlayerDamageableData(data);
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

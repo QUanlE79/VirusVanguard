@@ -29,7 +29,7 @@ public class VarusArrow : MonoBehaviour
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             PlayerDamageable damageable = player.GetComponent<PlayerDamageable>();
-            damage = weapon.damageModifier + damageable.damage.GetValue();
+            damage = damageable.damage.GetValue();
         }
         startPoint = new Vector2(transform.position.x, transform.position.y);
 
