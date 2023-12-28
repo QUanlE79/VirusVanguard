@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -169,6 +170,12 @@ public class PlayerDamageable : MonoBehaviour
         OrrnScript.UpGradeTime = loadedData.upgradeATKTime;
         YuriaScript.instance.UpdateHPBar();
         OrrnScript.instance.UpdateAtkBar();
+        CoinManager.instance.AddCoins(loadedData.cointAmount);        //CoinManager.instance.onCoinChanged += OnCoinChanged;
         // Load other data as needed
+    }
+
+    private void OnCoinChanged()
+    {
+        throw new NotImplementedException();
     }
 }

@@ -25,6 +25,7 @@ public class CoinManager : MonoBehaviour
         if (coinCount >= amount)
         {
             coinCount -= amount;
+            onCoinChanged.Invoke();
             // You can also add logic here to update the UI or perform other actions when coins are spent
             return true; // Return true to indicate that the coins were successfully spent
         }

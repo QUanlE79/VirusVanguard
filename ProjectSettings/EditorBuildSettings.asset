@@ -21,16 +21,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage1Boss.unity
     guid: 14e2db6c45d8c504fb44b3da6e4274c6
   - enabled: 1
-    path: Assets/Scenes/StagePhuoc.unity
-    guid: 5c296c1525295cd42b91586b11159ce1
-  - enabled: 1
-    path: Assets/Scenes/BossStagePhuoc.unity
-    guid: 008ce46b49686c74dadb6bb46cae5054
-  - enabled: 1
     path: Assets/Scenes/StageBach2.unity
     guid: 6666fabfc67687b49b584b98ed0a3658
   - enabled: 1
     path: Assets/Scenes/StageBach2_Boss.unity
     guid: 99ba008ae0c65464491c521e83c33443
+  - enabled: 1
+    path: Assets/Scenes/StagePhuoc.unity
+    guid: 5c296c1525295cd42b91586b11159ce1
+  - enabled: 1
+    path: Assets/Scenes/BossStagePhuoc.unity
+    guid: 008ce46b49686c74dadb6bb46cae5054
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 96b6924d5520bce40afd7f4e37ad1731, type: 2}
