@@ -17675,6 +17675,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthPickup
       objectReference: {fileID: 0}
+    - target: {fileID: 6889671445241575687, guid: 25a8358f933b1a8439154425e84218f3, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889671445241575687, guid: 25a8358f933b1a8439154425e84218f3, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dec86d589743f2c4c8b06d1615b07fcb, type: 3}
+    - target: {fileID: 6889671445241575687, guid: 25a8358f933b1a8439154425e84218f3, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8306888295616902803, guid: 25a8358f933b1a8439154425e84218f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.76

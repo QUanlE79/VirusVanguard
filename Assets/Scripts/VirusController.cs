@@ -28,6 +28,7 @@ public class VirusController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirection touchingDirection;
     public GameObject pauseMenu;
+    public GameObject optionDialog;
     public AudioSource bowCharge;
     public AudioSource bowRelease;
     public AudioSource footStep1;
@@ -261,9 +262,10 @@ public class VirusController : MonoBehaviour
     {
         if (context.performed)
         {
-            
-            MyGameManager.Instance.PauseGame();
-            pauseMenu.SetActive(true);
+            if (!optionDialog.activeInHierarchy) {
+                MyGameManager.Instance.PauseGame();
+                pauseMenu.SetActive(true);
+            }
             
         }
     }

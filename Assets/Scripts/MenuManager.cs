@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    List<int> widths = new List<int>() { 568, 960, 1280, 1920 };
+    List<int> heights = new List<int>() { 320, 540, 800, 1080 };
     public GameObject pauseMenu;
+    public GameObject optionsDialog;
     private void Awake()
     {
-        
+
     }
     public void NewGame()
     {
@@ -17,7 +20,8 @@ public class MenuManager : MonoBehaviour
     }
     public void Options()
     {
-
+        pauseMenu.SetActive(false);
+        optionsDialog.SetActive(true);
     }
     public void Quit()
     {
@@ -25,10 +29,13 @@ public class MenuManager : MonoBehaviour
     }
     public void PauseGame()
     {
-        MyGameManager.Instance.PauseGame();
-        
-        
-        
+        if (!optionsDialog.activeInHierarchy)
+        {
+            MyGameManager.Instance.PauseGame();
+        }
+
+
+
     }
     public void ResumeGame()
     {
@@ -36,4 +43,22 @@ public class MenuManager : MonoBehaviour
         pauseMenu.SetActive(false);
     }
 
+    public void SetScreenSize(int idx)
+    {
+        bool fullscreen = Screen.fullScreen;
+        int width = widths[idx];
+        int height = heights[idx];
+        Screen.SetResolution(width, height, fullscreen);
+    }
+
+    public void SetFullScreen(bool isFull)
+    {
+        Screen.fullScreen = isFull;
+    }
+
+    public void Back()
+    {
+        pauseMenu.SetActive(true);
+        optionsDialog.SetActive(false);
+    }
 }
