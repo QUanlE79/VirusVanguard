@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 /* Keep track of equipment. Has functions for adding and removing items. */
 
@@ -106,10 +108,18 @@ public class EquipmentManager : MonoBehaviour {
 	// Unequip all items
 	public void UnequipAll ()
 	{
-		for (int i = 0; i < currentEquipment.Length; i++)
+		if (currentEquipment.Length > 0)
 		{
-			Unequip(i);
-		}
+            for (int i = 0; i < currentEquipment.Length; i++)
+            {
+				if (currentEquipment[i] != null)
+				{
+                    Unequip(i);
+                }
+               
+            }
+        }
+		
 
         EquipDefaults();
 	}
@@ -149,4 +159,79 @@ public class EquipmentManager : MonoBehaviour {
 			UnequipAll();
 	}
 
+    public void SaveEquipment(string filePath)
+    {
+        EquipmentListWrapper wrapper = new EquipmentListWrapper
+        {
+            equipmentList = new List<EquipmentData>()
+        };
+        foreach (Equipment item in currentEquipment)
+        {
+            if(item != null)
+            {
+                EquipmentData itemData = new EquipmentData
+                {
+                    name = item.name,
+                    iconPath = AssetDatabase.GetAssetPath(item.icon),  // Use the path or other identifier
+                    isDefaultItem = item.isDefaultItem,
+                    // Add other necessary fields here
+                    damageModifier = item.damageModifier,
+                    armorModifier = item.armorModifier,
+                    equipSlot = item.equipSlot,
+                    equipmentPrefabPath = item.EquipmentPrefab != null ? AssetDatabase.GetAssetPath(item.EquipmentPrefab) : "",
+                    itemPrefabPath = item.ItemPrefab != null ? AssetDatabase.GetAssetPath(item.ItemPrefab) : ""
+                };
+
+                wrapper.equipmentList.Add(itemData);
+                
+            }
+           
+        }
+
+        string json = JsonUtility.ToJson(wrapper);
+        System.IO.File.WriteAllText(filePath, json);
+    }
+
+    // Load equipment from a file into the equipment manager
+    public void LoadEquipment(string filePath)
+    {
+        if (System.IO.File.Exists(filePath))
+        {
+            string json = System.IO.File.ReadAllText(filePath);
+            Debug.Log(json);
+            EquipmentListWrapper wrapper = JsonUtility.FromJson<EquipmentListWrapper>(json);
+
+            // Clear current equipment before adding loaded equipment
+			if(wrapper != null && wrapper.equipmentList.Count> 0)
+			{
+                UnequipAll();
+            }
+            
+
+            foreach (EquipmentData equipment in wrapper.equipmentList)
+            {
+                Equipment item = ScriptableObject.CreateInstance<Equipment>();
+                item.name = equipment.name;
+                item.icon = AssetDatabase.LoadAssetAtPath<Sprite>(equipment.iconPath);  // Use the path or other identifier
+                item.isDefaultItem = equipment.isDefaultItem;
+                // Add other necessary fields here
+                item.damageModifier = equipment.damageModifier;
+                item.armorModifier = equipment.armorModifier;
+                item.equipSlot = equipment.equipSlot;
+                item.EquipmentPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(equipment.equipmentPrefabPath);
+                item.ItemPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(equipment.itemPrefabPath);
+                Equip(item);
+                Debug.Log(item.name );
+            }
+        }
+    }
+    public int GetCurWeaponDamage()
+    {
+        return currentEquipment[(int)EquipmentSlot.Weapon].damageModifier;
+    }
+}
+[System.Serializable]
+public class EquipmentListWrapper
+{
+    public List<EquipmentData> equipmentList;
 }

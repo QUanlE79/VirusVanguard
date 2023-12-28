@@ -8,12 +8,18 @@ using UnityEngine.UI;
 public class OrrnScript : MonoBehaviour
 {
     public AudioSource BgMusic;
+    public static OrrnScript instance;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        instance = this;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         damageable = player.GetComponent<PlayerDamageable>();
-        UpGradeTime = 0;
+       
+    }
+    void Start()
+    {
+       
         BgMusic.Play();
     }
 
@@ -25,7 +31,7 @@ public class OrrnScript : MonoBehaviour
     public Image AtkBar;
     public TMP_Text AtkText;
     PlayerDamageable damageable;
-    public int UpGradeTime;
+    public static int UpGradeTime=0;
     public void UpdateAtkBar()
     {
         if (UpGradeTime <= 10)

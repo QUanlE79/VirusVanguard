@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class InventoryUI : MonoBehaviour
 {
-
+    public static InventoryUI Instance;
     public Transform itemsParent;   // The parent object of all the items
     public GameObject inventoryUI;  // The entire UI
     private CanvasGroup inventoryCanvasGroup;
@@ -15,20 +15,21 @@ public class InventoryUI : MonoBehaviour
     private void Awake()
     {
         
+        Instance= this;
+        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+        Transform inventoryTransform = inventoryUI.transform; // Replace "Inventory" with the actual name of your inventory UI GameObject
+        
+        // Get the CanvasGroup component
+        inventoryCanvasGroup = inventoryTransform.GetComponent<CanvasGroup>();
     }
     void Start()
     {
         inventory = Inventory.instance;
-        inventory.onItemChangedCallback += UpdateUI;
-        
-          // Subscribe to the onItemChanged callback
+
+        // Subscribe to the onItemChanged callback
 
         // Populate our slots array
-        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
-        Transform inventoryTransform = inventoryUI.transform; // Replace "Inventory" with the actual name of your inventory UI GameObject
 
-        // Get the CanvasGroup component
-        inventoryCanvasGroup = inventoryTransform.GetComponent<CanvasGroup>();
 
         // Hide the inventory UI at the start
         HideInventory();
@@ -44,7 +45,7 @@ public class InventoryUI : MonoBehaviour
     //		- Adding items
     //		- Clearing empty slots
     // This is called using a delegate on the Inventory.
-    void UpdateUI()
+    public  void UpdateUI()
     {
         // Loop through all the slots
         

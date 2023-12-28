@@ -1,1 +1,1 @@
-{"maxHealth":100,"health":46,"damageModifiers":[10,10,10],"armorModifiers":[2]}
+{"maxHealth":140,"health":70,"damageModifiers":[15,10,10,10,10],"armorModifiers":[1,2],"upgradeHPTime":2,"upgradeATKTime":4}

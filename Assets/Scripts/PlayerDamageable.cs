@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using static EquipmentManager;
+
 
 public class PlayerDamageable : MonoBehaviour
 {
@@ -75,7 +75,7 @@ public class PlayerDamageable : MonoBehaviour
             animator.SetBool(AnimationString.lockVelocity, value);
         }
     }
-
+    private int curWeaponDamage;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -84,10 +84,11 @@ public class PlayerDamageable : MonoBehaviour
     void Start()
     {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
+        curWeaponDamage=EquipmentManager.instance.GetCurWeaponDamage();
     }
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
-       
+        Debug.Log("ChangeModify");
         // Add new modifiers
         if (newItem != null)
         {
@@ -154,6 +155,7 @@ public class PlayerDamageable : MonoBehaviour
     }
     public PlayerDamageableData SavePlayerDamageableData()
     {
+        damage.RemoveModifier(curWeaponDamage);
         return new PlayerDamageableData(this);
     }
 
@@ -163,7 +165,10 @@ public class PlayerDamageable : MonoBehaviour
         this.health = loadedData.health;
         this.damage.SetModifiers(loadedData.damageModifiers);
         this.armor.SetModifiers(loadedData.armorModifiers);
-
+        YuriaScript.UpGradeTime = loadedData.upgradeHPTime;
+        OrrnScript.UpGradeTime = loadedData.upgradeATKTime;
+        YuriaScript.instance.UpdateHPBar();
+        OrrnScript.instance.UpdateAtkBar();
         // Load other data as needed
     }
 }

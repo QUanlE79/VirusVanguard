@@ -8,11 +8,18 @@ using UnityEngine.UI;
 public class YuriaScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public static YuriaScript instance;
+    // Start is called before the first frame update
+    private void Awake()
     {
+        instance = this;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         damageable = player.GetComponent<PlayerDamageable>();
-        UpGradeTime = 0;
+        
+    }
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -23,19 +30,17 @@ public class YuriaScript : MonoBehaviour
     public Image HPBar;
     public TMP_Text HPText;
     PlayerDamageable damageable;
-    public int UpGradeTime;
+    public static int UpGradeTime=0;
     public void UpdateHPBar()
     {
         if (UpGradeTime <= 10)
         {
             HPBar.fillAmount = UpGradeTime / 10f;
-
             //int crrAtk = damageable.damage.GetValue();
             int crrHP = damageable.MaxHealth;
             //Debug.Log(crrAtk);
             HPText.text = crrHP.ToString();
         }
-
     }
     public void UpdateHP()
     {

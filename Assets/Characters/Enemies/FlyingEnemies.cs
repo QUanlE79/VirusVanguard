@@ -99,6 +99,13 @@ public class FlyingEnemies : MonoBehaviour
             atkCd -= Time.deltaTime;
         }
     }
+    private void FixedUpdate()
+    {
+        if (!isAlive)
+        {
+            Death();
+        }
+    }
     private void Chase()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);

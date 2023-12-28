@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(PlayerDamageable))]
 public class VirusController : MonoBehaviour
 {
+    private CinemachineVirtualCamera virtualCamera;
     private Rigidbody2D rb2d;
     float horizontal;
     float vertical;
@@ -107,15 +109,20 @@ public class VirusController : MonoBehaviour
         animator = GetComponent<Animator>();
         touchingDirection= GetComponent<TouchingDirection>();
         damageable= GetComponent<PlayerDamageable>();
+        
+        DontDestroyOnLoad(gameObject);
+
+    }
+    private void Start()
+    {
+        FileManager.LoadEquipmentAtStart();
         PlayerDamageableData loadedData = FileManager.LoadPlayerDamageableData();
         if (loadedData != null)
         {
             // Apply the loaded data to the playerDamageable instance
             damageable.LoadPlayerDamageableData(loadedData);
         }
-
-
-
+        
     }
     private void Update()
     {
@@ -133,6 +140,17 @@ public class VirusController : MonoBehaviour
                 {
                     character.DisplayDialog();
                 }
+            }
+        }
+        if(virtualCamera == null)
+        {
+            virtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+
+            // Check if the Virtual Camera is found
+            if (virtualCamera != null)
+            {
+                // Adjust settings or follow the player as needed
+                virtualCamera.Follow = transform;
             }
         }
     }
@@ -272,5 +290,5 @@ public class VirusController : MonoBehaviour
     {
         doubleJump.Play();
     }
-
+   
 }
