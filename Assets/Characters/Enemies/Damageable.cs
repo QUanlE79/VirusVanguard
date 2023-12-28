@@ -59,7 +59,7 @@ public class Damageable : MonoBehaviour
         {
             _isAlive = value;
             animator.SetBool(AnimationString.isAlive,value);
-            Debug.Log("isAlive:" + value);
+            
         }
     }
 
@@ -105,7 +105,7 @@ public class Damageable : MonoBehaviour
 
     public bool Hit(int damage, Vector2 knockback)
     {
-        Debug.Log(damage);
+        
         if (isAlive && !isInvincible)
         {
             health -= damage;
@@ -132,13 +132,13 @@ public class Damageable : MonoBehaviour
     }
     public bool DropCoin(int min,int max)
     {
-        Debug.Log("Coin");
+        
         if (!isAlive && CoinPrefab!=null)
         {
-            Debug.Log("Coin2");
+            
             float amountCoin = (float) Random.Range(min,max)/10;
             float actualDropCoin= Mathf.Clamp(amountCoin, 1f, (float) max);
-            Debug.Log(actualDropCoin);
+            
             for(int i = 0; i < (int)actualDropCoin; i++)
             {
                 Vector2 randomSpawnPoint = transform.position + new Vector3(Random.Range(-spawnArea.x, spawnArea.x), 0, 0);

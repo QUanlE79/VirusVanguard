@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class PlayerDamageableData
@@ -11,6 +12,7 @@ public class PlayerDamageableData
     public int upgradeHPTime;
     public int upgradeATKTime;
     public int cointAmount;
+    public int CurStage;
     public PlayerDamageableData(PlayerDamageable playerDamageable)
     {
         maxHealth = playerDamageable.MaxHealth;
@@ -28,5 +30,6 @@ public class PlayerDamageableData
         upgradeATKTime = OrrnScript.UpGradeTime;
         upgradeHPTime = YuriaScript.UpGradeTime;
         cointAmount = CoinManager.instance.coinCount;
+        CurStage = DoorManager.CurStage;
     }
 }

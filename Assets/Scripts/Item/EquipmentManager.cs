@@ -198,7 +198,7 @@ public class EquipmentManager : MonoBehaviour {
         if (System.IO.File.Exists(filePath))
         {
             string json = System.IO.File.ReadAllText(filePath);
-            Debug.Log(json);
+            
             EquipmentListWrapper wrapper = JsonUtility.FromJson<EquipmentListWrapper>(json);
 
             // Clear current equipment before adding loaded equipment
@@ -221,7 +221,7 @@ public class EquipmentManager : MonoBehaviour {
                 item.EquipmentPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(equipment.equipmentPrefabPath);
                 item.ItemPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(equipment.itemPrefabPath);
                 Equip(item);
-                Debug.Log(item.name );
+                
             }
         }
     }

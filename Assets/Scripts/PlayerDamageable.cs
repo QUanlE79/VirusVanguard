@@ -89,7 +89,7 @@ public class PlayerDamageable : MonoBehaviour
     }
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
-        Debug.Log("ChangeModify");
+        
         // Add new modifiers
         if (newItem != null)
         {
@@ -123,7 +123,7 @@ public class PlayerDamageable : MonoBehaviour
 
     public bool Hit(int damage, Vector2 knockback)
     {
-        Debug.Log(damage);
+        
         if (isAlive && !isInvincible && !controller.isDashing)
         {
             damage -= armor.GetValue();
@@ -170,12 +170,12 @@ public class PlayerDamageable : MonoBehaviour
         OrrnScript.UpGradeTime = loadedData.upgradeATKTime;
         YuriaScript.instance.UpdateHPBar();
         OrrnScript.instance.UpdateAtkBar();
-        CoinManager.instance.AddCoins(loadedData.cointAmount);        //CoinManager.instance.onCoinChanged += OnCoinChanged;
+        CoinManager.instance.AddCoins(loadedData.cointAmount);
+        //CoinManager.instance.onCoinChanged += OnCoinChanged;
+        DoorManager.CurStage = loadedData.CurStage;
         // Load other data as needed
     }
 
-    private void OnCoinChanged()
-    {
-        throw new NotImplementedException();
-    }
+   
+   
 }

@@ -8,6 +8,7 @@ public class DoorManager : MonoBehaviour
     // Start is called before the first frame update
     GameObject player;
     PlayerDamageable damageable;
+    public static int CurStage;
     private void Awake()
     {
        
@@ -30,5 +31,24 @@ public class DoorManager : MonoBehaviour
         FileManager.SavePlayerDamageableData(data);
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    private void OnEnable()
+    {
+        // Subscribe to the SceneLoaded event
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+
+        // Unsubscribe from the SceneLoaded event to prevent memory leaks
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        CurStage=SceneManager.GetActiveScene().buildIndex;
+        // This method will be called whenever a new scene is loaded
+        Debug.Log("Scene loaded: " + scene.name);
     }
 }

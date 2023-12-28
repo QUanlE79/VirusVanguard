@@ -62,7 +62,7 @@ public class Inventory : MonoBehaviour
             // Trigger callback
             if (onItemChangedCallback != null)
             {
-                Debug.Log("CC");
+               
                 onItemChangedCallback.Invoke();
             }
 
