@@ -12,16 +12,21 @@ public class MenuManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject optionsDialog;
     public AudioMixer audioMixer;
-   
+    GameObject player;
     private void Awake()
     {
-       
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     public void NewGame()
     {
         FileManager.DeletePlayerDamageableData();
         EquipmentManager.instance.DeleteEquipment("EquipmentData.json");
         Inventory.instance.DeleteInventory("InventoryData.json");
+        Inventory.instance.LoadInventory("InventoryData.json");
+        //FileManager.LoadEquipmentAtStart();
+        PlayerDamageable damageable=player.GetComponent<PlayerDamageable>();
+        damageable.LoadPlayerDamageableData(FileManager.LoadPlayerDamageableData());
+        
         PlayerPrefs.SetInt("CurStage", 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 

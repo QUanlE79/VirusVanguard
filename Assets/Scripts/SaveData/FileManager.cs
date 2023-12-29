@@ -12,13 +12,15 @@ public class FileManager : MonoBehaviour
     }
     public static void DeletePlayerDamageableData()
     {
-        File.WriteAllText(savePath, "");
+        
+        File.WriteAllText(savePath, "{\"maxHealth\":100,\"health\":100,\"damageModifiers\":[10],\"armorModifiers\":[],\"upgradeHPTime\":0,\"upgradeATKTime\":0,\"cointAmount\":0}");
     }
     public static PlayerDamageableData LoadPlayerDamageableData()
     {
         if (File.Exists(savePath))
         {
             string jsonData = File.ReadAllText(savePath);
+            Debug.Log(jsonData);
             return JsonUtility.FromJson<PlayerDamageableData>(jsonData);
         }
         else

@@ -118,35 +118,43 @@ public class Inventory : MonoBehaviour
     }
     public void DeleteInventory(string filePath)
     {
-      
+       
+       
         System.IO.File.WriteAllText(filePath, "");
     }
 
     // Load inventory from a file into the inventory
     public void LoadInventory(string filePath)
     {
+        
         if (System.IO.File.Exists(filePath))
         {
+            Debug.Log("lo");
             string json = System.IO.File.ReadAllText(filePath);
             InventoryListWrapper wrapper = JsonUtility.FromJson<InventoryListWrapper>(json);
-
-            // Clear current inventory before adding loaded items
             items.Clear();
-
-            foreach (EquipmentData itemData in wrapper.inventoryList)
+            onItemChangedCallback.Invoke();
+            // Clear current inventory before adding loaded items
+            if (wrapper != null && wrapper.inventoryList.Count>0)
             {
-                Equipment item = ScriptableObject.CreateInstance<Equipment>();
-                item.name = itemData.name;
-                item.icon = Resources.Load<Sprite>(itemData.iconPath);  // Use the path or other identifier
-                item.isDefaultItem = itemData.isDefaultItem;
-                // Add other necessary fields here
-                item.damageModifier = itemData.damageModifier;
-                item.armorModifier = itemData.armorModifier;
-                item.equipSlot = itemData.equipSlot;
-                item.EquipmentPrefab =Resources.Load<GameObject>(itemData.equipmentPrefabPath);
-                item.ItemPrefab = Resources.Load<GameObject>(itemData.itemPrefabPath);
-                Add(item);
+                
+
+                foreach (EquipmentData itemData in wrapper.inventoryList)
+                {
+                    Equipment item = ScriptableObject.CreateInstance<Equipment>();
+                    item.name = itemData.name;
+                    item.icon = Resources.Load<Sprite>(itemData.iconPath);  // Use the path or other identifier
+                    item.isDefaultItem = itemData.isDefaultItem;
+                    // Add other necessary fields here
+                    item.damageModifier = itemData.damageModifier;
+                    item.armorModifier = itemData.armorModifier;
+                    item.equipSlot = itemData.equipSlot;
+                    item.EquipmentPrefab = Resources.Load<GameObject>(itemData.equipmentPrefabPath);
+                    item.ItemPrefab = Resources.Load<GameObject>(itemData.itemPrefabPath);
+                    Add(item);
+                }
             }
+            
         }
     }
     private string GetRelativeResourcePath(Object resource)
