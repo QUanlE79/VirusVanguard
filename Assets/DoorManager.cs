@@ -29,10 +29,23 @@ public class DoorManager : MonoBehaviour
         damageable = collision.GetComponent<PlayerDamageable>();
         PlayerDamageableData data = new PlayerDamageableData(damageable);
         FileManager.SavePlayerDamageableData(data);
-        CurStage++;
-        PlayerPrefs.SetInt("CurStage", CurStage);
+        
+        
         Debug.Log(CurStage);
-        SceneManager.LoadScene(CurStage );
+        if ((CurStage == 4 || CurStage == 6) && SceneManager.GetActiveScene().buildIndex!=1)
+        {
+            
+            SceneManager.LoadScene(1);
+           
+        }
+        else
+        {
+            CurStage++;
+            PlayerPrefs.SetInt("CurStage", CurStage);
+            SceneManager.LoadScene(CurStage);
+
+        }
+       
     }
     private void OnEnable()
     {
