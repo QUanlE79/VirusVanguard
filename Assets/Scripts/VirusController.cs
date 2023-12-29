@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirection), typeof(PlayerDamageable))]
@@ -166,6 +167,7 @@ public class VirusController : MonoBehaviour
             }
         }
     }
+    bool checkAlive = false;
     private void FixedUpdate()
     {
        
@@ -173,6 +175,12 @@ public class VirusController : MonoBehaviour
             rb2d.velocity = new Vector2(moveInput.x*CurSpeed, rb2d.velocity.y);
 
         animator.SetFloat(AnimationString.LookY, rb2d.velocity.y);
+        if (!isAlive && !checkAlive)
+        {
+            checkAlive = true;
+            StartCoroutine(Death());
+           
+        }
 
     }
     public void onMove(InputAction.CallbackContext context)
@@ -188,10 +196,28 @@ public class VirusController : MonoBehaviour
         else
         {
             IsMoving = false;
+           
         }
       
     }
+    public Canvas DeathDialog;
+    private IEnumerator Death()
+    {
 
+        int CurStage = PlayerPrefs.GetInt("CurStage", 1);
+        damageable.LoadPlayerDamageableData(FileManager.LoadPlayerDamageableData());
+        if (CurStage > 1)
+        {
+            CurStage--;
+            PlayerPrefs.SetInt("CurStage", CurStage);
+        }
+        
+        DeathDialog.gameObject.SetActive(true);     
+        yield return new WaitForSecondsRealtime(5f);
+        DeathDialog.gameObject.SetActive(false);
+        damageable.isAlive = true;
+        SceneManager.LoadScene(1);
+    }
     private void SetFacingDirection(Vector2 moveInput)
     {
         if (moveInput.x > 0 && !IsFacingRight)
