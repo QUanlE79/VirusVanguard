@@ -10,7 +10,10 @@ public class FileManager : MonoBehaviour
         string jsonData = JsonUtility.ToJson(playerData);
         File.WriteAllText(savePath, jsonData);
     }
-
+    public static void DeletePlayerDamageableData()
+    {
+        File.WriteAllText(savePath, "");
+    }
     public static PlayerDamageableData LoadPlayerDamageableData()
     {
         if (File.Exists(savePath))

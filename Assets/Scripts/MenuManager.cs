@@ -19,7 +19,15 @@ public class MenuManager : MonoBehaviour
     }
     public void NewGame()
     {
-       
+        FileManager.DeletePlayerDamageableData();
+        EquipmentManager.instance.DeleteEquipment("EquipmentData.json");
+        Inventory.instance.DeleteInventory("InventoryData.json");
+        PlayerPrefs.SetInt("CurStage", 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
+    public void Continue()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Options()

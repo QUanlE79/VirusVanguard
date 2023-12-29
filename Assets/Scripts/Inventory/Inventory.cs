@@ -116,6 +116,11 @@ public class Inventory : MonoBehaviour
         string json = JsonUtility.ToJson(wrapper);
         System.IO.File.WriteAllText(filePath, json);
     }
+    public void DeleteInventory(string filePath)
+    {
+      
+        System.IO.File.WriteAllText(filePath, "");
+    }
 
     // Load inventory from a file into the inventory
     public void LoadInventory(string filePath)
