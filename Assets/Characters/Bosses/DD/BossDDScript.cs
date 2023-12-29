@@ -15,6 +15,8 @@ public class BossDDScript : MonoBehaviour
     Animator animator;
 
     Damageable damageable;
+    public GameObject door;
+
 
     public bool isAlive
     {
@@ -50,7 +52,7 @@ public class BossDDScript : MonoBehaviour
 
     private void Awake()
     {
-
+        door = GameObject.FindGameObjectWithTag("Door");
     }
     // Start is called before the first frame update
     public AudioSource warningStart;
@@ -192,10 +194,24 @@ public class BossDDScript : MonoBehaviour
     {
         // Freeze the screen
         //Time.timeScale = 0f;
+        BoxCollider2D boxCollider = door.GetComponent<BoxCollider2D>();
+        SpriteRenderer spriteRenderer = door.GetComponent<SpriteRenderer>();
+        if (boxCollider != null)
+        {
+            // Toggle the enabled state of the BoxCollider2D
+            boxCollider.enabled = true;
+        }
+        spriteRenderer.color = new Color(
+                spriteRenderer.color.r,
+                spriteRenderer.color.g,
+                spriteRenderer.color.b,
+                255 // invert the alpha value
+            );
 
         // Display the canvas notification
         Dialog.gameObject.SetActive(true);
-
+        
+        
         // Wait for a duration
         yield return new WaitForSecondsRealtime(Duration);
 
@@ -204,7 +220,7 @@ public class BossDDScript : MonoBehaviour
 
         // Hide the canvas notification
         Dialog.gameObject.SetActive(false);
-        SceneManager.LoadScene(0);
+        // SceneManager.LoadScene(0);
     }
     public Canvas MeetDialog;
     //private float Duration = 5f;
