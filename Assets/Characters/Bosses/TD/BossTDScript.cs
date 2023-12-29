@@ -42,6 +42,7 @@ public class BossTDScript : MonoBehaviour
 
     }
     // Start is called before the first frame update
+    public AudioSource BgMusic;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -56,6 +57,7 @@ public class BossTDScript : MonoBehaviour
         redBook.GetComponent<SkillScipt>().damage = 10;
         theHand.transform.localScale = new Vector3(2, 2, 2);
         theRock.transform.localScale = new Vector3(2, 2, 2);
+        BgMusic.Play();
     }
     private bool isChecked = false;
     public GameObject redBook;
@@ -217,31 +219,54 @@ public class BossTDScript : MonoBehaviour
         MeetDialog.gameObject.SetActive(false);
     }
     public Canvas Dialog;
-
+    private bool deathHandled = false;
+    public AudioSource WinningMusic;
     private IEnumerator Death()
     {
-        // Freeze the screen
-        //Time.timeScale = 0f;
+        if (!deathHandled)
+        {
 
-        // Display the canvas notification
-        Dialog.gameObject.SetActive(true);
+            GameObject[] projectiles = GameObject.FindGameObjectsWithTag("Projectile");
+            foreach (GameObject projectile in projectiles)
+            {
+                Destroy(projectile);
+            }
+            Dialog.gameObject.SetActive(true);
+            yield return new WaitForSecondsRealtime(Duration);
+            Dialog.gameObject.SetActive(false);
+            BgMusic.Stop();
+            WinningMusic.Play();
+            deathHandled = true; 
+        }
+        StartCoroutine(ShowCredit());
 
-        // Wait for a duration
-        yield return new WaitForSecondsRealtime(Duration);
+    }
+    public Canvas Credit;
+    public Transform EndCredit;
+    private IEnumerator ShowCredit()
+    {
 
-        // Unfreeze the screen
-        //Time.timeScale = 1f;
+        float elapsedTime = 0f;
+        float creditDuration = 20f;
 
-        // Hide the canvas notification
-        Dialog.gameObject.SetActive(false);
+        while (elapsedTime < creditDuration)
+        {
+            Credit.transform.position = Vector2.MoveTowards(Credit.transform.position, EndCredit.position, 0.02f * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
         SceneManager.LoadScene(0);
     }
 
     private void FixedUpdate()
     {
-        if (!isAlive)
+        if (isAlive)
         {
-            StartCoroutine(Death());
+            return;
         }
+        
+        StartCoroutine(Death());
+        
     }
 }
