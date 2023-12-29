@@ -141,6 +141,18 @@ public class VirusController : MonoBehaviour
                     character.DisplayDialog();
                 }
             }
+
+            RaycastHit2D hitMedkit = Physics2D.Raycast(rb2d.position, direction, 1.5f, LayerMask.GetMask("Medkit"));
+
+            if (hitMedkit.collider != null)
+            {
+                MedkitScript mk = hitMedkit.collider.GetComponent<MedkitScript>();
+
+                if (mk != null)
+                {
+                    mk.RecoverHP();
+                }
+            }
         }
         if(virtualCamera == null)
         {

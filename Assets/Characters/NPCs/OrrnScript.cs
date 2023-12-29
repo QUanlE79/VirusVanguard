@@ -9,13 +9,14 @@ public class OrrnScript : MonoBehaviour
 {
     public AudioSource BgMusic;
     public static OrrnScript instance;
+    //CoinManager CoinManager;
     // Start is called before the first frame update
     private void Awake()
     {
         instance = this;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         damageable = player.GetComponent<PlayerDamageable>();
-       
+        //CoinManager = player.GetComponent<CoinManager>();
     }
     void Start()
     {
@@ -26,10 +27,15 @@ public class OrrnScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateAtkBar();
+        if (AtkBar != null && PriceText != null)
+        {
+            UpdateAtkBar();
+        }
+        
     }
     public Image AtkBar;
     public TMP_Text AtkText;
+    public TMP_Text PriceText;
     PlayerDamageable damageable;
     public static int UpGradeTime=0;
     public void UpdateAtkBar()
@@ -41,16 +47,22 @@ public class OrrnScript : MonoBehaviour
             int crrAtk = damageable.damage.GetValue();
             //Debug.Log(crrAtk);
             AtkText.text = crrAtk.ToString();
+            PriceText.text = (50 * UpGradeTime).ToString();
         }
 
     }
     public void UpdateDmg()
     {
-        if (UpGradeTime < 10)
+        int price = 50 * (UpGradeTime + 1);
+        if (UpGradeTime < 10 && (CoinManager.instance.coinCount > price))
         {
             UpGradeTime++;
             damageable.damage.AddModifier(10);
+            CoinManager.instance.SpendCoins(50 * (UpGradeTime + 1));
         }
+        else
+        {
 
+        }
     }
 }
