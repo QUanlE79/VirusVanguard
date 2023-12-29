@@ -261,8 +261,30 @@
                 },
                 {
                     "name": "",
+                    "id": "e360088d-0b72-40d3-854c-5fea8527ac78",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9b277de0-c198-48d3-8ec7-67ad5a83e52d",
                     "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf342961-0297-47ee-971b-d10bd1905633",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -294,8 +316,8 @@
                 },
                 {
                     "name": "",
-                    "id": "ed139076-d768-4160-86fd-d7740fca35a1",
-                    "path": "<Keyboard>/j",
+                    "id": "88ba08dc-e6f6-425e-bc9b-ea139534c68f",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
