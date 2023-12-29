@@ -192,6 +192,10 @@ public class EquipmentManager : MonoBehaviour {
         string json = JsonUtility.ToJson(wrapper);
         System.IO.File.WriteAllText(filePath, json);
     }
+    public void DeleteEquipment(string filePath)
+    {
+        System.IO.File.WriteAllText(filePath, "");
+    }
     private string GetRelativeResourcePath(Object resource)
     {
         if (resource != null)
