@@ -182,12 +182,13 @@ public class BossDDScript : MonoBehaviour
 
     }
     public Canvas Dialog;
-    private float Duration = 10f;
+    private float Duration = 5f;
     private void FixedUpdate()
     {
         if (!isAlive)
         {
             StartCoroutine(Death());
+            Destroy(gameObject); 
         }
     }
     private IEnumerator Death()

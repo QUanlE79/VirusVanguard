@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3914a38786470774fbe2f0767ea0fee5, type: 3}
+  m_Name: GoldenGloves
+  m_EditorClassIdentifier: 
+  name: Golden Gloves
+  icon: {fileID: 21300000, guid: b46f5762855caf04d9d359026053bf0c, type: 3}
+  isDefaultItem: 0
+  ItemPrefab: {fileID: 8399087730134043543, guid: bd401feb684fd7f4588d13f8d1554b8f, type: 3}
+  equipSlot: 2
+  armorModifier: 2
+  damageModifier: 2
+  EquipmentPrefab: {fileID: 8399087730134043543, guid: bd401feb684fd7f4588d13f8d1554b8f, type: 3}
+  equipmentPrefabPath: 

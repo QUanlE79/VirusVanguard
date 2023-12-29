@@ -1,1 +1,1 @@
-{"maxHealth":200,"health":171,"damageModifiers":[15,10,10],"armorModifiers":[1,2],"upgradeHPTime":2,"upgradeATKTime":2,"cointAmount":190}
+{"maxHealth":100,"health":10,"damageModifiers":[1,15],"armorModifiers":[2,1,1],"upgradeHPTime":0,"upgradeATKTime":0,"cointAmount":90}
