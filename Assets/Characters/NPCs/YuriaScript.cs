@@ -25,10 +25,15 @@ public class YuriaScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateHPBar();
+        if (HPBar != null && PriceText!=null)
+        {
+            UpdateHPBar();
+        }
+        
     }
     public Image HPBar;
     public TMP_Text HPText;
+    public TMP_Text PriceText;
     PlayerDamageable damageable;
     public static int UpGradeTime=0;
     public void UpdateHPBar()
@@ -40,16 +45,19 @@ public class YuriaScript : MonoBehaviour
             int crrHP = damageable.MaxHealth;
             //Debug.Log(crrAtk);
             HPText.text = crrHP.ToString();
+            PriceText.text = (50 * UpGradeTime).ToString();
         }
     }
     public void UpdateHP()
     {
-        if (UpGradeTime < 10)
+        int price = 50 * (UpGradeTime + 1);
+        if (UpGradeTime < 10 && (CoinManager.instance.coinCount > price))
         {
             UpGradeTime++;
-            damageable.MaxHealth += 20;
-            damageable.health = damageable.MaxHealth;
+            damageable.MaxHealth += 50;
+            damageable.health += 50;
+            CoinManager.instance.SpendCoins(50 * (UpGradeTime + 1));
         }
-
     }
+    
 }
