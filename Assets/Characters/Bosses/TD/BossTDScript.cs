@@ -51,12 +51,12 @@ public class BossTDScript : MonoBehaviour
         damageable = GetComponent<Damageable>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(Meet());
-        blueBook.transform.localScale = new Vector3(1,1,1);
-        redBook.transform.localScale = new Vector3(1, 1, 1);
+        blueBook.transform.localScale = new Vector3(2,2,2);
+        redBook.transform.localScale = new Vector3(2, 2, 2);
         blueBook.GetComponent<SkillScipt>().damage = 10;
         redBook.GetComponent<SkillScipt>().damage = 10;
-        theHand.transform.localScale = new Vector3(2, 2, 2);
-        theRock.transform.localScale = new Vector3(2, 2, 2);
+        theHand.transform.localScale = new Vector3(3, 3, 3);
+        theRock.transform.localScale = new Vector3(3, 3, 3);
         BgMusic.Play();
     }
     private bool isChecked = false;
