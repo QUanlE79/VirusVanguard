@@ -47,7 +47,7 @@ public class OrrnScript : MonoBehaviour
             int crrAtk = damageable.damage.GetValue();
             //Debug.Log(crrAtk);
             AtkText.text = crrAtk.ToString();
-            PriceText.text = (50 * UpGradeTime + 1).ToString();
+            PriceText.text = (50 * (UpGradeTime + 1)).ToString();
         }
 
     }

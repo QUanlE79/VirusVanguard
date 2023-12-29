@@ -45,7 +45,7 @@ public class YuriaScript : MonoBehaviour
             int crrHP = damageable.MaxHealth;
             //Debug.Log(crrAtk);
             HPText.text = crrHP.ToString();
-            PriceText.text = (50 * UpGradeTime + 1).ToString();
+            PriceText.text = (50 * (UpGradeTime + 1)).ToString();
         }
     }
     public void UpdateHP()
