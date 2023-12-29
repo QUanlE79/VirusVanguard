@@ -255,7 +255,8 @@ public class BossTDScript : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Destroy(player);
         SceneManager.LoadScene(0);
     }
 
