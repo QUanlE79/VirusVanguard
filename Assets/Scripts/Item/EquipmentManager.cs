@@ -195,6 +195,7 @@ public class EquipmentManager : MonoBehaviour {
     public void DeleteEquipment(string filePath)
     {
         System.IO.File.WriteAllText(filePath, "");
+        UnequipAll();
     }
     private string GetRelativeResourcePath(Object resource)
     {
@@ -224,26 +225,27 @@ public class EquipmentManager : MonoBehaviour {
             EquipmentListWrapper wrapper = JsonUtility.FromJson<EquipmentListWrapper>(json);
 
             // Clear current equipment before adding loaded equipment
-			if(wrapper != null && wrapper.equipmentList.Count> 0)
-			{
-                UnequipAll();
-            }
-            
-
-            foreach (EquipmentData equipment in wrapper.equipmentList)
+            if (wrapper != null && wrapper.equipmentList.Count > 0)
             {
-                Equipment item = ScriptableObject.CreateInstance<Equipment>();
-                item.name = equipment.name;
-                item.icon = Resources.Load<Sprite>(equipment.iconPath);  // Load from "Resources" folder
-                item.isDefaultItem = equipment.isDefaultItem;
-                // Add other necessary fields here
-                item.damageModifier = equipment.damageModifier;
-                item.armorModifier = equipment.armorModifier;
-                item.equipSlot = equipment.equipSlot;
-                item.EquipmentPrefab = Resources.Load<GameObject>(equipment.equipmentPrefabPath);  // Load from "Resources" folder
-                item.ItemPrefab = Resources.Load<GameObject>(equipment.itemPrefabPath);  // Load from "Resources" folder
-                Equip(item);
+                UnequipAll();
 
+
+
+                foreach (EquipmentData equipment in wrapper.equipmentList)
+                {
+                    Equipment item = ScriptableObject.CreateInstance<Equipment>();
+                    item.name = equipment.name;
+                    item.icon = Resources.Load<Sprite>(equipment.iconPath);  // Load from "Resources" folder
+                    item.isDefaultItem = equipment.isDefaultItem;
+                    // Add other necessary fields here
+                    item.damageModifier = equipment.damageModifier;
+                    item.armorModifier = equipment.armorModifier;
+                    item.equipSlot = equipment.equipSlot;
+                    item.EquipmentPrefab = Resources.Load<GameObject>(equipment.equipmentPrefabPath);  // Load from "Resources" folder
+                    item.ItemPrefab = Resources.Load<GameObject>(equipment.itemPrefabPath);  // Load from "Resources" folder
+                    Equip(item);
+
+                }
             }
         }
     }

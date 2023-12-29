@@ -21,7 +21,8 @@ public class UIManager : MonoBehaviour
     }
     private void Awake()
     {
-        gameCanvas = FindObjectOfType<Canvas>();
+        GameObject cv = GameObject.FindGameObjectWithTag("GameCanvas");
+        gameCanvas = cv.GetComponent<Canvas>();
     }
     // Start is called before the first frame update
     public void CharacterTookDamage(GameObject character, int damageReceived)
