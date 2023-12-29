@@ -12,12 +12,14 @@ public class MenuManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject optionsDialog;
     public AudioMixer audioMixer;
+   
     private void Awake()
     {
-
+       
     }
     public void NewGame()
     {
+       
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Options()
@@ -27,7 +29,18 @@ public class MenuManager : MonoBehaviour
     }
     public void Quit()
     {
+        if (SceneManager.GetActiveScene().buildIndex > 1)
+        {
+            PlayerPrefs.SetInt("CurStage", SceneManager.GetActiveScene().buildIndex - 1);
+            
+        }
+
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1.0f;
+        
+        
         Application.Quit();
+        
     }
     public void PauseGame()
     {

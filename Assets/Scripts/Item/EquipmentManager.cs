@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
+
 using UnityEngine;
-using static UnityEditor.Progress;
+
 
 /* Keep track of equipment. Has functions for adding and removing items. */
 
@@ -167,31 +166,50 @@ public class EquipmentManager : MonoBehaviour {
         };
         foreach (Equipment item in currentEquipment)
         {
-            if(item != null)
+            if (item != null)
             {
                 EquipmentData itemData = new EquipmentData
                 {
                     name = item.name,
-                    iconPath = AssetDatabase.GetAssetPath(item.icon),  // Use the path or other identifier
+                    iconPath = GetRelativeResourceIconPath(item.icon),  // Use the path or other identifier
                     isDefaultItem = item.isDefaultItem,
                     // Add other necessary fields here
                     damageModifier = item.damageModifier,
                     armorModifier = item.armorModifier,
                     equipSlot = item.equipSlot,
-                    equipmentPrefabPath = item.EquipmentPrefab != null ? AssetDatabase.GetAssetPath(item.EquipmentPrefab) : "",
-                    itemPrefabPath = item.ItemPrefab != null ? AssetDatabase.GetAssetPath(item.ItemPrefab) : ""
+                    equipmentPrefabPath = GetRelativeResourcePath(item.EquipmentPrefab),  // Load from "Resources" folder
+                    itemPrefabPath = GetRelativeResourcePath(item.ItemPrefab),  // Load from "Resources" folder
                 };
-
                 wrapper.equipmentList.Add(itemData);
+             }
+
+               
                 
             }
            
-        }
+        
 
         string json = JsonUtility.ToJson(wrapper);
         System.IO.File.WriteAllText(filePath, json);
     }
-
+    private string GetRelativeResourcePath(Object resource)
+    {
+        if (resource != null)
+        {
+            string resourceName = resource.name;
+            return "Items/" + resourceName;
+        }
+        return "";
+    }
+    private string GetRelativeResourceIconPath(Object resource)
+    {
+        if (resource != null)
+        {
+            string resourceName = resource.name;
+            return "Item/" + resourceName;
+        }
+        return "";
+    }
     // Load equipment from a file into the equipment manager
     public void LoadEquipment(string filePath)
     {
@@ -212,16 +230,16 @@ public class EquipmentManager : MonoBehaviour {
             {
                 Equipment item = ScriptableObject.CreateInstance<Equipment>();
                 item.name = equipment.name;
-                item.icon = AssetDatabase.LoadAssetAtPath<Sprite>(equipment.iconPath);  // Use the path or other identifier
+                item.icon = Resources.Load<Sprite>(equipment.iconPath);  // Load from "Resources" folder
                 item.isDefaultItem = equipment.isDefaultItem;
                 // Add other necessary fields here
                 item.damageModifier = equipment.damageModifier;
                 item.armorModifier = equipment.armorModifier;
                 item.equipSlot = equipment.equipSlot;
-                item.EquipmentPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(equipment.equipmentPrefabPath);
-                item.ItemPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(equipment.itemPrefabPath);
+                item.EquipmentPrefab = Resources.Load<GameObject>(equipment.equipmentPrefabPath);  // Load from "Resources" folder
+                item.ItemPrefab = Resources.Load<GameObject>(equipment.itemPrefabPath);  // Load from "Resources" folder
                 Equip(item);
-                
+
             }
         }
     }

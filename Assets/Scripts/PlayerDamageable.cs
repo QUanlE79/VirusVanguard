@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerDamageable : MonoBehaviour
 {
@@ -85,7 +85,7 @@ public class PlayerDamageable : MonoBehaviour
     void Start()
     {
         EquipmentManager.instance.onEquipmentChanged += OnEquipmentChanged;
-        curWeaponDamage=EquipmentManager.instance.GetCurWeaponDamage();
+        //curWeaponDamage=EquipmentManager.instance.GetCurWeaponDamage();
     }
     void OnEquipmentChanged(Equipment newItem, Equipment oldItem)
     {
@@ -156,7 +156,7 @@ public class PlayerDamageable : MonoBehaviour
     }
     public PlayerDamageableData SavePlayerDamageableData()
     {
-        damage.RemoveModifier(curWeaponDamage);
+        //damage.RemoveModifier(curWeaponDamage);
         return new PlayerDamageableData(this);
     }
 
@@ -168,11 +168,15 @@ public class PlayerDamageable : MonoBehaviour
         this.armor.SetModifiers(loadedData.armorModifiers);
         YuriaScript.UpGradeTime = loadedData.upgradeHPTime;
         OrrnScript.UpGradeTime = loadedData.upgradeATKTime;
-        YuriaScript.instance.UpdateHPBar();
-        OrrnScript.instance.UpdateAtkBar();
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            YuriaScript.instance.UpdateHPBar();
+            OrrnScript.instance.UpdateAtkBar();
+        }
+        
         CoinManager.instance.AddCoins(loadedData.cointAmount);
         //CoinManager.instance.onCoinChanged += OnCoinChanged;
-        DoorManager.CurStage = loadedData.CurStage;
+        
         // Load other data as needed
     }
 

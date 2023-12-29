@@ -60,7 +60,7 @@ public class HealthBarController : MonoBehaviour
             FrontHB.fillAmount = Mathf.Lerp(fillF, BackHB.fillAmount, percentComplete);
         }
         //isHealthChanged = false;
-        HealthAmountText.text = hFraction*100+ "%";
+        HealthAmountText.text = (int)(hFraction*100)+ "%";
     }
     private void OnPlayerHealthChanged(int health, int MaxHealth)
     {

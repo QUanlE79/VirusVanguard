@@ -8,7 +8,7 @@ public class DoorManager : MonoBehaviour
     // Start is called before the first frame update
     GameObject player;
     PlayerDamageable damageable;
-    public static int CurStage;
+    int CurStage;
     private void Awake()
     {
        
@@ -29,8 +29,10 @@ public class DoorManager : MonoBehaviour
         damageable = collision.GetComponent<PlayerDamageable>();
         PlayerDamageableData data = new PlayerDamageableData(damageable);
         FileManager.SavePlayerDamageableData(data);
-        
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        CurStage++;
+        PlayerPrefs.SetInt("CurStage", CurStage);
+        Debug.Log(CurStage);
+        SceneManager.LoadScene(CurStage );
     }
     private void OnEnable()
     {
@@ -47,7 +49,8 @@ public class DoorManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        CurStage=SceneManager.GetActiveScene().buildIndex;
+        CurStage=PlayerPrefs.GetInt("CurStage", 1);
+        Debug.Log(CurStage);
         // This method will be called whenever a new scene is loaded
         Debug.Log("Scene loaded: " + scene.name);
     }

@@ -1,6 +1,6 @@
 ﻿
 using System.Collections.Generic;
-using UnityEditor;
+
 using UnityEngine;
 
 
@@ -99,16 +99,17 @@ public class Inventory : MonoBehaviour
             EquipmentData itemData = new EquipmentData
             {
                 name = item.name,
-                iconPath = AssetDatabase.GetAssetPath(item.icon),  // Use the path or other identifier
+                iconPath = GetRelativeResourceIconPath(item.icon),  // Use the path or other identifier
                 isDefaultItem = item.isDefaultItem,
                 // Add other necessary fields here
                 damageModifier = item.damageModifier,
                 armorModifier = item.armorModifier,
                 equipSlot = item.equipSlot,
-                equipmentPrefabPath = item.EquipmentPrefab != null ? AssetDatabase.GetAssetPath(item.EquipmentPrefab) : "",
-                itemPrefabPath = item.ItemPrefab != null ? AssetDatabase.GetAssetPath(item.ItemPrefab) : ""
+                equipmentPrefabPath = GetRelativeResourcePath(item.EquipmentPrefab),  // Load from "Resources" folder
+                itemPrefabPath = GetRelativeResourcePath(item.ItemPrefab),
+                
             };
-
+            Debug.Log(itemData.iconPath + itemData.equipmentPrefabPath + itemData.itemPrefabPath);
             wrapper.inventoryList.Add(itemData);
         }
 
@@ -131,17 +132,35 @@ public class Inventory : MonoBehaviour
             {
                 Equipment item = ScriptableObject.CreateInstance<Equipment>();
                 item.name = itemData.name;
-                item.icon = AssetDatabase.LoadAssetAtPath<Sprite>(itemData.iconPath);  // Use the path or other identifier
+                item.icon = Resources.Load<Sprite>(itemData.iconPath);  // Use the path or other identifier
                 item.isDefaultItem = itemData.isDefaultItem;
                 // Add other necessary fields here
                 item.damageModifier = itemData.damageModifier;
                 item.armorModifier = itemData.armorModifier;
                 item.equipSlot = itemData.equipSlot;
-                item.EquipmentPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(itemData.equipmentPrefabPath);
-                item.ItemPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(itemData.itemPrefabPath);
+                item.EquipmentPrefab =Resources.Load<GameObject>(itemData.equipmentPrefabPath);
+                item.ItemPrefab = Resources.Load<GameObject>(itemData.itemPrefabPath);
                 Add(item);
             }
         }
+    }
+    private string GetRelativeResourcePath(Object resource)
+    {
+        if (resource != null)
+        {
+            string resourceName = resource.name;
+            return "Items/" + resourceName;
+        }
+        return "";
+    }
+    private string GetRelativeResourceIconPath(Object resource)
+    {
+        if (resource != null)
+        {
+            string resourceName = resource.name;
+            return "Item/" + resourceName;
+        }
+        return "";
     }
 }
 [System.Serializable]
