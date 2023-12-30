@@ -173,7 +173,7 @@ public class PlayerDamageable : MonoBehaviour
             YuriaScript.instance.UpdateHPBar();
             OrrnScript.instance.UpdateAtkBar();
         }
-        
+        CoinManager.instance.coinCount = 0;
         CoinManager.instance.AddCoins(loadedData.cointAmount);
         //CoinManager.instance.onCoinChanged += OnCoinChanged;
         
