@@ -599,11 +599,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 914661453717412328, guid: 6c4f09990587fc14f9e8d83bed045511, type: 3}
       propertyPath: _health
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 914661453717412328, guid: 6c4f09990587fc14f9e8d83bed045511, type: 3}
       propertyPath: _maxhealth
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1008899781281471161, guid: 6c4f09990587fc14f9e8d83bed045511, type: 3}
       propertyPath: m_Name
