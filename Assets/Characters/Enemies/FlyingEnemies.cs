@@ -19,7 +19,8 @@ public class FlyingEnemies : MonoBehaviour
     Animator animator;
 
     Damageable damageable;
-
+    public int minCoin = 10;
+    public int maxCoin = 20;
 
     private bool _hasTarget = false;
 
@@ -135,6 +136,7 @@ public class FlyingEnemies : MonoBehaviour
     }
     void Death()
     {
+        damageable.DropCoin(minCoin, maxCoin);
         Destroy(gameObject);
     }
 }

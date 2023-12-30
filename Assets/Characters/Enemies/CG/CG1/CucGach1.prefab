@@ -242,6 +242,7 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   InvincibilityTime: 0.25
+  CoinPrefab: {fileID: 0}
 --- !u!114 &6055526050549697699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +259,8 @@ MonoBehaviour:
   walkStopRate: 0.05
   attackZone: {fileID: 1564098975853513870}
   cliffDetectionZone: {fileID: 5944351477878775987}
+  minCoin: 40
+  maxCoin: 60
   flashEffect: {fileID: 3251380236602564305}
 --- !u!114 &3251380236602564305
 MonoBehaviour:
@@ -429,7 +432,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.13528055, y: 0.20292196}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -440,7 +443,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7294389, y: 0.5941561}
   m_EdgeRadius: 0
 --- !u!114 &5944351477878775987
 MonoBehaviour:
@@ -554,5 +557,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb076b7b1016764ba3efd3e3b96206a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 20
   knockback: {x: 3, y: 2}

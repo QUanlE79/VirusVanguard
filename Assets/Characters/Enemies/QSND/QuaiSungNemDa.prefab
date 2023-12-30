@@ -253,8 +253,8 @@ MonoBehaviour:
   healthChanged:
     m_PersistentCalls:
       m_Calls: []
-  _maxhealth: 100
-  _health: 100
+  _maxhealth: 80
+  _health: 80
   _isAlive: 1
   InvincibilityTime: 0.25
   CoinPrefab: {fileID: 9010154992810424471, guid: bc8223112bfbaca4a8f7963ce008dec4, type: 3}
