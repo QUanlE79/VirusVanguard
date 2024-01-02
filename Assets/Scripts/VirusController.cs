@@ -205,7 +205,7 @@ public class VirusController : MonoBehaviour
     {
 
         int CurStage = PlayerPrefs.GetInt("CurStage", 1);
-        damageable.LoadPlayerDamageableData(FileManager.LoadPlayerDamageableData());
+       
         if (CurStage > 1)
         {
             CurStage--;
@@ -217,6 +217,7 @@ public class VirusController : MonoBehaviour
         DeathDialog.gameObject.SetActive(false);
         damageable.isAlive = true;
         checkAlive = false;
+        damageable.LoadPlayerDamageableData(FileManager.LoadPlayerDamageableData());
         SceneManager.LoadScene(1);
     }
     private void SetFacingDirection(Vector2 moveInput)
