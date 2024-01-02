@@ -12,6 +12,7 @@ TagManager:
   - Projectile
   - GameCanvas
   - Boss
+  - UI
   layers:
   - Default
   - TransparentFX

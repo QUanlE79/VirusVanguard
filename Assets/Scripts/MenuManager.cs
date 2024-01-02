@@ -13,12 +13,25 @@ public class MenuManager : MonoBehaviour
     public GameObject optionsDialog;
     public AudioMixer audioMixer;
     GameObject player;
+    CanvasGroup cvgr;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        GameObject canvas = GameObject.FindGameObjectWithTag("GameCanvas");
+        cvgr = canvas.GetComponent<CanvasGroup>();
+        
+    }
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            cvgr.alpha = 0f;
+        }
+        
     }
     public void NewGame()
     {
+        cvgr.alpha = 1f;
         FileManager.DeletePlayerDamageableData();
         EquipmentManager.instance.DeleteEquipment("EquipmentData.json");
         Inventory.instance.DeleteInventory("InventoryData.json");
@@ -33,6 +46,7 @@ public class MenuManager : MonoBehaviour
     }
     public void Continue()
     {
+        cvgr.alpha = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Options()

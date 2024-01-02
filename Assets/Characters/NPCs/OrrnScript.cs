@@ -20,7 +20,6 @@ public class OrrnScript : MonoBehaviour
     }
     void Start()
     {
-       
         BgMusic.Play();
     }
 
