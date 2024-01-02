@@ -26,7 +26,7 @@ public class MedkitScript : MonoBehaviour
     public void RecoverHP()
     {
         int price = 50;
-        if ((CoinManager.instance.coinCount > price))
+        if ((CoinManager.instance.coinCount >= price))
         {
             damageable.health = damageable.MaxHealth;
             CoinManager.instance.SpendCoins(50);
