@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDamageable : MonoBehaviour
 {
+    public AudioSource hurt;
+    public AudioSource die;
     public UnityEvent<int, Vector2> damageableHit;
     public UnityEvent<int, int> healthChanged;
     Animator animator;
@@ -130,12 +132,14 @@ public class PlayerDamageable : MonoBehaviour
             damage = Mathf.Clamp(damage, 0, int.MaxValue);
             health -= damage;
             isInvincible = true;
+            hurt.Play();
             animator.SetTrigger(AnimationString.hit);
             LockVelocity= true;
             damageableHit?.Invoke(damage, knockback);
             CharacterEvents.CharacterTookDamaged.Invoke(gameObject, damage);
             if (health < 0)
             {
+                die.Play();
                 health = 0;
             }
             return true;
