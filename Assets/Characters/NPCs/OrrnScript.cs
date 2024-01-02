@@ -57,7 +57,7 @@ public class OrrnScript : MonoBehaviour
         {
             UpGradeTime++;
             damageable.damage.AddModifier(10);
-            CoinManager.instance.SpendCoins(50 * (UpGradeTime + 1));
+            CoinManager.instance.SpendCoins(price);
         }
         else
         {

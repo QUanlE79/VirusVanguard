@@ -175,6 +175,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NguoiBay1
       objectReference: {fileID: 0}
+    - target: {fileID: 3841699771203159026, guid: 6dd18e7333c6532478dc7dd4a2802eea, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841699771203159026, guid: 6dd18e7333c6532478dc7dd4a2802eea, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -232,6 +240,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: XacUop
       objectReference: {fileID: 0}
+    - target: {fileID: 3975701623149663391, guid: 72079bda700b3484d894dfafde9498d4, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975701623149663391, guid: 72079bda700b3484d894dfafde9498d4, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -248,6 +264,14 @@ PrefabInstance:
     - target: {fileID: 1729942427695344282, guid: 92413017a97a9e547b09f81c82b70889, type: 3}
       propertyPath: m_Name
       value: ConLinh2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100078481416113880, guid: 92413017a97a9e547b09f81c82b70889, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100078481416113880, guid: 92413017a97a9e547b09f81c82b70889, type: 3}
+      propertyPath: _maxhealth
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6022990089904690737, guid: 92413017a97a9e547b09f81c82b70889, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1125,6 +1149,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 568392002945373810, guid: baa2bf817ca91dc43819dfdf51fe7618, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 568392002945373810, guid: baa2bf817ca91dc43819dfdf51fe7618, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2239506444715335072, guid: baa2bf817ca91dc43819dfdf51fe7618, type: 3}
       propertyPath: spawPoint
       value: 
@@ -1597,6 +1629,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuaiSungNemDa
       objectReference: {fileID: 0}
+    - target: {fileID: 3987392808218626668, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987392808218626668, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 7162665957856787551, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.91
@@ -1752,7 +1792,7 @@ AudioSource:
   m_GameObject: {fileID: 550793300}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 9c605588bca47a54b93742213e8e0675, type: 2}
+  OutputAudioMixerGroup: {fileID: 7325987628158877450, guid: 9c605588bca47a54b93742213e8e0675, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3d4dfd4c7066b5a47a89e16a38fb8812, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -7919,6 +7959,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NguoiBay2
       objectReference: {fileID: 0}
+    - target: {fileID: 9134389218796614111, guid: ff0236a3662246b458c11b6fb9cddde3, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134389218796614111, guid: ff0236a3662246b458c11b6fb9cddde3, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8095,7 +8143,7 @@ Transform:
   m_GameObject: {fileID: 940865394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.250247, y: -1.1911339, z: -10}
+  m_LocalPosition: {x: -7.168686, y: -1.1908869, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8412,6 +8460,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThanLanBay2
       objectReference: {fileID: 0}
+    - target: {fileID: 5272890822913163690, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272890822913163690, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 5666274694027012777, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
       propertyPath: spawPoint
       value: 
@@ -8473,6 +8529,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6507685303367189949, guid: b4072fe00a3d6b94aa77cfcde8a1706c, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507685303367189949, guid: b4072fe00a3d6b94aa77cfcde8a1706c, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8529,6 +8593,14 @@ PrefabInstance:
     - target: {fileID: 2601798360829596443, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
       propertyPath: m_Name
       value: ThanLanBay2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272890822913163690, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272890822913163690, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
+      propertyPath: _maxhealth
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5666274694027012777, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
       propertyPath: spawPoint
@@ -9097,6 +9169,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2737493668224087748, guid: 2cfdbc4371fdcc44798e5771da60fd17, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737493668224087748, guid: 2cfdbc4371fdcc44798e5771da60fd17, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 6135115921140398684, guid: 2cfdbc4371fdcc44798e5771da60fd17, type: 3}
       propertyPath: m_Name
       value: ConLinh1
@@ -9238,6 +9318,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2151560953261604810, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151560953261604810, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2793510532962694926, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.46413624
@@ -9944,6 +10032,14 @@ PrefabInstance:
       propertyPath: spawPoint
       value: 
       objectReference: {fileID: 2018933530}
+    - target: {fileID: 5559536746703255867, guid: b0ec51fd747521b43ab9f281821ce75d, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559536746703255867, guid: b0ec51fd747521b43ab9f281821ce75d, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 9207953416472155865, guid: b0ec51fd747521b43ab9f281821ce75d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.83
@@ -10417,6 +10513,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 568392002945373810, guid: baa2bf817ca91dc43819dfdf51fe7618, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 568392002945373810, guid: baa2bf817ca91dc43819dfdf51fe7618, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2239506444715335072, guid: baa2bf817ca91dc43819dfdf51fe7618, type: 3}
       propertyPath: spawPoint
       value: 
@@ -10486,6 +10590,14 @@ PrefabInstance:
       propertyPath: spawPoint
       value: 
       objectReference: {fileID: 115517006}
+    - target: {fileID: 5559536746703255867, guid: b0ec51fd747521b43ab9f281821ce75d, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559536746703255867, guid: b0ec51fd747521b43ab9f281821ce75d, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 9207953416472155865, guid: b0ec51fd747521b43ab9f281821ce75d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.83
@@ -10747,6 +10859,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4041441336580578041, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041441336580578041, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
+      propertyPath: _maxhealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8012272593686004976, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
       propertyPath: m_Name
       value: QuaiCho1
@@ -10980,6 +11100,14 @@ PrefabInstance:
     - target: {fileID: 5119681230356277032, guid: c944139ccd47e9e4c98fa39aff9a630d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496928695551918594, guid: c944139ccd47e9e4c98fa39aff9a630d, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496928695551918594, guid: c944139ccd47e9e4c98fa39aff9a630d, type: 3}
+      propertyPath: _maxhealth
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8383199636978204744, guid: c944139ccd47e9e4c98fa39aff9a630d, type: 3}
       propertyPath: m_Name
@@ -11268,6 +11396,14 @@ PrefabInstance:
     - target: {fileID: 432115350216964327, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987392808218626668, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: _health
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987392808218626668, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: _maxhealth
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7162665957856787551, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
       propertyPath: m_LocalPosition.x
