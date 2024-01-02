@@ -61,7 +61,7 @@ public class BossHBController : MonoBehaviour
             FrontHB.fillAmount = Mathf.Lerp(fillF, BackHB.fillAmount, percentComplete);
         }
         //isHealthChanged = false;
-        HealthAmountText.text = hFraction * 100 + "%";
+        HealthAmountText.text = (int)(hFraction * 100) + "%";
     }
     private void OnHealthChanged(int health, int MaxHealth)
     {

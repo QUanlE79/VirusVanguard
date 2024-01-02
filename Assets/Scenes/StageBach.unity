@@ -532,6 +532,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NhimSao2
       objectReference: {fileID: 0}
+    - target: {fileID: 6122144460330514132, guid: b820ba9c4caac1d43a135e70786084b8, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122144460330514132, guid: b820ba9c4caac1d43a135e70786084b8, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -49005,6 +49013,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 911596410}
     m_Modifications:
+    - target: {fileID: 6217250134948265611, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217250134948265611, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7593552920058532998, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.54076
@@ -49070,6 +49086,14 @@ PrefabInstance:
     - target: {fileID: 432115350216964327, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
       propertyPath: m_Name
       value: QuaiSungNemDa
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987392808218626668, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: _health
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987392808218626668, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: _maxhealth
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7162665957856787551, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
       propertyPath: m_LocalScale.x
@@ -49173,6 +49197,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 911596410}
     m_Modifications:
+    - target: {fileID: 6217250134948265611, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217250134948265611, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7593552920058532998, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.252821
@@ -51248,6 +51280,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuaiSungCamChay
       objectReference: {fileID: 0}
+    - target: {fileID: 9215723107783158231, guid: 7e52d8b66a40c9e439fae40b7a1e3e08, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215723107783158231, guid: 7e52d8b66a40c9e439fae40b7a1e3e08, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -51266,6 +51306,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 911596410}
     m_Modifications:
+    - target: {fileID: 993740758860991941, guid: 9246918849c6e5641a37fcc19f2105e1, type: 3}
+      propertyPath: _health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 993740758860991941, guid: 9246918849c6e5641a37fcc19f2105e1, type: 3}
+      propertyPath: _maxhealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4390762171531476099, guid: 9246918849c6e5641a37fcc19f2105e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 92.30576
@@ -51588,6 +51636,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CayChim1
       objectReference: {fileID: 0}
+    - target: {fileID: 6978638184957667949, guid: ddf5a20519860d941b793d900e99eafa, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978638184957667949, guid: ddf5a20519860d941b793d900e99eafa, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -51644,6 +51700,14 @@ PrefabInstance:
     - target: {fileID: 1853697798947241176, guid: 6dd18e7333c6532478dc7dd4a2802eea, type: 3}
       propertyPath: m_Name
       value: NguoiBay1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841699771203159026, guid: 6dd18e7333c6532478dc7dd4a2802eea, type: 3}
+      propertyPath: _health
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841699771203159026, guid: 6dd18e7333c6532478dc7dd4a2802eea, type: 3}
+      propertyPath: _maxhealth
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51905,11 +51969,11 @@ PrefabInstance:
       objectReference: {fileID: 237409056}
     - target: {fileID: 993740758860991941, guid: 9246918849c6e5641a37fcc19f2105e1, type: 3}
       propertyPath: _health
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 993740758860991941, guid: 9246918849c6e5641a37fcc19f2105e1, type: 3}
       propertyPath: _maxhealth
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4390762171531476099, guid: 9246918849c6e5641a37fcc19f2105e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52357,6 +52421,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuaiSungCamChay (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9215723107783158231, guid: 7e52d8b66a40c9e439fae40b7a1e3e08, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215723107783158231, guid: 7e52d8b66a40c9e439fae40b7a1e3e08, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52671,6 +52743,14 @@ PrefabInstance:
     - target: {fileID: 1201562966472736835, guid: 4de9a5aa0548975449ef2a140072540b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108490897034635151, guid: 4de9a5aa0548975449ef2a140072540b, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108490897034635151, guid: 4de9a5aa0548975449ef2a140072540b, type: 3}
+      propertyPath: _maxhealth
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53027,6 +53107,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 911596410}
     m_Modifications:
+    - target: {fileID: 6217250134948265611, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217250134948265611, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7593552920058532998, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.2405205
@@ -53978,7 +54066,7 @@ Transform:
   m_GameObject: {fileID: 1392203127}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.576408, y: 0.11765197, z: -10}
+  m_LocalPosition: {x: 0.8162322, y: 0.11765197, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54699,6 +54787,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NhimSao2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122144460330514132, guid: b820ba9c4caac1d43a135e70786084b8, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122144460330514132, guid: b820ba9c4caac1d43a135e70786084b8, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -54717,6 +54813,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 911596410}
     m_Modifications:
+    - target: {fileID: 2151560953261604810, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151560953261604810, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2793510532962694926, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44.112534
@@ -55091,6 +55195,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 911596410}
     m_Modifications:
+    - target: {fileID: 2151560953261604810, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151560953261604810, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2793510532962694926, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
       propertyPath: m_LocalPosition.x
       value: 51.69301
@@ -56510,6 +56622,14 @@ PrefabInstance:
     - target: {fileID: 4635106748323640673, guid: b820ba9c4caac1d43a135e70786084b8, type: 3}
       propertyPath: m_Name
       value: NhimSao2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122144460330514132, guid: b820ba9c4caac1d43a135e70786084b8, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122144460330514132, guid: b820ba9c4caac1d43a135e70786084b8, type: 3}
+      propertyPath: _maxhealth
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

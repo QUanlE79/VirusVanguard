@@ -14314,6 +14314,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuaiSungCamChay
       objectReference: {fileID: 0}
+    - target: {fileID: 9215723107783158231, guid: 7e52d8b66a40c9e439fae40b7a1e3e08, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215723107783158231, guid: 7e52d8b66a40c9e439fae40b7a1e3e08, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14628,7 +14636,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3044201, y: -0.09837399, z: -10}
+  m_LocalPosition: {x: -0.11, y: -0.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15232,6 +15240,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1250977077}
     m_Modifications:
+    - target: {fileID: 6217250134948265611, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217250134948265611, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
+      propertyPath: _maxhealth
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7593552920058532998, guid: d0eef056b333fbe4792e6181f4be75d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.140427
@@ -15759,6 +15775,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThanLanBay2
       objectReference: {fileID: 0}
+    - target: {fileID: 5272890822913163690, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
+      propertyPath: _health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272890822913163690, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
+      propertyPath: _maxhealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5666274694027012777, guid: fd0eef43b6d1cea46872315409aa6fa8, type: 3}
       propertyPath: spawPoint
       value: 
@@ -16156,6 +16180,14 @@ PrefabInstance:
     - target: {fileID: 3561771899170005587, guid: ddf5a20519860d941b793d900e99eafa, type: 3}
       propertyPath: m_Name
       value: CayChim1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978638184957667949, guid: ddf5a20519860d941b793d900e99eafa, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978638184957667949, guid: ddf5a20519860d941b793d900e99eafa, type: 3}
+      propertyPath: _maxhealth
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6978638184957667949, guid: ddf5a20519860d941b793d900e99eafa, type: 3}
       propertyPath: spawnArea.x
@@ -18408,6 +18440,14 @@ PrefabInstance:
     - target: {fileID: 3334051265192767905, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987392808218626668, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987392808218626668, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: _maxhealth
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7001240954261298881, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
       propertyPath: m_Enabled
