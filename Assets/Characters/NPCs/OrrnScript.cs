@@ -20,7 +20,6 @@ public class OrrnScript : MonoBehaviour
     }
     void Start()
     {
-       
         BgMusic.Play();
     }
 
@@ -54,7 +53,7 @@ public class OrrnScript : MonoBehaviour
     public void UpdateDmg()
     {
         int price = 50 * (UpGradeTime + 1);
-        if (UpGradeTime < 10 && (CoinManager.instance.coinCount > price))
+        if (UpGradeTime < 10 && (CoinManager.instance.coinCount >= price))
         {
             UpGradeTime++;
             damageable.damage.AddModifier(10);

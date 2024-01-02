@@ -51,7 +51,7 @@ public class YuriaScript : MonoBehaviour
     public void UpdateHP()
     {
         int price = 50 * (UpGradeTime + 1);
-        if (UpGradeTime < 10 && (CoinManager.instance.coinCount > price))
+        if (UpGradeTime < 10 && (CoinManager.instance.coinCount >= price))
         {
             UpGradeTime++;
             damageable.MaxHealth += 50;
