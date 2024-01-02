@@ -65,7 +65,7 @@ public class BossDDScript : MonoBehaviour
         damageable = GetComponent<Damageable>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(Meet());
-        warningStart.Play();
+        //warningStart.Play();
         bgMusic.Play();
     }
     private bool isChecked = false;
@@ -241,6 +241,6 @@ public class BossDDScript : MonoBehaviour
 
         // Hide the canvas notification
         MeetDialog.gameObject.SetActive(false);
-        warningStart.Stop();
+        //warningStart.Stop();
     }
 }
