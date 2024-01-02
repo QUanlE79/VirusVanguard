@@ -16,6 +16,9 @@ public class BossDDScript : MonoBehaviour
 
     Damageable damageable;
     public GameObject door;
+    public int minCoin = 90;
+    public int maxCoin = 150;
+
 
 
     public bool isAlive
@@ -195,6 +198,7 @@ public class BossDDScript : MonoBehaviour
     {
         // Freeze the screen
         //Time.timeScale = 0f;
+        damageable.DropCoin(minCoin, maxCoin);
         BoxCollider2D boxCollider = door.GetComponent<BoxCollider2D>();
         SpriteRenderer spriteRenderer = door.GetComponent<SpriteRenderer>();
         if (boxCollider != null)

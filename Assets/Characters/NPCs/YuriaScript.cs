@@ -56,7 +56,7 @@ public class YuriaScript : MonoBehaviour
             UpGradeTime++;
             damageable.MaxHealth += 50;
             damageable.health += 50;
-            CoinManager.instance.SpendCoins(50 * (UpGradeTime + 1));
+            CoinManager.instance.SpendCoins(price);
         }
     }
     
