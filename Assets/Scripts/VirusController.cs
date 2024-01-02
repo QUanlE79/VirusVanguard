@@ -216,6 +216,7 @@ public class VirusController : MonoBehaviour
         yield return new WaitForSecondsRealtime(5f);
         DeathDialog.gameObject.SetActive(false);
         damageable.isAlive = true;
+        checkAlive = false;
         SceneManager.LoadScene(1);
     }
     private void SetFacingDirection(Vector2 moveInput)
