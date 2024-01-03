@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkillScipt : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int damage = 10;
+    public int damage = 20;
     public Vector2 speed = new Vector2(10f, 10f);
     public Vector2 knockback = new Vector2(2f, 0);
     Rigidbody2D rb2d;

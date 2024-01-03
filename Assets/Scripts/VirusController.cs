@@ -213,7 +213,7 @@ public class VirusController : MonoBehaviour
         }
         
         DeathDialog.gameObject.SetActive(true);     
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(3f);
         DeathDialog.gameObject.SetActive(false);
         damageable.isAlive = true;
         checkAlive = false;

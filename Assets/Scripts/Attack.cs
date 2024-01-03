@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Attack : MonoBehaviour
    
@@ -10,7 +11,16 @@ public class Attack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        int curstage = SceneManager.GetActiveScene().buildIndex;
+        if (curstage > 4)
+        {
+            damage = damage + 7;
+        }
+        if (curstage > 6)
+        {
+            damage = damage + 10;
+        }
+
     }
 
     // Update is called once per frame

@@ -183,6 +183,14 @@ PrefabInstance:
       propertyPath: _maxhealth
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8758469151245384334, guid: 6dd18e7333c6532478dc7dd4a2802eea, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758469151245384334, guid: 6dd18e7333c6532478dc7dd4a2802eea, type: 3}
+      propertyPath: minCoin
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -196,6 +204,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 124520647381747221, guid: 72079bda700b3484d894dfafde9498d4, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 124520647381747221, guid: 72079bda700b3484d894dfafde9498d4, type: 3}
+      propertyPath: minCoin
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3158684391295044548, guid: 72079bda700b3484d894dfafde9498d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.21435663
@@ -272,6 +288,14 @@ PrefabInstance:
     - target: {fileID: 2100078481416113880, guid: 92413017a97a9e547b09f81c82b70889, type: 3}
       propertyPath: _maxhealth
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381897464429104220, guid: 92413017a97a9e547b09f81c82b70889, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381897464429104220, guid: 92413017a97a9e547b09f81c82b70889, type: 3}
+      propertyPath: minCoin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6022990089904690737, guid: 92413017a97a9e547b09f81c82b70889, type: 3}
       propertyPath: m_LocalPosition.x
@@ -925,6 +949,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 566957554115196708, guid: 4da0ae1719e063b43a5e9a612b673bb7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 566957554115196708, guid: 4da0ae1719e063b43a5e9a612b673bb7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 566957554115196708, guid: 4da0ae1719e063b43a5e9a612b673bb7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1242743
       objectReference: {fileID: 0}
@@ -963,6 +995,14 @@ PrefabInstance:
     - target: {fileID: 566957554115196708, guid: 4da0ae1719e063b43a5e9a612b673bb7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547867483625780194, guid: 4da0ae1719e063b43a5e9a612b673bb7, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2547867483625780194, guid: 4da0ae1719e063b43a5e9a612b673bb7, type: 3}
+      propertyPath: minCoin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6774600395308884748, guid: 4da0ae1719e063b43a5e9a612b673bb7, type: 3}
       propertyPath: _health
@@ -1658,6 +1698,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuaiCho2
       objectReference: {fileID: 0}
+    - target: {fileID: 3680640288011882354, guid: 8f67ed7175c2a5748b189abd821b2cfe, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680640288011882354, guid: 8f67ed7175c2a5748b189abd821b2cfe, type: 3}
+      propertyPath: minCoin
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1867,6 +1915,14 @@ PrefabInstance:
     - target: {fileID: 4041441336580578041, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
       propertyPath: _maxhealth
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041515924117623459, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041515924117623459, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
+      propertyPath: minCoin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8012272593686004976, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
       propertyPath: m_Name
@@ -8154,10 +8210,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: NguoiBay2
       objectReference: {fileID: 0}
+    - target: {fileID: 6058721511971803201, guid: ff0236a3662246b458c11b6fb9cddde3, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058721511971803201, guid: ff0236a3662246b458c11b6fb9cddde3, type: 3}
+      propertyPath: minCoin
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9134389218796614111, guid: ff0236a3662246b458c11b6fb9cddde3, type: 3}
       propertyPath: _health
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 9134389218796614111, guid: ff0236a3662246b458c11b6fb9cddde3, type: 3}
+      propertyPath: CoinPrefab
+      value: 
+      objectReference: {fileID: 9010154992810424471, guid: bc8223112bfbaca4a8f7963ce008dec4, type: 3}
     - target: {fileID: 9134389218796614111, guid: ff0236a3662246b458c11b6fb9cddde3, type: 3}
       propertyPath: _maxhealth
       value: 150
@@ -8338,7 +8406,7 @@ Transform:
   m_GameObject: {fileID: 940865394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.2502465, y: -1.1911672, z: -10}
+  m_LocalPosition: {x: -4.560443, y: -1.1880912, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8683,6 +8751,14 @@ PrefabInstance:
     - target: {fileID: 125685605044465784, guid: b4072fe00a3d6b94aa77cfcde8a1706c, type: 3}
       propertyPath: m_Name
       value: QuaiHe2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047706844795940750, guid: b4072fe00a3d6b94aa77cfcde8a1706c, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047706844795940750, guid: b4072fe00a3d6b94aa77cfcde8a1706c, type: 3}
+      propertyPath: minCoin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6113690987655380708, guid: b4072fe00a3d6b94aa77cfcde8a1706c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9372,6 +9448,14 @@ PrefabInstance:
       propertyPath: _maxhealth
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 3277290598160508359, guid: 2cfdbc4371fdcc44798e5771da60fd17, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277290598160508359, guid: 2cfdbc4371fdcc44798e5771da60fd17, type: 3}
+      propertyPath: minCoin
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6135115921140398684, guid: 2cfdbc4371fdcc44798e5771da60fd17, type: 3}
       propertyPath: m_Name
       value: ConLinh1
@@ -9560,6 +9644,14 @@ PrefabInstance:
     - target: {fileID: 2793510532962694926, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098546032223042128, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3098546032223042128, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
+      propertyPath: minCoin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5780068214862024065, guid: a37b90e1d94e48e488ca581fd0e9d200, type: 3}
       propertyPath: m_Name
@@ -9791,6 +9883,10 @@ PrefabInstance:
       propertyPath: _health
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 8803205981380614442, guid: fdd9bb3a1ef3b85459e0230bf0d0672c, type: 3}
+      propertyPath: CoinPrefab
+      value: 
+      objectReference: {fileID: 9010154992810424471, guid: bc8223112bfbaca4a8f7963ce008dec4, type: 3}
     - target: {fileID: 8803205981380614442, guid: fdd9bb3a1ef3b85459e0230bf0d0672c, type: 3}
       propertyPath: _maxhealth
       value: 300
@@ -11127,6 +11223,14 @@ PrefabInstance:
       propertyPath: _maxhealth
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 7041515924117623459, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041515924117623459, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
+      propertyPath: minCoin
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8012272593686004976, guid: 433dff0f6d5e5614288e9111910851e9, type: 3}
       propertyPath: m_Name
       value: QuaiCho1
@@ -11259,17 +11363,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5337713382834712895, guid: 5ae3f14a4c20cb04496603497eddfefa, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337713382834712895, guid: 5ae3f14a4c20cb04496603497eddfefa, type: 3}
+      propertyPath: minCoin
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5835375725852839252, guid: 5ae3f14a4c20cb04496603497eddfefa, type: 3}
       propertyPath: m_Name
       value: GaVit2
       objectReference: {fileID: 0}
     - target: {fileID: 6890745051420691129, guid: 5ae3f14a4c20cb04496603497eddfefa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890745051420691129, guid: 5ae3f14a4c20cb04496603497eddfefa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890745051420691129, guid: 5ae3f14a4c20cb04496603497eddfefa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5229216
+      value: -7.4413
       objectReference: {fileID: 0}
     - target: {fileID: 6890745051420691129, guid: 5ae3f14a4c20cb04496603497eddfefa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.5691
+      value: 29.6953
       objectReference: {fileID: 0}
     - target: {fileID: 6890745051420691129, guid: 5ae3f14a4c20cb04496603497eddfefa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11386,6 +11506,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2293845709171622417, guid: c944139ccd47e9e4c98fa39aff9a630d, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293845709171622417, guid: c944139ccd47e9e4c98fa39aff9a630d, type: 3}
+      propertyPath: minCoin
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5119681230356277032, guid: c944139ccd47e9e4c98fa39aff9a630d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.57
@@ -11729,6 +11857,14 @@ PrefabInstance:
     - target: {fileID: 3987392808218626668, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
       propertyPath: _maxhealth
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333195076562313777, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: maxCoin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333195076562313777, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
+      propertyPath: minCoin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7162665957856787551, guid: 0c3078d3fcbae444282e537a52a18d59, type: 3}
       propertyPath: m_LocalPosition.x

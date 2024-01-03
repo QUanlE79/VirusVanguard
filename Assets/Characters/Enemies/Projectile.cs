@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Projectile : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class Projectile : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         startPonit = new Vector2(transform.position.x, transform.position.y);
+        if (SceneManager.GetActiveScene().buildIndex > 6)
+        {
+            damage *= 2;
+        }
     }
     void Start()
     {

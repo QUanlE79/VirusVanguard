@@ -53,8 +53,8 @@ public class BossTDScript : MonoBehaviour
         StartCoroutine(Meet());
         blueBook.transform.localScale = new Vector3(2,2,2);
         redBook.transform.localScale = new Vector3(2, 2, 2);
-        blueBook.GetComponent<SkillScipt>().damage = 10;
-        redBook.GetComponent<SkillScipt>().damage = 10;
+        blueBook.GetComponent<SkillScipt>().damage = 20;
+        redBook.GetComponent<SkillScipt>().damage = 20;
         theHand.transform.localScale = new Vector3(3, 3, 3);
         theRock.transform.localScale = new Vector3(3, 3, 3);
         BgMusic.Play();
@@ -75,8 +75,8 @@ public class BossTDScript : MonoBehaviour
             isChecked = true;
             blueBook.transform.localScale *= 2f;
             redBook.transform.localScale *= 2f;
-            blueBook.GetComponent<SkillScipt>().damage *= 2;
-            redBook.GetComponent<SkillScipt>().damage *= 2;
+            blueBook.GetComponent<SkillScipt>().damage = 30;
+            redBook.GetComponent<SkillScipt>().damage = 30;
             theHand.transform.localScale *= 2f;
             theRock.transform.localScale *= 2f;
         }
