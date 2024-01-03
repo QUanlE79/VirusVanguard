@@ -721,6 +721,10 @@ PrefabInstance:
       value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8803205981380614442, guid: fdd9bb3a1ef3b85459e0230bf0d0672c, type: 3}
+      propertyPath: CoinPrefab
+      value: 
+      objectReference: {fileID: 9010154992810424471, guid: bc8223112bfbaca4a8f7963ce008dec4, type: 3}
+    - target: {fileID: 8803205981380614442, guid: fdd9bb3a1ef3b85459e0230bf0d0672c, type: 3}
       propertyPath: _maxhealth
       value: 200
       objectReference: {fileID: 0}
@@ -54066,7 +54070,7 @@ Transform:
   m_GameObject: {fileID: 1392203127}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.212685, y: 0.11765197, z: -10}
+  m_LocalPosition: {x: -0.60228777, y: 0.11765197, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

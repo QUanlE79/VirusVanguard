@@ -242,7 +242,7 @@ MonoBehaviour:
   _health: 100
   _isAlive: 1
   InvincibilityTime: 0.25
-  CoinPrefab: {fileID: 0}
+  CoinPrefab: {fileID: 9010154992810424471, guid: bc8223112bfbaca4a8f7963ce008dec4, type: 3}
 --- !u!114 &6055526050549697699
 MonoBehaviour:
   m_ObjectHideFlags: 0
